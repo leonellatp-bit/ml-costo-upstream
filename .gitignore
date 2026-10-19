@@ -1,10 +1,16 @@
+# --- Datos con licencia (S&P Global): NO subir. En Render se cargan como Secret File ---
 data/
+
+# --- Artefactos pesados o regenerables con run_nested.py ---
 results/models/
 results/cache/
-results/dashboard/*.pkl
+# (results/dashboard/model_*.pkl SÍ se suben: el dashboard en Render los necesita, ~28 MB)
+
+# --- Salida intermedia del Jupyter Book ---
 book/_build/
+
+# --- Python / Jupyter ---
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 desktop.ini
-results/dashboard/predictions.csv

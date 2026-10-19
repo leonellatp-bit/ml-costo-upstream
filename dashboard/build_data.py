@@ -60,8 +60,7 @@ for m in MODEL_ORDER:
     for split, frame, yy, pp in [("Entrenamiento", dev, y, pipe.predict(X)), ("Validación", dev, y, oof),
                                  ("Prueba", test, yt, fin["pred"])]:
         rows.append(pd.DataFrame({"model": m, "method": me, "split": split, "y": yy, "pred": pp,
-                                  "Year": frame["Year"].values, "RegionName": frame["RegionName"].values,
-                                  "asset": frame[C.GROUP].values}))
+                                  "Year": frame["Year"].values, "RegionName": frame["RegionName"].values}))
     e = yt - fin["pred"]
     for k, v in enumerate(acf(e, 20)):
         acf_rows.append({"model": m, "lag": k, "acf": v, "band": 1.96 / np.sqrt(len(e))})

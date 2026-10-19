@@ -7,6 +7,7 @@ y abrir http://127.0.0.1:8050
 from __future__ import annotations
 
 import json
+import os
 import pickle
 import sys
 import warnings
@@ -48,7 +49,20 @@ def _json(path):
         return {}
 
 
-raw = pd.read_csv(C.DATA_PATH, sep=";")
+def _data_path() -> Path:
+    """Ubicación del CSV crudo (licencia S&P Global, nunca se sube a GitHub).
+
+    Orden de búsqueda: variable de entorno DATA_PATH -> Secret File de Render
+    (/etc/secrets/<archivo>) -> carpeta data/ local del proyecto.
+    """
+    for cand in [os.environ.get("DATA_PATH"), f"/etc/secrets/{C.DATA_PATH.name}", str(C.DATA_PATH)]:
+        if cand and Path(cand).exists():
+            return Path(cand)
+    raise FileNotFoundError(
+        f"No se encontró {C.DATA_PATH.name}. En local: cópialo en data/. En Render: súbelo como Secret File.")
+
+
+raw = pd.read_csv(_data_path(), sep=";")
 data = raw.dropna(subset=[C.TARGET])
 mt = _csv(R / "master_table.csv")
 mtA = mt[mt.scenario == "A_estructural"] if len(mt) else mt
@@ -156,8 +170,8 @@ def tab_resumen():
         html.Li("La comparación estadística sigue la secuencia Friedman → Nemenyi (CD) → MCS → Giacomini-White / Clark-West "
                 "→ Diebold-Mariano (HLN) con bootstrap estacionario, tamaños de efecto e IC BCa."),
     ], className="findings")
-    n_assets = raw[C.GROUP].nunique()
-    data_k = [kpi("Observaciones", f"{len(raw):,}", f"{len(data):,} con target"), kpi("Activos", f"{n_assets}", f"{data[C.GROUP].nunique()} con costo observado"),
+    data_k = [kpi("Observaciones", f"{len(raw):,}", f"{len(data):,} con target"),
+              kpi("Activos", f"{raw[C.GROUP].nunique()}", f"{data[C.GROUP].nunique()} con costo observado"),
               kpi("Países · Regiones", f"{raw.CountryName.nunique()} · {raw.RegionName.nunique()}", "cobertura global"),
               kpi("Periodo", f"{raw.Year.min()}–{raw.Year.max()}", "panel activo-año")]
     # Imagen de portada: si existe una foto propia en assets/ (hero_oilfield.jpg/.png) se usa; si no, la ilustración SVG
@@ -486,6 +500,7 @@ def tab_predictor():
 # App
 # ------------------------------------------------------------------
 app = Dash(__name__, title="Costo upstream · ML", suppress_callback_exceptions=True)
+server = app.server  # punto de entrada para gunicorn (despliegue en Render)
 TABS = [("Resumen", tab_resumen), ("Datos y EDA", tab_eda), ("Modelos y optimización", tab_modelos),
         ("Optimización computacional", tab_computacional), ("Evaluación", tab_evaluacion),
         ("Comparación estadística", tab_estadistica), ("Predictor", tab_predictor)]
@@ -509,7 +524,7 @@ def render(tab):
 
 
 @app.callback(Output("eda-box", "figure"), Output("eda-year", "figure"), Input("eda-reg", "value"), Input("eda-cat", "value"))
-def eda(regs, cat):
+def eda_update(regs, cat):
     d = data if not regs else data[data.RegionName.isin(regs)]
     order = d.groupby(cat)[C.TARGET].median().sort_values().index.tolist()
     f1 = go.Figure()

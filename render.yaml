@@ -1,0 +1,11 @@
+# Blueprint de Render: despliega el dashboard como Web Service.
+services:
+  - type: web
+    name: ml-costo-upstream-dash
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-render.txt
+    startCommand: gunicorn dashboard.app:server --workers 1 --threads 2 --timeout 120 --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.4
