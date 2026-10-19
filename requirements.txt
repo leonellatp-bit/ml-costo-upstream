@@ -1,0 +1,20 @@
+# Entorno probado: Python 3.13 (shap 0.54 requiere Python >= 3.12)
+#   conda create -n ml_proyecto python=3.13 -y && conda activate ml_proyecto
+#   pip install -r requirements.txt
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+matplotlib==3.11.2
+xgboost==2.1.4
+optuna==4.1.0
+deap==1.4.1
+shap==0.54.1
+lime==0.2.0.1
+plotly==5.24.1
+dash==2.18.2
+# Para construir y ejecutar el libro
+jupyter-book==1.0.3
+jupyter==1.1.1
+# Opcional (sección 3.3, vecinos aproximados): faiss-cpu

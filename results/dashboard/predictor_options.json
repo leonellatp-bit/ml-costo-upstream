@@ -1,0 +1,1817 @@
+{
+ "hierarchy": [
+  {
+   "RegionName": "Eastern Asia",
+   "CountryName": "Taiwan",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Belarus",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Bulgaria",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Czech Republic",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Hungary",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Poland",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Romania",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Russia",
+   "ProductionElementName": "Russia - Siberia",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Russia",
+   "ProductionElementName": "Russia -Urals/Volga",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Russia",
+   "ProductionElementName": "Russia- Artic Sector",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Russia",
+   "ProductionElementName": "Russia- Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Russia",
+   "ProductionElementName": "Russia- Sakhalin",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Russia",
+   "ProductionElementName": "Russia - Shale Oil",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Europe",
+   "CountryName": "Ukraine",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Argentina",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Argentina",
+   "ProductionElementName": "Argentina - Shale Oil",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Barbados",
+   "ProductionElementName": "Other -Caribbean",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Bolivia",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Brazil",
+   "ProductionElementName": "Brazil",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Chile",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Colombia",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Cuba",
+   "ProductionElementName": "Other -Caribbean",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Ecuador",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Ecuador",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Guatemala",
+   "ProductionElementName": "Other- Central America",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Guyana",
+   "ProductionElementName": "Guyana",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Mexico",
+   "ProductionElementName": "Mexico",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Peru",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Suriname",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Trinidad and Tobago",
+   "ProductionElementName": "South America (excludes Venezuela & Brazil)",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Venezuela",
+   "ProductionElementName": "Venezuela Conventional",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Latin America and the Caribbean",
+   "CountryName": "Venezuela",
+   "ProductionElementName": "Venezuela Extra Heavy Oil",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Bahrain",
+   "ProductionElementName": "Middle East-Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Egypt",
+   "ProductionElementName": "Middle East-Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Iran",
+   "ProductionElementName": "Middle East- Iran",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Iraq",
+   "ProductionElementName": "Middle East-Iraq",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Kuwait",
+   "ProductionElementName": "Middle East-Kuwait",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Neutral Zone",
+   "ProductionElementName": "Middle East-Other",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Oman",
+   "ProductionElementName": "Middle East- Oman",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Qatar",
+   "ProductionElementName": "Middle East-Qatar",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Qatar",
+   "ProductionElementName": "Middle East-Qatar",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Saudi Arabia",
+   "ProductionElementName": "Middle East-Saudi Arabia",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Syria",
+   "ProductionElementName": "Middle East-Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Turkey",
+   "ProductionElementName": "Middle East-Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "United Arab Emirates",
+   "ProductionElementName": "Middle East- UAE",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Middle East",
+   "CountryName": "Yemen",
+   "ProductionElementName": "Middle East-Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "Canada",
+   "ProductionElementName": "Canada Conventional Oil",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "Canada",
+   "ProductionElementName": "Canada Heavy Oil",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "Canada",
+   "ProductionElementName": "Canada- Shale Oil",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "Canada",
+   "ProductionElementName": "Canada Bitumen",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "Canada",
+   "ProductionElementName": "Canada Syncrude",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US GOM Deepwater",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Alaska",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US California Heavy",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US GOM Shallow Water",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Lower 48",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Lower 48 Light Oil",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Stripper Wells",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Wyoming Heavy",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US shale - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Shale Oil - Bakken",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Shale Oil- Eagle Ford",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Shale Oil- Permian",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Shale Oil- Woodford",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Shale Oil-Granite Wash",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Shale Oil-Niobrara",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US Shale- Monterey",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US shale - D J",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US shale - Powder River",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US shale- Bakken",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US shale- Eagle Ford",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US shale- Permian",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "North America",
+   "CountryName": "United States",
+   "ProductionElementName": "US shale- Stack/Scoop",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Northern Europe",
+   "CountryName": "Denmark",
+   "ProductionElementName": "North Sea",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Northern Europe",
+   "CountryName": "Estonia",
+   "ProductionElementName": "Europe  Kerogene/Shale",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Northern Europe",
+   "CountryName": "Lithuania",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Northern Europe",
+   "CountryName": "Norway",
+   "ProductionElementName": "North Sea",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Northern Europe",
+   "CountryName": "United Kingdom",
+   "ProductionElementName": "North Sea",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Northern Europe",
+   "CountryName": "United Kingdom",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Oceania",
+   "CountryName": "Australia",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Oceania",
+   "CountryName": "New Zealand",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Oceania",
+   "CountryName": "Papua New Guinea",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Brunei Darussalam",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Cambodia",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Indonesia",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Indonesia",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Malaysia",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Myanmar",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Philippines",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Thailand",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Timor-Leste",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "South-eastern Asia",
+   "CountryName": "Viet Nam",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Asia",
+   "CountryName": "Bangladesh",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Asia",
+   "CountryName": "India",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Asia",
+   "CountryName": "Pakistan",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Europe",
+   "CountryName": "Albania",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Europe",
+   "CountryName": "Croatia",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Europe",
+   "CountryName": "Greece",
+   "ProductionElementName": "Other - Mediterranean",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Europe",
+   "CountryName": "Italy",
+   "ProductionElementName": "Other - Mediterranean",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Europe",
+   "CountryName": "Italy",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Europe",
+   "CountryName": "Serbia",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Southern Europe",
+   "CountryName": "Spain",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Asia",
+   "CountryName": "Azerbaijan",
+   "ProductionElementName": "Caspian",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Asia",
+   "CountryName": "Azerbaijan",
+   "ProductionElementName": "Central Asia",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Asia",
+   "CountryName": "Georgia",
+   "ProductionElementName": "Central Asia",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Asia",
+   "CountryName": "Jordan",
+   "ProductionElementName": "Middle East-Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Europe",
+   "CountryName": "Austria",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Europe",
+   "CountryName": "France",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Europe",
+   "CountryName": "Germany",
+   "ProductionElementName": "North Sea",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Europe",
+   "CountryName": "Germany",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Europe",
+   "CountryName": "Netherlands",
+   "ProductionElementName": "North Sea",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Western Europe",
+   "CountryName": "Netherlands",
+   "ProductionElementName": "Europe Onshore",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Algeria",
+   "ProductionElementName": "Middle East- Algeria",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Angola",
+   "ProductionElementName": "West Africa - Angola",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Cameroon",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Chad",
+   "ProductionElementName": "Other - Central Africa",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Congo (the)",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Congo (the)",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Congo, Democratic Republic of the",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Equatorial Guinea",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Equatorial Guinea",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Gabon",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Gabon",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Ghana",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Ivory Coast",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Kenya",
+   "ProductionElementName": "Other- Central Africa",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Libya",
+   "ProductionElementName": "Middle East- Libya",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Madagascar",
+   "ProductionElementName": "East Africa Bitumen",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Mauritania",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Morocco",
+   "ProductionElementName": "Middle East Kerogene/Shale",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Niger",
+   "ProductionElementName": "West Africa - Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Nigeria",
+   "ProductionElementName": "West Africa - Nigeria",
+   "MemberOpec": "OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "South Sudan",
+   "ProductionElementName": "Other - Central Africa",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Sudan",
+   "ProductionElementName": "Other - Central Africa",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Africa",
+   "CountryName": "Tunisia",
+   "ProductionElementName": "Middle East-Other",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Central Asia",
+   "CountryName": "Kazakhstan",
+   "ProductionElementName": "Caspian",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Central Asia",
+   "CountryName": "Kazakhstan",
+   "ProductionElementName": "Central Asia",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Central Asia",
+   "CountryName": "Kyrgyzstan",
+   "ProductionElementName": "Central Asia",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Central Asia",
+   "CountryName": "Tajikistan",
+   "ProductionElementName": "Central Asia",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Central Asia",
+   "CountryName": "Turkmenistan",
+   "ProductionElementName": "Central Asia",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Central Asia",
+   "CountryName": "Uzbekistan",
+   "ProductionElementName": "Central Asia",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Asia",
+   "CountryName": "China",
+   "ProductionElementName": "Far East - China Kerogene/Shale",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Asia",
+   "CountryName": "China",
+   "ProductionElementName": "Far East - China",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Asia",
+   "CountryName": "China",
+   "ProductionElementName": "China- Shale Oil",
+   "MemberOpec": "NON - OPEC"
+  },
+  {
+   "RegionName": "Eastern Asia",
+   "CountryName": "Japan",
+   "ProductionElementName": "Far East - Except China",
+   "MemberOpec": "NON - OPEC"
+  }
+ ],
+ "combos": [
+  {
+   "CountryName": "Taiwan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Belarus",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Bulgaria",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Czech Republic",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Hungary",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Poland",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Romania",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Russia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Russia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Russia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Ukraine",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Argentina",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Argentina",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Barbados",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Bolivia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Brazil",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Brazil",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Brazil",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Chile",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Colombia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Cuba",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Ecuador",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Guatemala",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Guyana",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Mexico",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Mexico",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Peru",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Peru",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Suriname",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Trinidad and Tobago",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Trinidad and Tobago",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Venezuela",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Venezuela",
+   "ReserveTypeName": "Unconventional",
+   "SupplySubTypeName": "Bitumen",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Venezuela",
+   "ReserveTypeName": "Unconventional",
+   "SupplySubTypeName": "Syncrude",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Bahrain",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Bahrain",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Egypt",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Egypt",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Iran",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Iran",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Iraq",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Kuwait",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Neutral Zone",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Neutral Zone",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Oman",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Qatar",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Qatar",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Saudi Arabia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Saudi Arabia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Syria",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Turkey",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "United Arab Emirates",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "United Arab Emirates",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "United Arab Emirates",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Yemen",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Canada",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Canada",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Canada",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Canada",
+   "ReserveTypeName": "Unconventional",
+   "SupplySubTypeName": "Bitumen",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Canada",
+   "ReserveTypeName": "Unconventional",
+   "SupplySubTypeName": "Syncrude",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "United States",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "United States",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "United States",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "United States",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Denmark",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Estonia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Kerogen/Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Lithuania",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Norway",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Norway",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "United Kingdom",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "United Kingdom",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "United Kingdom",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Australia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Australia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Australia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "New Zealand",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "New Zealand",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "New Zealand",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Papua New Guinea",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Brunei Darussalam",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Cambodia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Indonesia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Indonesia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Malaysia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Malaysia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Myanmar",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Philippines",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Thailand",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Thailand",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Thailand",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Timor-Leste",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Viet Nam",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Bangladesh",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "India",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "India",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Pakistan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Albania",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Croatia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Greece",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Italy",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Italy",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Serbia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Spain",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Azerbaijan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Azerbaijan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Azerbaijan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Georgia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Jordan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Austria",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "France",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Germany",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Germany",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Netherlands",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Netherlands",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Algeria",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Angola",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Angola",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Angola",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Cameroon",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Cameroon",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Chad",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Congo (the)",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Congo (the)",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Congo, Democratic Republic of the",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Equatorial Guinea",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Gabon",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Gabon",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Ghana",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Ghana",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Ghana",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Ivory Coast",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Kenya",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Libya",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Madagascar",
+   "ReserveTypeName": "Unconventional",
+   "SupplySubTypeName": "Bitumen",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Mauritania",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Morocco",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Kerogen/Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Niger",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Nigeria",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Deep"
+  },
+  {
+   "CountryName": "Nigeria",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Nigeria",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "South Sudan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Sudan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Tunisia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Tunisia",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Kazakhstan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "Kazakhstan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Kyrgyzstan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Tajikistan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Turkmenistan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Uzbekistan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "China",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Kerogen/Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "China",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Offshore Shallow"
+  },
+  {
+   "CountryName": "China",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "China",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Shale",
+   "ReserveLocationName": "Onshore"
+  },
+  {
+   "CountryName": "Japan",
+   "ReserveTypeName": "Conventional",
+   "SupplySubTypeName": "Non-Shale",
+   "ReserveLocationName": "Onshore"
+  }
+ ],
+ "best_model": "RandomForest",
+ "best_methods": {
+  "DecisionTree": "Genetica",
+  "KNN": "Bayesiana",
+  "Lasso": "Bayesiana",
+  "RandomForest": "Random",
+  "Ridge": "Random",
+  "SVR": "Bayesiana",
+  "XGBoost": "Grid"
+ },
+ "production_median": 37.95
+}

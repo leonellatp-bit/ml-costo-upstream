@@ -1,0 +1,82 @@
+{
+ "combos": {
+  "RandomForest|Random": 5.2,
+  "XGBoost|Bayesiana": 5.5,
+  "XGBoost|Grid": 6.0,
+  "RandomForest|Genetica": 6.0,
+  "RandomForest|Grid": 6.1,
+  "XGBoost|Random": 6.8,
+  "RandomForest|Bayesiana": 7.0,
+  "XGBoost|Genetica": 7.7,
+  "SVR|Bayesiana": 9.5,
+  "SVR|Random": 13.3,
+  "SVR|Genetica": 14.0,
+  "DecisionTree|Genetica": 15.2,
+  "DecisionTree|Grid": 15.7,
+  "DecisionTree|Bayesiana": 15.7,
+  "SVR|Grid": 16.7,
+  "KNN|Genetica": 16.7,
+  "DecisionTree|Random": 16.9,
+  "KNN|Bayesiana": 16.95,
+  "KNN|Grid": 17.45,
+  "KNN|Random": 17.8,
+  "Ridge|Grid": 20.2,
+  "Ridge|Random": 20.3,
+  "Ridge|Genetica": 20.7,
+  "Ridge|Bayesiana": 20.8,
+  "Lasso|Bayesiana": 21.55,
+  "Lasso|Genetica": 21.6,
+  "Lasso|Grid": 21.6,
+  "Lasso|Random": 23.05
+ },
+ "cd_combos": 13.664776268777219,
+ "models": {
+  "RandomForest": 1.8,
+  "XGBoost": 2.3,
+  "SVR": 3.1,
+  "DecisionTree": 4.4,
+  "KNN": 4.7,
+  "Ridge": 5.7,
+  "Lasso": 6.0
+ },
+ "cd_models": 2.848347742823624,
+ "methods": {
+  "Bayesiana": 2.4,
+  "Grid": 2.507142857142857,
+  "Genetica": 2.5285714285714285,
+  "Random": 2.5642857142857145
+ },
+ "cd_methods": 0.5606086933543252,
+ "friedman": {
+  "combos": {
+   "chi2": 145.3525498891353,
+   "df": 27.0,
+   "p_value": 3.5636610403719254e-18,
+   "iman_davenport_F": 10.49498363455245,
+   "p_value_F": 1.0184644482300247e-27,
+   "kendall_W": 0.5383427773671678,
+   "N": 10.0,
+   "k": 28.0
+  },
+  "models": {
+   "chi2": 34.457142857142856,
+   "df": 6.0,
+   "p_value": 5.48917173234346e-06,
+   "iman_davenport_F": 12.140939597315436,
+   "p_value_F": 1.3675385019203447e-08,
+   "kendall_W": 0.5742857142857143,
+   "N": 10.0,
+   "k": 7.0
+  },
+  "methods": {
+   "chi2": 0.6382054992765216,
+   "df": 3.0,
+   "p_value": 0.8876330577425315,
+   "iman_davenport_F": 0.21033531717234025,
+   "p_value_F": 0.8891698787172151,
+   "kendall_W": 0.003039073806078674,
+   "N": 70.0,
+   "k": 4.0
+  }
+ }
+}

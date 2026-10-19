@@ -1,0 +1,9 @@
+format: jb-book
+root: intro
+chapters:
+  - file: 01_datos_eda
+  - file: 02_modelos_optimizacion
+  - file: 03_optimizacion_computacional
+  - file: 04_evaluacion
+  - file: 05_comparacion_estadistica
+  - file: 06_conclusiones

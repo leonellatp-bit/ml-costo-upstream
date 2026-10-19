@@ -1,0 +1,10 @@
+data/
+results/models/
+results/cache/
+results/dashboard/*.pkl
+book/_build/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+desktop.ini
+results/dashboard/predictions.csv

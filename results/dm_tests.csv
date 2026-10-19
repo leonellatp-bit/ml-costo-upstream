@@ -1,0 +1,3 @@
+modelo 1 (mejor),modelo 2 (segundo),dif. media pérdida (1−2),IC 95 % bootstrap estacionario,DM (HLN),p-valor,d de Cohen,magnitud,p Holm (2 pruebas)
+XGBoost|Random,XGBoost|Bayesiana,-0.08933678054856763,"[-0.265, 0.071]",-1.381391388350696,0.16757114210232973,-0.05047494279553867,despreciable,0.16757114210232973
+XGBoost|Random,SVR lineal (E1),-4.846036112046013,"[-7.751, -2.466]",-4.1238424330044685,4.143663386568573e-05,-0.1506819230661601,despreciable,8.287326773137146e-05

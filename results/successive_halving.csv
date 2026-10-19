@@ -1,0 +1,5 @@
+model,method,time_s,n_candidates,best_rmse,total_trees_fitted,rounds,candidates_per_round,resources_per_round
+XGBoost,Random (fidelidad completa),26.94934911099972,27,2.3023679940664885,43740,,,
+XGBoost,Successive Halving (η=3),12.972630682000272,27,2.464892892207092,6480,4.0,"[27, 9, 3, 1]","[20, 60, 180, 540]"
+RandomForest,Random (fidelidad completa),137.6343720519999,27,2.246562212278864,43740,,,
+RandomForest,Successive Halving (η=3),35.01348268000038,27,2.252643755855987,6480,4.0,"[27, 9, 3, 1]","[20, 60, 180, 540]"

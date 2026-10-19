@@ -1,0 +1,18 @@
+# Jupyter Book (v1) — Proyecto final de Machine Learning
+title: "Costo de producción equivalente Brent en activos upstream"
+author: Leonella Torreglosa Portillo
+copyright: "2026"
+logo: ""
+execute:
+  # Los notebooks se entregan ya ejecutados (la CV anidada completa tarda ~2 h).
+  # Para re-ejecutar todo: cambiar a "force" o correr run_nested.py y luego los notebooks.
+  execute_notebooks: "off"
+only_build_toc_files: true
+parse:
+  myst_enable_extensions: [dollarmath, colon_fence]
+sphinx:
+  config:
+    language: es
+    html_show_copyright: false
+html:
+  use_repository_button: false

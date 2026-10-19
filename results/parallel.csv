@@ -1,0 +1,4 @@
+model,backend,n_jobs,time_s,speedup
+RandomForest,secuencial,1,5.528273742500005,1.0
+RandomForest,loky,2,3.3783404414998586,1.63638740329132
+RandomForest,threading,2,3.0915634025000145,1.788180613740455
