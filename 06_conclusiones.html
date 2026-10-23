@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="prev" title="5. Comparación estadística" href="05_comparacion_estadistica.html" />
+    <link rel="prev" title="5b. Propuesta: modelos híbridos" href="05b_modelos_hibridos.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -219,6 +219,7 @@
 <li class="toctree-l1"><a class="reference internal" href="03_optimizacion_computacional.html">3. Optimización computacional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_evaluacion.html">4. Evaluación de modelos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_comparacion_estadistica.html">5. Comparación estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05b_modelos_hibridos.html">5b. Propuesta: modelos híbridos</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Conclusiones</a></li>
 </ul>
 
@@ -423,6 +424,13 @@ irreales de LIME en variables jerárquicas.</p></li>
 Ball-Tree son más lentos que la fuerza bruta en 173 dimensiones. Successive Halving ahorra 75 % del tiempo en
 Random Forest sin pérdida, pero en XGBoost empeora el resultado porque «pocos árboles» no preserva el ranking
 de configuraciones con <em>learning rate</em> bajo.</p></li>
+<li><p><strong>Combinar modelos no rompe el límite.</strong> Se propusieron tres modelos híbridos con pesos estimados sin fuga:
+RF + XGBoost (peso óptimo de Bates-Granger, w = 0.83), RF + SVR y un Super Learner convexo de los 7 modelos.
+Ninguno supera de forma significativa al mejor modelo individual (Diebold-Mariano p ≥ 0.39 frente a XGBoost;
+en CV, RF + SVR logra 1.992 frente a 2.008 de RF, Wilcoxon p = 0.16). La teoría lo anticipa: los errores de
+RF y XGBoost tienen correlación 0.96, así que la ganancia máxima de combinarlos es de 0.2 % del MSE. Todos los
+modelos fallan en los mismos activos (correlación de errores ≥ 0.57): el límite está en la información, no
+en el algoritmo.</p></li>
 </ol>
 </section>
 <section id="limitaciones">
@@ -485,12 +493,12 @@ Halving que preserve el ranking en XGBoost (submuestreo de filas).</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="05_comparacion_estadistica.html"
+       href="05b_modelos_hibridos.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">5. Comparación estadística</p>
+        <p class="prev-next-title">5b. Propuesta: modelos híbridos</p>
       </div>
     </a>
 </div>
