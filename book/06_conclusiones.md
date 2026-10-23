@@ -41,6 +41,14 @@ Forest y XGBoost, sin una diferencia estadísticamente demostrable entre ellos.
    Random Forest sin pérdida, pero en XGBoost empeora el resultado porque "pocos árboles" no preserva el ranking
    de configuraciones con *learning rate* bajo.
 
+7. **Combinar modelos no rompe el límite.** Se propusieron tres modelos híbridos con pesos estimados sin fuga:
+   RF + XGBoost (peso óptimo de Bates-Granger, w = 0.83), RF + SVR y un Super Learner convexo de los 7 modelos.
+   Ninguno supera de forma significativa al mejor modelo individual (Diebold-Mariano p ≥ 0.39 frente a XGBoost;
+   en CV, RF + SVR logra 1.992 frente a 2.008 de RF, Wilcoxon p = 0.16). La teoría lo anticipa: los errores de
+   RF y XGBoost tienen correlación 0.96, así que la ganancia máxima de combinarlos es de 0.2 % del MSE. Todos los
+   modelos fallan en los mismos activos (correlación de errores ≥ 0.57): el límite está en la información, no
+   en el algoritmo.
+
 ## Limitaciones
 
 - **Tamaño efectivo.** 3.834 filas con target, pero solo 695 activos independientes (por debajo de las 20.000
