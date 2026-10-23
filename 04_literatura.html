@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Revisión de literatura y novedad &#8212; Costo unitario de producción en activos upstream de Oil &amp; Gas</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04_literatura';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="5. Modelo original: HGSB" href="05_modelo_original.html" />
+    <link rel="prev" title="3.5. Propuesta: modelos híbridos" href="05b_modelos_hibridos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Costo unitario de producción en activos upstream de Oil & Gas</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Predicción del costo unitario de producción en activos upstream de Oil & Gas
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">2. Datos y EDA mejorado</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_modelos_optimizacion.html">3.1. Modelos y optimización de hiperparámetros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_optimizacion_computacional.html">3.2. Optimización computacional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_evaluacion.html">3.3. Evaluación de modelos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_comparacion_estadistica.html">3.4. Comparación estadística</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05b_modelos_hibridos.html">3.5. Propuesta: modelos híbridos</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: HGSB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística del modelo original</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/04_literatura.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4. Revisión de literatura y novedad</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo-de-busqueda">4.1 Protocolo de búsqueda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-novedad">4.2 Matriz de novedad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trabajos-mas-cercanos-y-en-que-se-diferencia-la-propuesta">4.3 Trabajos más cercanos y en qué se diferencia la propuesta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaracion-de-novedad">4.4 Declaración de novedad</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="revision-de-literatura-y-novedad">
+<h1>4. Revisión de literatura y novedad<a class="headerlink" href="#revision-de-literatura-y-novedad" title="Link to this heading">#</a></h1>
+<p>Este capítulo documenta la evidencia de novedad del modelo original (condición R1 de la guía): se buscó si el
+mecanismo propuesto, un <em>gradient boosting</em> que en cada iteración recodifica las categóricas con la media del
+residuo <strong>contraída hacia su categoría padre en una jerarquía del dominio</strong>, ya se ha usado para predecir el
+costo unitario de producción de activos petroleros.</p>
+<section id="protocolo-de-busqueda">
+<h2>4.1 Protocolo de búsqueda<a class="headerlink" href="#protocolo-de-busqueda" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Bases de datos:</strong> Scopus, Google Scholar y arXiv, más un motor web general para literatura técnica de la
+industria (SPE, <em>Energies</em>, repositorios institucionales).</p></li>
+<li><p><strong>Componentes de cada cadena:</strong> (i) nombre o familia del modelo, (ii) problema de aplicación, (iii) sinónimos en
+inglés y español.</p></li>
+<li><p><strong>Revisión:</strong> título y resumen de todos los resultados revisados; texto completo de los más cercanos.</p></li>
+<li><p><strong>Fecha de consulta:</strong> 23 de octubre de 2026 (arXiv y web). Scopus y Google Scholar: ver la columna <em>Fecha</em>.</p></li>
+</ul>
+<p><strong>Cadenas para Scopus y Google Scholar</strong> (sintaxis de Scopus; en Scholar se usan las mismas palabras sin
+<code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY</span></code>):</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Cadena de búsqueda</p></th>
+<th class="head"><p>Componentes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>S1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY((&quot;gradient</span> <span class="pre">boosting&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;XGBoost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;boosted</span> <span class="pre">trees&quot;)</span> <span class="pre">AND</span> <span class="pre">(&quot;production</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;lifting</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;operating</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;breakeven&quot;)</span> <span class="pre">AND</span> <span class="pre">(oil</span> <span class="pre">OR</span> <span class="pre">petroleum</span> <span class="pre">OR</span> <span class="pre">upstream))</span></code></p></td>
+<td><p>familia + problema</p></td>
+</tr>
+<tr class="row-odd"><td><p>S2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY((&quot;hierarchical&quot;</span> <span class="pre">AND</span> <span class="pre">(&quot;target</span> <span class="pre">encoding&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;shrinkage&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;empirical</span> <span class="pre">Bayes&quot;))</span> <span class="pre">AND</span> <span class="pre">(&quot;gradient</span> <span class="pre">boosting&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;decision</span> <span class="pre">tree&quot;))</span></code></p></td>
+<td><p>mecanismo</p></td>
+</tr>
+<tr class="row-even"><td><p>S3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY((&quot;hierarchical</span> <span class="pre">shrinkage&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;hierarchical</span> <span class="pre">encoding&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;categorical</span> <span class="pre">hierarchy&quot;)</span> <span class="pre">AND</span> <span class="pre">(oil</span> <span class="pre">OR</span> <span class="pre">petroleum</span> <span class="pre">OR</span> <span class="pre">&quot;oil</span> <span class="pre">and</span> <span class="pre">gas&quot;)</span> <span class="pre">AND</span> <span class="pre">cost)</span></code></p></td>
+<td><p>mecanismo + problema</p></td>
+</tr>
+<tr class="row-odd"><td><p>S4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY((&quot;machine</span> <span class="pre">learning&quot;)</span> <span class="pre">AND</span> <span class="pre">(&quot;cost</span> <span class="pre">per</span> <span class="pre">barrel&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;unit</span> <span class="pre">production</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;supply</span> <span class="pre">cost&quot;)</span> <span class="pre">AND</span> <span class="pre">(oil</span> <span class="pre">OR</span> <span class="pre">upstream))</span></code></p></td>
+<td><p>problema (cualquier modelo)</p></td>
+</tr>
+<tr class="row-even"><td><p>S5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;costo</span> <span class="pre">de</span> <span class="pre">producción&quot;</span> <span class="pre">petróleo</span> <span class="pre">(&quot;aprendizaje</span> <span class="pre">automático&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;machine</span> <span class="pre">learning&quot;)</span> <span class="pre">(&quot;boosting&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;bosques</span> <span class="pre">aleatorios&quot;)</span></code></p></td>
+<td><p>sinónimos en español</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Cadenas ejecutadas en arXiv y en el motor web</strong> (texto exacto de la consulta):</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Cadena ejecutada</p></th>
+<th class="head"><p>Componentes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>W1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">prediction</span> <span class="pre">oil</span> <span class="pre">production</span> <span class="pre">cost</span> <span class="pre">per</span> <span class="pre">barrel</span> <span class="pre">upstream</span> <span class="pre">assets</span> <span class="pre">gradient</span> <span class="pre">boosting</span></code></p></td>
+<td><p>familia + problema</p></td>
+</tr>
+<tr class="row-odd"><td><p>W2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">site:arxiv.org</span> <span class="pre">hierarchical</span> <span class="pre">target</span> <span class="pre">encoding</span> <span class="pre">gradient</span> <span class="pre">boosting</span> <span class="pre">categorical</span> <span class="pre">empirical</span> <span class="pre">Bayes</span> <span class="pre">shrinkage</span></code></p></td>
+<td><p>mecanismo (arXiv)</p></td>
+</tr>
+<tr class="row-even"><td><p>W3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;lifting</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;breakeven&quot;</span> <span class="pre">oil</span> <span class="pre">fields</span> <span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">regression</span> <span class="pre">random</span> <span class="pre">forest</span> <span class="pre">XGBoost</span></code></p></td>
+<td><p>problema + sinónimos</p></td>
+</tr>
+<tr class="row-odd"><td><p>W4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hierarchical</span> <span class="pre">categorical</span> <span class="pre">variables</span> <span class="pre">gradient</span> <span class="pre">boosting</span> <span class="pre">tree</span> <span class="pre">shrinkage</span> <span class="pre">parent</span> <span class="pre">category</span> <span class="pre">regression</span></code></p></td>
+<td><p>mecanismo</p></td>
+</tr>
+<tr class="row-even"><td><p>W5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;costo</span> <span class="pre">de</span> <span class="pre">producción&quot;</span> <span class="pre">petróleo</span> <span class="pre">&quot;aprendizaje</span> <span class="pre">automático&quot;</span> <span class="pre">predicción</span> <span class="pre">por</span> <span class="pre">barril</span></code></p></td>
+<td><p>sinónimos en español</p></td>
+</tr>
+<tr class="row-odd"><td><p>W6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">operating</span> <span class="pre">cost</span> <span class="pre">OPEX</span> <span class="pre">estimation</span> <span class="pre">oil</span> <span class="pre">and</span> <span class="pre">gas</span> <span class="pre">fields</span> <span class="pre">regression</span> <span class="pre">model</span> <span class="pre">study</span></code></p></td>
+<td><p>problema (OPEX)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="matriz-de-novedad">
+<h2>4.2 Matriz de novedad<a class="headerlink" href="#matriz-de-novedad" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Las filas de <strong>Scopus</strong> y <strong>Google Scholar</strong> se completan ejecutando las cadenas S1–S5 con acceso institucional y
+registrando resultados, revisados y relevantes. En arXiv y en el motor web se revisaron los primeros resultados
+que devuelve cada consulta (la columna <em>Result.</em> indica cuántos se revisaron, no el total de la base).</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Base de datos</p></th>
+<th class="head"><p>Cadena</p></th>
+<th class="head"><p>Fecha</p></th>
+<th class="head"><p>Result.</p></th>
+<th class="head"><p>Revis.</p></th>
+<th class="head"><p>Relev.</p></th>
+<th class="head"><p>Observación</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Scopus</p></td>
+<td><p>S1</p></td>
+<td><p><em>completar</em></p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+</tr>
+<tr class="row-odd"><td><p>Scopus</p></td>
+<td><p>S2</p></td>
+<td><p><em>completar</em></p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+</tr>
+<tr class="row-even"><td><p>Scopus</p></td>
+<td><p>S3</p></td>
+<td><p><em>completar</em></p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+</tr>
+<tr class="row-odd"><td><p>Scopus</p></td>
+<td><p>S4</p></td>
+<td><p><em>completar</em></p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+</tr>
+<tr class="row-even"><td><p>Google Scholar</p></td>
+<td><p>S1</p></td>
+<td><p><em>completar</em></p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+</tr>
+<tr class="row-odd"><td><p>Google Scholar</p></td>
+<td><p>S5</p></td>
+<td><p><em>completar</em></p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+<td><p>_</p></td>
+</tr>
+<tr class="row-even"><td><p>arXiv</p></td>
+<td><p>W2</p></td>
+<td><p>2026-10-23</p></td>
+<td><p>9</p></td>
+<td><p>9</p></td>
+<td><p>3</p></td>
+<td><p>CatBoost <span class="bibtex-citation" id="id1">[<a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span>, codificación regularizada del objetivo <span class="bibtex-citation" id="id2">[<a class="reference internal" href="09_reproducibilidad.html#id6" title="Florian Pargent, Florian Pfisterer, Janek Thomas, and Bernd Bischl. Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features. Computational Statistics, 37:2671–2692, 2022.">Pargent <em>et al.</em>, 2022</a>]</span> y un estudio comparativo de codificadores: codifican el <strong>objetivo</strong> (preprocesamiento o estadísticos ordenados); ninguno usa una jerarquía del dominio dentro del boosting ni aborda costos petroleros.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Web</p></td>
+<td><p>W1</p></td>
+<td><p>2026-10-23</p></td>
+<td><p>10</p></td>
+<td><p>10</p></td>
+<td><p>1</p></td>
+<td><p><span class="bibtex-citation" id="id3">[<a class="reference internal" href="09_reproducibilidad.html#id13" title="Eman H. Alkhammash. An optimized gradient boosting model by genetic algorithm for forecasting crude oil production. Energies, 15(17):6416, 2022.">Alkhammash, 2022</a>]</span>: boosting optimizado con algoritmo genético para <strong>pronosticar producción</strong> de crudo, no costo.</p></td>
+</tr>
+<tr class="row-even"><td><p>Web</p></td>
+<td><p>W3</p></td>
+<td><p>2026-10-23</p></td>
+<td><p>10</p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>Productividad de pozos, desempeño SAGD y recomendación de intervenciones; ninguno predice costo unitario.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Web</p></td>
+<td><p>W4</p></td>
+<td><p>2026-10-23</p></td>
+<td><p>9</p></td>
+<td><p>9</p></td>
+<td><p>2</p></td>
+<td><p>CatBoost y una regresión <strong>lineal</strong> con categóricas jerárquicas por programación entera mixta (<em>Expert Systems with Applications</em>, 2022).</p></td>
+</tr>
+<tr class="row-even"><td><p>Web</p></td>
+<td><p>W5</p></td>
+<td><p>2026-10-23</p></td>
+<td><p>9</p></td>
+<td><p>9</p></td>
+<td><p>0</p></td>
+<td><p>Pronóstico de precios y de producción, no de costo unitario.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Web</p></td>
+<td><p>W6</p></td>
+<td><p>2026-10-23</p></td>
+<td><p>9</p></td>
+<td><p>9</p></td>
+<td><p>1</p></td>
+<td><p><span class="bibtex-citation" id="id4">[<a class="reference internal" href="09_reproducibilidad.html#id14" title="Fulmence Stanslaus Kaborogo, Emily Barnabas Kiswaka, and Masolwa Benjamin Lazaro. Cost estimation proxy models for economic evaluations in petroleum projects: a case study from the onshore gas field in the southern coastal tanzania basin. Tanzania Journal of Engineering and Technology, 42(4):56–68, 2024.">Kaborogo <em>et al.</em>, 2024</a>]</span>: modelos <em>proxy</em> de CAPEX/DRILLEX/OPEX con <strong>regresión lineal múltiple</strong>; sin ML ni categorías.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="trabajos-mas-cercanos-y-en-que-se-diferencia-la-propuesta">
+<h2>4.3 Trabajos más cercanos y en qué se diferencia la propuesta<a class="headerlink" href="#trabajos-mas-cercanos-y-en-que-se-diferencia-la-propuesta" title="Link to this heading">#</a></h2>
+<p>La tabla compara familias algorítmicas afines, no solo aplicaciones.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Método</p></th>
+<th class="head"><p>Qué hace</p></th>
+<th class="head"><p>Qué conserva el HGSB</p></th>
+<th class="head"><p>Qué cambia el HGSB</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>XGBoost <span class="bibtex-citation" id="id5">[<a class="reference internal" href="09_reproducibilidad.html#id2" title="Tianqi Chen and Carlos Guestrin. XGBoost: a scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. 2016.">Chen and Guestrin, 2016</a>]</span></p></td>
+<td><p>Boosting de segundo orden con hojas <span class="math notranslate nohighlight">\(-G/(H+\lambda)\)</span></p></td>
+<td><p>Ganancia y pesos de hoja de 2.º orden</p></td>
+<td><p>Las categóricas no se expanden en One-Hot: se recodifican cada iteración</p></td>
+</tr>
+<tr class="row-odd"><td><p>LightGBM <span class="bibtex-citation" id="id6">[<a class="reference internal" href="09_reproducibilidad.html#id3" title="Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. LightGBM: a highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems, volume 30. 2017.">Ke <em>et al.</em>, 2017</a>]</span></p></td>
+<td><p>Ordena categorías por <span class="math notranslate nohighlight">\(G/(H+\text{cat\_smooth})\)</span> dentro de cada nodo</p></td>
+<td><p>Ordenar categorías por residuo medio (partición óptima de <span class="bibtex-citation" id="id7">[<a class="reference internal" href="09_reproducibilidad.html#id7" title="Walter D. Fisher. On grouping for maximum homogeneity. Journal of the American Statistical Association, 53(284):789–798, 1958.">Fisher, 1958</a>]</span>)</p></td>
+<td><p>Contrae hacia el <strong>padre jerárquico</strong>, no hacia 0; cuenta <strong>activos</strong>, no filas; categoría nueva hereda del padre</p></td>
+</tr>
+<tr class="row-even"><td><p>CatBoost <span class="bibtex-citation" id="id8">[<a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span></p></td>
+<td><p>Estadísticos ordenados del objetivo para evitar fuga</p></td>
+<td><p>Codificación de categorías con un estimador regularizado</p></td>
+<td><p>Codifica el <strong>residuo de la iteración</strong>, con un prior jerárquico</p></td>
+</tr>
+<tr class="row-odd"><td><p>Codificación jerárquica del objetivo <span class="bibtex-citation" id="id9">[<a class="reference internal" href="09_reproducibilidad.html#id5" title="Daniele Micci-Barreca. A preprocessing scheme for high-cardinality categorical attributes in classification and prediction problems. ACM SIGKDD Explorations Newsletter, 3(1):27–32, 2001.">Micci-Barreca, 2001</a>]</span></p></td>
+<td><p>Media del objetivo por categoría, contraída hacia el nivel superior</p></td>
+<td><p>La fórmula de contracción empírica Bayes</p></td>
+<td><p>Se aplica <strong>dentro</strong> del boosting (una vez por árbol), no como preprocesamiento único</p></td>
+</tr>
+<tr class="row-even"><td><p>Codificación regularizada <span class="bibtex-citation" id="id10">[<a class="reference internal" href="09_reproducibilidad.html#id6" title="Florian Pargent, Florian Pfisterer, Janek Thomas, and Bernd Bischl. Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features. Computational Statistics, 37:2671–2692, 2022.">Pargent <em>et al.</em>, 2022</a>]</span></p></td>
+<td><p>Target encoding con validación cruzada y suavizado</p></td>
+<td><p>Regularización de categorías de alta cardinalidad</p></td>
+<td><p>Prior jerárquico y recodificación iterativa</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPBoost / MERF <span class="bibtex-citation" id="id11">[<a class="reference internal" href="09_reproducibilidad.html#id11" title="Ahlem Hajjem, François Bellavance, and Denis Larocque. Mixed-effects random forest for clustered data. Journal of Statistical Computation and Simulation, 84(6):1313–1328, 2014.">Hajjem <em>et al.</em>, 2014</a>, <a class="reference internal" href="09_reproducibilidad.html#id10" title="Fabio Sigrist. Gaussian process boosting. Journal of Machine Learning Research, 23(232):1–46, 2022.">Sigrist, 2022</a>]</span></p></td>
+<td><p>Boosting o bosques más efectos aleatorios por grupo</p></td>
+<td><p>Préstamo de información entre grupos</p></td>
+<td><p>Los efectos actúan <strong>dentro de los cortes</strong> del árbol, no como término aditivo</p></td>
+</tr>
+<tr class="row-even"><td><p>Hierarchical Shrinkage <span class="bibtex-citation" id="id12">[<a class="reference internal" href="09_reproducibilidad.html#id12" title="Abhineet Agarwal, Yan Shuo Tan, Omer Ronen, Chandan Singh, and Bin Yu. Hierarchical shrinkage: improving the accuracy and interpretability of tree-based models. In Proceedings of the 39th International Conference on Machine Learning, volume 162 of PMLR, 111–135. 2022.">Agarwal <em>et al.</em>, 2022</a>]</span></p></td>
+<td><p>Contrae cada hoja hacia sus nodos ancestros del árbol</p></td>
+<td><p>La idea de contracción jerárquica</p></td>
+<td><p>La jerarquía es la <strong>del dominio</strong> (región → país), no la del árbol</p></td>
+</tr>
+<tr class="row-odd"><td><p>Regresión lineal con categóricas jerárquicas (ESWA, 2022)</p></td>
+<td><p>Fusiona niveles jerárquicos con optimización entera mixta</p></td>
+<td><p>Uso explícito de la jerarquía</p></td>
+<td><p>Modelo no lineal (boosting) en lugar de lineal</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="declaracion-de-novedad">
+<h2>4.4 Declaración de novedad<a class="headerlink" href="#declaracion-de-novedad" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Al mejor de nuestro conocimiento y según la búsqueda descrita (arXiv y motor web el 23-10-2026; Scopus y Google
+Scholar según la matriz), <strong>no se encontraron estudios que apliquen un gradient boosting con recodificación
+jerárquica contraída de las categóricas (HGSB) a la predicción del costo unitario de producción de activos
+upstream</strong>. Los trabajos más cercanos en la aplicación pronostican producción <span class="bibtex-citation" id="id13">[<a class="reference internal" href="09_reproducibilidad.html#id13" title="Eman H. Alkhammash. An optimized gradient boosting model by genetic algorithm for forecasting crude oil production. Energies, 15(17):6416, 2022.">Alkhammash, 2022</a>]</span> o
+estiman CAPEX/OPEX con regresión lineal <span class="bibtex-citation" id="id14">[<a class="reference internal" href="09_reproducibilidad.html#id14" title="Fulmence Stanslaus Kaborogo, Emily Barnabas Kiswaka, and Masolwa Benjamin Lazaro. Cost estimation proxy models for economic evaluations in petroleum projects: a case study from the onshore gas field in the southern coastal tanzania basin. Tanzania Journal of Engineering and Technology, 42(4):56–68, 2024.">Kaborogo <em>et al.</em>, 2024</a>]</span>; los más cercanos en el mecanismo
+<span class="bibtex-citation" id="id15">[<a class="reference internal" href="09_reproducibilidad.html#id12" title="Abhineet Agarwal, Yan Shuo Tan, Omer Ronen, Chandan Singh, and Bin Yu. Hierarchical shrinkage: improving the accuracy and interpretability of tree-based models. In Proceedings of the 39th International Conference on Machine Learning, volume 162 of PMLR, 111–135. 2022.">Agarwal <em>et al.</em>, 2022</a>, <a class="reference internal" href="09_reproducibilidad.html#id3" title="Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. LightGBM: a highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems, volume 30. 2017.">Ke <em>et al.</em>, 2017</a>, <a class="reference internal" href="09_reproducibilidad.html#id5" title="Daniele Micci-Barreca. A preprocessing scheme for high-cardinality categorical attributes in classification and prediction problems. ACM SIGKDD Explorations Newsletter, 3(1):27–32, 2001.">Micci-Barreca, 2001</a>, <a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span> usan
+codificaciones o contracciones que no combinan las tres piezas del HGSB: (1) prior del padre en una jerarquía del
+dominio, (2) recodificación del residuo en cada iteración y (3) conteo por grupo (activo) en lugar de por fila.</p>
+</div>
+<p>La novedad es <strong>de mecanismo y de aplicación</strong>: el mecanismo se formula de forma general (cualquier problema de
+regresión con categóricas anidadas y observaciones agrupadas), así que es transferible a otras tareas, como costos
+por planta o por región comercial.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05b_modelos_hibridos.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">3.5. Propuesta: modelos híbridos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05_modelo_original.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">5. Modelo original: HGSB</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo-de-busqueda">4.1 Protocolo de búsqueda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-novedad">4.2 Matriz de novedad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trabajos-mas-cercanos-y-en-que-se-diferencia-la-propuesta">4.3 Trabajos más cercanos y en qué se diferencia la propuesta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaracion-de-novedad">4.4 Declaración de novedad</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Leonella Torreglosa Portillo
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

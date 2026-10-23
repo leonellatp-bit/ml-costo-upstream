@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Optimización computacional &#8212; Costo de producción equivalente Brent en activos upstream</title>
+    <title>3.2. Optimización computacional &#8212; Costo unitario de producción en activos upstream de Oil &amp; Gas</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="4. Evaluación de modelos" href="04_evaluacion.html" />
-    <link rel="prev" title="2. Modelos y optimización de hiperparámetros" href="02_modelos_optimizacion.html" />
+    <link rel="next" title="3.3. Evaluación de modelos" href="04_evaluacion.html" />
+    <link rel="prev" title="3.1. Modelos y optimización de hiperparámetros" href="02_modelos_optimizacion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -194,7 +194,7 @@
   
   
   
-    <p class="title logo__title">Costo de producción equivalente Brent en activos upstream</p>
+    <p class="title logo__title">Costo unitario de producción en activos upstream de Oil & Gas</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -210,18 +210,27 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Predicción del costo de producción equivalente Brent en activos upstream de Oil & Gas
+                    Predicción del costo unitario de producción en activos upstream de Oil & Gas
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">1. Datos y EDA mejorado</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_modelos_optimizacion.html">2. Modelos y optimización de hiperparámetros</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Optimización computacional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_evaluacion.html">4. Evaluación de modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_comparacion_estadistica.html">5. Comparación estadística</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05b_modelos_hibridos.html">5b. Propuesta: modelos híbridos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_conclusiones.html">6. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">2. Datos y EDA mejorado</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="02_modelos_optimizacion.html">3.1. Modelos y optimización de hiperparámetros</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. Optimización computacional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_evaluacion.html">3.3. Evaluación de modelos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_comparacion_estadistica.html">3.4. Comparación estadística</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05b_modelos_hibridos.html">3.5. Propuesta: modelos híbridos</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="04_literatura.html">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: HGSB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística del modelo original</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
 </ul>
 
     </div>
@@ -357,7 +366,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>3. Optimización computacional</h1>
+    <h1>3.2. Optimización computacional</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,12 +376,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complejidad-teorica-de-los-modelos-optimizados">3.1 Complejidad teórica de los modelos optimizados</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escalamiento-empirico-con-n">3.2 Escalamiento empírico con n</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-estandar-vs-optimizado">3.3 Modelo estándar vs optimizado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizacion-multi-fidelidad-successive-halving">3.4 Optimización multi-fidelidad: Successive Halving</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paralelizacion-y-computo-distribuido">3.5 Paralelización y cómputo distribuido</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perfilamiento-cprofile-tracemalloc">3.6 Perfilamiento (cProfile + tracemalloc)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complejidad-teorica-de-los-modelos-optimizados">3.2.1 Complejidad teórica de los modelos optimizados</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escalamiento-empirico-con-n">3.2.2 Escalamiento empírico con n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-estandar-vs-optimizado">3.2.3 Modelo estándar vs optimizado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizacion-multi-fidelidad-successive-halving">3.2.4 Optimización multi-fidelidad: Successive Halving</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paralelizacion-y-computo-distribuido">3.2.5 Paralelización y cómputo distribuido</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perfilamiento-cprofile-tracemalloc">3.2.6 Perfilamiento (cProfile + tracemalloc)</a></li>
 </ul>
             </nav>
         </div>
@@ -385,7 +394,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="optimizacion-computacional">
-<h1>3. Optimización computacional<a class="headerlink" href="#optimizacion-computacional" title="Link to this heading">#</a></h1>
+<h1>3.2. Optimización computacional<a class="headerlink" href="#optimizacion-computacional" title="Link to this heading">#</a></h1>
 <p>Objetivo (Sección 4 de la guía): reducir el costo manteniendo el desempeño, contrastando la complejidad
 teórica O(·) con tiempos medidos. Todas las mediciones usan el escenario A, el conjunto de desarrollo
 preprocesado (p = 173 columnas tras One-Hot) y la mediana de 3 repeticiones para reducir la varianza.</p>
@@ -432,7 +441,7 @@ preprocesado (p = 173 columnas tras One-Hot) y la mediana de 3 repeticiones para
 <div class="output text_html"><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>method</th>      <th>outer_rmse_mean</th>    </tr>    <tr>      <th>model</th>      <th></th>      <th></th>    </tr>  </thead>  <tbody>    <tr>      <th>DecisionTree</th>      <td>Genetica</td>      <td>2.4475</td>    </tr>    <tr>      <th>KNN</th>      <td>Bayesiana</td>      <td>2.6127</td>    </tr>    <tr>      <th>Lasso</th>      <td>Bayesiana</td>      <td>2.7047</td>    </tr>    <tr>      <th>RandomForest</th>      <td>Random</td>      <td>2.0082</td>    </tr>    <tr>      <th>Ridge</th>      <td>Random</td>      <td>2.6832</td>    </tr>    <tr>      <th>SVR</th>      <td>Bayesiana</td>      <td>2.1867</td>    </tr>    <tr>      <th>XGBoost</th>      <td>Grid</td>      <td>2.0573</td>    </tr>  </tbody></table></div></div></div>
 </div>
 <section id="complejidad-teorica-de-los-modelos-optimizados">
-<h2>3.1 Complejidad teórica de los modelos optimizados<a class="headerlink" href="#complejidad-teorica-de-los-modelos-optimizados" title="Link to this heading">#</a></h2>
+<h2>3.2.1 Complejidad teórica de los modelos optimizados<a class="headerlink" href="#complejidad-teorica-de-los-modelos-optimizados" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s2">"modelo"</span><span class="p">:</span> <span class="n">m</span><span class="p">,</span> <span class="s2">"entrenamiento"</span><span class="p">:</span> <span class="n">MODELS</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">.</span><span class="n">complexity_train</span><span class="p">,</span> <span class="s2">"inferencia"</span><span class="p">:</span> <span class="n">MODELS</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">.</span><span class="n">complexity_predict</span><span class="p">}</span>
@@ -445,7 +454,7 @@ preprocesado (p = 173 columnas tras One-Hot) y la mediana de 3 repeticiones para
 </div>
 </section>
 <section id="escalamiento-empirico-con-n">
-<h2>3.2 Escalamiento empírico con n<a class="headerlink" href="#escalamiento-empirico-con-n" title="Link to this heading">#</a></h2>
+<h2>3.2.2 Escalamiento empírico con n<a class="headerlink" href="#escalamiento-empirico-con-n" title="Link to this heading">#</a></h2>
 <p>Se mide el tiempo de ajuste y de predicción (500 consultas fijas) variando n con p fijo. La pendiente de
 log(tiempo) frente a log(n) estima el exponente empírico <em>b</em> en t ∝ n^b, que se contrasta con la teoría.</p>
 <div class="cell docutils container">
@@ -502,7 +511,7 @@ paramétricos constante) y, para tamaños pequeños, los costos fijos hacen que 
 queden por debajo de los asintóticos.</p>
 </section>
 <section id="modelo-estandar-vs-optimizado">
-<h2>3.3 Modelo estándar vs optimizado<a class="headerlink" href="#modelo-estandar-vs-optimizado" title="Link to this heading">#</a></h2>
+<h2>3.2.3 Modelo estándar vs optimizado<a class="headerlink" href="#modelo-estandar-vs-optimizado" title="Link to this heading">#</a></h2>
 <p>Cada variante se entrena con los mismos datos (desarrollo) y se evalúa en el hold-out. <code class="docutils literal notranslate"><span class="pre">speedup</span></code> &gt; 1
 indica que la variante es más rápida que la versión estándar (primera fila de cada modelo);
 <code class="docutils literal notranslate"><span class="pre">delta_rmse</span></code> &gt; 0 indica pérdida de precisión. La memoria es el pico de asignaciones de Python
@@ -580,7 +589,7 @@ speedup 8–10×, ΔRMSE ≈ 0; SVR exacto → Nyström: inferencia 58×, ΔRMSE
 PCA + KD-Tree: inferencia 4×, ΔRMSE +0.29; Ridge/Lasso: la versión estándar ya es la óptima para este tamaño.</p>
 </section>
 <section id="optimizacion-multi-fidelidad-successive-halving">
-<h2>3.4 Optimización multi-fidelidad: Successive Halving<a class="headerlink" href="#optimizacion-multi-fidelidad-successive-halving" title="Link to this heading">#</a></h2>
+<h2>3.2.4 Optimización multi-fidelidad: Successive Halving<a class="headerlink" href="#optimizacion-multi-fidelidad-successive-halving" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Fidelidad:</strong> número de árboles (<code class="docutils literal notranslate"><span class="pre">n_estimators</span></code>). Es la elección natural en ensambles: el costo es
 lineal en el número de árboles y el ranking de configuraciones con pocos árboles está muy
@@ -622,7 +631,7 @@ el tamaño de la submuestra de filas, o escalar el <em>learning rate</em> con el
 </ul>
 </section>
 <section id="paralelizacion-y-computo-distribuido">
-<h2>3.5 Paralelización y cómputo distribuido<a class="headerlink" href="#paralelizacion-y-computo-distribuido" title="Link to this heading">#</a></h2>
+<h2>3.2.5 Paralelización y cómputo distribuido<a class="headerlink" href="#paralelizacion-y-computo-distribuido" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Entre modelos y pliegues: la CV anidada completa (<code class="docutils literal notranslate"><span class="pre">src/nested_cv.py</span></code>) reparte las 308 + 77 tareas
 (escenario × modelo × método × pliegue) con <code class="docutils literal notranslate"><span class="pre">joblib</span></code> (backend <code class="docutils literal notranslate"><span class="pre">loky</span></code>, procesos); dentro de cada tarea
@@ -666,7 +675,7 @@ nula porque la transferencia de datos y el lanzamiento de kernels dominan el cos
 aceleración se mediría con el mismo <code class="docutils literal notranslate"><span class="pre">measure()</span></code> de <code class="docutils literal notranslate"><span class="pre">src/computational.py</span></code>.</p>
 </section>
 <section id="perfilamiento-cprofile-tracemalloc">
-<h2>3.6 Perfilamiento (cProfile + tracemalloc)<a class="headerlink" href="#perfilamiento-cprofile-tracemalloc" title="Link to this heading">#</a></h2>
+<h2>3.2.6 Perfilamiento (cProfile + tracemalloc)<a class="headerlink" href="#perfilamiento-cprofile-tracemalloc" title="Link to this heading">#</a></h2>
 <p>Se perfila una búsqueda Bayesiana de Random Forest (5 evaluaciones) para identificar dónde se gasta el
 tiempo antes de optimizar.</p>
 <div class="cell docutils container">
@@ -737,7 +746,7 @@ irrelevante para este tamaño de datos.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">2. Modelos y optimización de hiperparámetros</p>
+        <p class="prev-next-title">3.1. Modelos y optimización de hiperparámetros</p>
       </div>
     </a>
     <a class="right-next"
@@ -745,7 +754,7 @@ irrelevante para este tamaño de datos.</p>
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">4. Evaluación de modelos</p>
+        <p class="prev-next-title">3.3. Evaluación de modelos</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -767,12 +776,12 @@ irrelevante para este tamaño de datos.</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complejidad-teorica-de-los-modelos-optimizados">3.1 Complejidad teórica de los modelos optimizados</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escalamiento-empirico-con-n">3.2 Escalamiento empírico con n</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-estandar-vs-optimizado">3.3 Modelo estándar vs optimizado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizacion-multi-fidelidad-successive-halving">3.4 Optimización multi-fidelidad: Successive Halving</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paralelizacion-y-computo-distribuido">3.5 Paralelización y cómputo distribuido</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perfilamiento-cprofile-tracemalloc">3.6 Perfilamiento (cProfile + tracemalloc)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complejidad-teorica-de-los-modelos-optimizados">3.2.1 Complejidad teórica de los modelos optimizados</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escalamiento-empirico-con-n">3.2.2 Escalamiento empírico con n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-estandar-vs-optimizado">3.2.3 Modelo estándar vs optimizado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizacion-multi-fidelidad-successive-halving">3.2.4 Optimización multi-fidelidad: Successive Halving</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paralelizacion-y-computo-distribuido">3.2.5 Paralelización y cómputo distribuido</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perfilamiento-cprofile-tracemalloc">3.2.6 Perfilamiento (cProfile + tracemalloc)</a></li>
 </ul>
   </nav></div>
 

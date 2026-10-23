@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Evaluación de modelos &#8212; Costo de producción equivalente Brent en activos upstream</title>
+    <title>3.3. Evaluación de modelos &#8212; Costo unitario de producción en activos upstream de Oil &amp; Gas</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="5. Comparación estadística" href="05_comparacion_estadistica.html" />
-    <link rel="prev" title="3. Optimización computacional" href="03_optimizacion_computacional.html" />
+    <link rel="next" title="3.4. Comparación estadística" href="05_comparacion_estadistica.html" />
+    <link rel="prev" title="3.2. Optimización computacional" href="03_optimizacion_computacional.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -194,7 +194,7 @@
   
   
   
-    <p class="title logo__title">Costo de producción equivalente Brent en activos upstream</p>
+    <p class="title logo__title">Costo unitario de producción en activos upstream de Oil & Gas</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -210,18 +210,27 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Predicción del costo de producción equivalente Brent en activos upstream de Oil & Gas
+                    Predicción del costo unitario de producción en activos upstream de Oil & Gas
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">1. Datos y EDA mejorado</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_modelos_optimizacion.html">2. Modelos y optimización de hiperparámetros</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_optimizacion_computacional.html">3. Optimización computacional</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Evaluación de modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_comparacion_estadistica.html">5. Comparación estadística</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05b_modelos_hibridos.html">5b. Propuesta: modelos híbridos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_conclusiones.html">6. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">2. Datos y EDA mejorado</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="02_modelos_optimizacion.html">3.1. Modelos y optimización de hiperparámetros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_optimizacion_computacional.html">3.2. Optimización computacional</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.3. Evaluación de modelos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_comparacion_estadistica.html">3.4. Comparación estadística</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05b_modelos_hibridos.html">3.5. Propuesta: modelos híbridos</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="04_literatura.html">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: HGSB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística del modelo original</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
 </ul>
 
     </div>
@@ -357,7 +366,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>4. Evaluación de modelos</h1>
+    <h1>3.3. Evaluación de modelos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,20 +376,20 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-base-de-referencia">4.1 Líneas base de referencia</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metricas-en-el-conjunto-de-prueba-y-pruebas-de-supuestos">4.2 Métricas en el conjunto de prueba y pruebas de supuestos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajuste-en-entrenamiento-validacion-y-prueba">4.3 Ajuste en entrenamiento, validación y prueba</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-residuos-del-mejor-modelo-prueba">4.4 Análisis de residuos del mejor modelo (prueba)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robustez-y-estabilidad-de-las-metricas">4.5 Robustez y estabilidad de las métricas</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-base-de-referencia">3.3.1 Líneas base de referencia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metricas-en-el-conjunto-de-prueba-y-pruebas-de-supuestos">3.3.2 Métricas en el conjunto de prueba y pruebas de supuestos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajuste-en-entrenamiento-validacion-y-prueba">3.3.3 Ajuste en entrenamiento, validación y prueba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-residuos-del-mejor-modelo-prueba">3.3.4 Análisis de residuos del mejor modelo (prueba)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robustez-y-estabilidad-de-las-metricas">3.3.5 Robustez y estabilidad de las métricas</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#media-desviacion-estandar-a-traves-de-los-pliegues-externos">Media ± desviación estándar a través de los pliegues externos</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensibilidad-a-la-semilla-de-inicializacion-del-modelo">Sensibilidad a la semilla de inicialización del modelo</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretabilidad-con-shap">4.6 Interpretabilidad con SHAP</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretabilidad-con-shap">3.3.6 Interpretabilidad con SHAP</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicaciones-locales-una-prediccion-precisa-y-una-con-error-alto">Explicaciones locales: una predicción precisa y una con error alto</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-shap-vs-lime">4.7 XGBoost: SHAP vs LIME</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-shap-vs-lime">3.3.7 XGBoost: SHAP vs LIME</a></li>
 </ul>
             </nav>
         </div>
@@ -393,7 +402,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="evaluacion-de-modelos">
-<h1>4. Evaluación de modelos<a class="headerlink" href="#evaluacion-de-modelos" title="Link to this heading">#</a></h1>
+<h1>3.3. Evaluación de modelos<a class="headerlink" href="#evaluacion-de-modelos" title="Link to this heading">#</a></h1>
 <p>Para cada uno de los 7 modelos se elige el optimizador con menor RMSE externo medio (selección hecha
 con la CV anidada, no con el conjunto de prueba). El modelo final de esa combinación (búsqueda sobre todo
 el desarrollo) se evalúa <strong>una sola vez</strong> en el hold-out de 139 activos no vistos.</p>
@@ -443,7 +452,7 @@ el desarrollo) se evalúa <strong>una sola vez</strong> en el hold-out de 139 ac
 <div class="output text_html"><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>method</th>      <th>outer_rmse_mean</th>      <th>outer_rmse_std</th>      <th>outer_mae_mean</th>      <th>outer_r2_mean</th>    </tr>    <tr>      <th>model</th>      <th></th>      <th></th>      <th></th>      <th></th>      <th></th>    </tr>  </thead>  <tbody>    <tr>      <th>KNN</th>      <td>Bayesiana</td>      <td>2.613</td>      <td>0.659</td>      <td>1.358</td>      <td>0.758</td>    </tr>    <tr>      <th>Ridge</th>      <td>Random</td>      <td>2.683</td>      <td>0.553</td>      <td>1.735</td>      <td>0.749</td>    </tr>    <tr>      <th>Lasso</th>      <td>Bayesiana</td>      <td>2.705</td>      <td>0.575</td>      <td>1.753</td>      <td>0.744</td>    </tr>    <tr>      <th>DecisionTree</th>      <td>Genetica</td>      <td>2.448</td>      <td>0.886</td>      <td>1.242</td>      <td>0.778</td>    </tr>    <tr>      <th>RandomForest</th>      <td>Random</td>      <td>2.008</td>      <td>0.549</td>      <td>1.095</td>      <td>0.856</td>    </tr>    <tr>      <th>XGBoost</th>      <td>Grid</td>      <td>2.057</td>      <td>0.600</td>      <td>1.176</td>      <td>0.848</td>    </tr>    <tr>      <th>SVR</th>      <td>Bayesiana</td>      <td>2.187</td>      <td>0.529</td>      <td>1.242</td>      <td>0.835</td>    </tr>  </tbody></table></div></div></div>
 </div>
 <section id="lineas-base-de-referencia">
-<h2>4.1 Líneas base de referencia<a class="headerlink" href="#lineas-base-de-referencia" title="Link to this heading">#</a></h2>
+<h2>3.3.1 Líneas base de referencia<a class="headerlink" href="#lineas-base-de-referencia" title="Link to this heading">#</a></h2>
 <p>Se reentrenan con la misma partición las líneas base del entregable 1: <code class="docutils literal notranslate"><span class="pre">DummyRegressor</span></code> (media) y SVR
 lineal, en ambos escenarios de variables.</p>
 <div class="cell docutils container">
@@ -469,7 +478,7 @@ lineal, en ambos escenarios de variables.</p>
 </div>
 </section>
 <section id="metricas-en-el-conjunto-de-prueba-y-pruebas-de-supuestos">
-<h2>4.2 Métricas en el conjunto de prueba y pruebas de supuestos<a class="headerlink" href="#metricas-en-el-conjunto-de-prueba-y-pruebas-de-supuestos" title="Link to this heading">#</a></h2>
+<h2>3.3.2 Métricas en el conjunto de prueba y pruebas de supuestos<a class="headerlink" href="#metricas-en-el-conjunto-de-prueba-y-pruebas-de-supuestos" title="Link to this heading">#</a></h2>
 <p>Residuos ordenados por activo y año (el orden natural del panel) para las pruebas de independencia:</p>
 <ul class="simple">
 <li><p><strong>White</strong> (forma especial con ŷ y ŷ²): H0 homocedasticidad.</p></li>
@@ -519,7 +528,7 @@ sistemáticamente los activos caros. Los ensambles reducen la asimetría (0.6–
 </ul>
 </section>
 <section id="ajuste-en-entrenamiento-validacion-y-prueba">
-<h2>4.3 Ajuste en entrenamiento, validación y prueba<a class="headerlink" href="#ajuste-en-entrenamiento-validacion-y-prueba" title="Link to this heading">#</a></h2>
+<h2>3.3.3 Ajuste en entrenamiento, validación y prueba<a class="headerlink" href="#ajuste-en-entrenamiento-validacion-y-prueba" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Entrenamiento:</strong> predicción del modelo final sobre el conjunto de desarrollo con el que fue ajustado.</p></li>
 <li><p><strong>Validación:</strong> predicciones <em>fuera de pliegue</em> del bucle externo (cada fila predicha por el modelo
@@ -576,7 +585,7 @@ del ciclo de costos 2015–2023 en los tres subconjuntos, con desviaciones de la
 </ul>
 </section>
 <section id="analisis-de-residuos-del-mejor-modelo-prueba">
-<h2>4.4 Análisis de residuos del mejor modelo (prueba)<a class="headerlink" href="#analisis-de-residuos-del-mejor-modelo-prueba" title="Link to this heading">#</a></h2>
+<h2>3.3.4 Análisis de residuos del mejor modelo (prueba)<a class="headerlink" href="#analisis-de-residuos-del-mejor-modelo-prueba" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">yt</span> <span class="o">-</span> <span class="n">finals</span><span class="p">[</span><span class="n">bm</span><span class="p">][</span><span class="s2">"pred"</span><span class="p">]</span>
@@ -669,7 +678,7 @@ bootstrap estacionario por bloques.</p></li>
 </ul>
 </section>
 <section id="robustez-y-estabilidad-de-las-metricas">
-<h2>4.5 Robustez y estabilidad de las métricas<a class="headerlink" href="#robustez-y-estabilidad-de-las-metricas" title="Link to this heading">#</a></h2>
+<h2>3.3.5 Robustez y estabilidad de las métricas<a class="headerlink" href="#robustez-y-estabilidad-de-las-metricas" title="Link to this heading">#</a></h2>
 <section id="media-desviacion-estandar-a-traves-de-los-pliegues-externos">
 <h3>Media ± desviación estándar a través de los pliegues externos<a class="headerlink" href="#media-desviacion-estandar-a-traves-de-los-pliegues-externos" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -737,7 +746,7 @@ capítulo 5.</p></li>
 </section>
 </section>
 <section id="interpretabilidad-con-shap">
-<h2>4.6 Interpretabilidad con SHAP<a class="headerlink" href="#interpretabilidad-con-shap" title="Link to this heading">#</a></h2>
+<h2>3.3.6 Interpretabilidad con SHAP<a class="headerlink" href="#interpretabilidad-con-shap" title="Link to this heading">#</a></h2>
 <p>Los valores de Shapley reparten la predicción de cada observación entre las variables cumpliendo
 <strong>eficiencia</strong> (las contribuciones suman la predicción menos el valor base), <strong>simetría</strong> (variables
 intercambiables reciben igual contribución) y <strong>aditividad</strong> (la contribución en un ensamble es la suma de
@@ -845,7 +854,7 @@ extrapolar por encima de lo visto. Es el mismo patrón de error persistente por 
 </section>
 </section>
 <section id="xgboost-shap-vs-lime">
-<h2>4.7 XGBoost: SHAP vs LIME<a class="headerlink" href="#xgboost-shap-vs-lime" title="Link to this heading">#</a></h2>
+<h2>3.3.7 XGBoost: SHAP vs LIME<a class="headerlink" href="#xgboost-shap-vs-lime" title="Link to this heading">#</a></h2>
 <p>La guía pide analizar XGBoost con ambas técnicas. Se explican las mismas dos observaciones.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -941,7 +950,7 @@ fuente principal de interpretación y LIME sirve como verificación cualitativa.
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">3. Optimización computacional</p>
+        <p class="prev-next-title">3.2. Optimización computacional</p>
       </div>
     </a>
     <a class="right-next"
@@ -949,7 +958,7 @@ fuente principal de interpretación y LIME sirve como verificación cualitativa.
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">5. Comparación estadística</p>
+        <p class="prev-next-title">3.4. Comparación estadística</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -971,20 +980,20 @@ fuente principal de interpretación y LIME sirve como verificación cualitativa.
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-base-de-referencia">4.1 Líneas base de referencia</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metricas-en-el-conjunto-de-prueba-y-pruebas-de-supuestos">4.2 Métricas en el conjunto de prueba y pruebas de supuestos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajuste-en-entrenamiento-validacion-y-prueba">4.3 Ajuste en entrenamiento, validación y prueba</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-residuos-del-mejor-modelo-prueba">4.4 Análisis de residuos del mejor modelo (prueba)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robustez-y-estabilidad-de-las-metricas">4.5 Robustez y estabilidad de las métricas</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineas-base-de-referencia">3.3.1 Líneas base de referencia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metricas-en-el-conjunto-de-prueba-y-pruebas-de-supuestos">3.3.2 Métricas en el conjunto de prueba y pruebas de supuestos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajuste-en-entrenamiento-validacion-y-prueba">3.3.3 Ajuste en entrenamiento, validación y prueba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-residuos-del-mejor-modelo-prueba">3.3.4 Análisis de residuos del mejor modelo (prueba)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robustez-y-estabilidad-de-las-metricas">3.3.5 Robustez y estabilidad de las métricas</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#media-desviacion-estandar-a-traves-de-los-pliegues-externos">Media ± desviación estándar a través de los pliegues externos</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensibilidad-a-la-semilla-de-inicializacion-del-modelo">Sensibilidad a la semilla de inicialización del modelo</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretabilidad-con-shap">4.6 Interpretabilidad con SHAP</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretabilidad-con-shap">3.3.6 Interpretabilidad con SHAP</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicaciones-locales-una-prediccion-precisa-y-una-con-error-alto">Explicaciones locales: una predicción precisa y una con error alto</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-shap-vs-lime">4.7 XGBoost: SHAP vs LIME</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-shap-vs-lime">3.3.7 XGBoost: SHAP vs LIME</a></li>
 </ul>
   </nav></div>
 

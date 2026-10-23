@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Modelos y optimización de hiperparámetros &#8212; Costo de producción equivalente Brent en activos upstream</title>
+    <title>3.1. Modelos y optimización de hiperparámetros &#8212; Costo unitario de producción en activos upstream de Oil &amp; Gas</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="3. Optimización computacional" href="03_optimizacion_computacional.html" />
-    <link rel="prev" title="1. Datos y EDA mejorado" href="01_datos_eda.html" />
+    <link rel="next" title="3.2. Optimización computacional" href="03_optimizacion_computacional.html" />
+    <link rel="prev" title="3. Modelos benchmark" href="03_benchmarks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -194,7 +194,7 @@
   
   
   
-    <p class="title logo__title">Costo de producción equivalente Brent en activos upstream</p>
+    <p class="title logo__title">Costo unitario de producción en activos upstream de Oil & Gas</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -210,18 +210,27 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Predicción del costo de producción equivalente Brent en activos upstream de Oil & Gas
+                    Predicción del costo unitario de producción en activos upstream de Oil & Gas
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">1. Datos y EDA mejorado</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Modelos y optimización de hiperparámetros</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_optimizacion_computacional.html">3. Optimización computacional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_evaluacion.html">4. Evaluación de modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_comparacion_estadistica.html">5. Comparación estadística</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05b_modelos_hibridos.html">5b. Propuesta: modelos híbridos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_conclusiones.html">6. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">2. Datos y EDA mejorado</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.1. Modelos y optimización de hiperparámetros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_optimizacion_computacional.html">3.2. Optimización computacional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_evaluacion.html">3.3. Evaluación de modelos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_comparacion_estadistica.html">3.4. Comparación estadística</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05b_modelos_hibridos.html">3.5. Propuesta: modelos híbridos</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="04_literatura.html">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: HGSB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística del modelo original</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
 </ul>
 
     </div>
@@ -357,7 +366,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>2. Modelos y optimización de hiperparámetros</h1>
+    <h1>3.1. Modelos y optimización de hiperparámetros</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,18 +376,18 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-experimental">2.1 Diseño experimental</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacios-de-busqueda">2.2 Espacios de búsqueda</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabla-maestra-de-resultados-escenario-a">2.3 Tabla maestra de resultados (escenario A)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-validacion-anidada-sesgo-optimista-del-bucle-interno">2.4 ¿Por qué validación anidada? Sesgo optimista del bucle interno</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergencia-curvas-de-desempeno-anytime">2.5 Convergencia: curvas de desempeño <em>anytime</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-experimental">3.1.1 Diseño experimental</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacios-de-busqueda">3.1.2 Espacios de búsqueda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabla-maestra-de-resultados-escenario-a">3.1.3 Tabla maestra de resultados (escenario A)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-validacion-anidada-sesgo-optimista-del-bucle-interno">3.1.4 ¿Por qué validación anidada? Sesgo optimista del bucle interno</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergencia-curvas-de-desempeno-anytime">3.1.5 Convergencia: curvas de desempeño <em>anytime</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evidencia-cuantitativa-de-eficiencia">Evidencia cuantitativa de eficiencia</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizacion-bayesiana-optuna-tpe-modelo-sustituto-adquisicion-y-trayectoria">2.6 Optimización Bayesiana (Optuna-TPE): modelo sustituto, adquisición y trayectoria</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritmo-genetico-deap-operadores-y-diversidad">2.7 Algoritmo genético (DEAP): operadores y diversidad</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estabilidad-frente-a-semillas-aleatorias">2.8 Estabilidad frente a semillas aleatorias</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escenario-b-efecto-de-incluir-brentdifferential">2.9 Escenario B: efecto de incluir <code class="docutils literal notranslate"><span class="pre">BrentDifferential</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizacion-bayesiana-optuna-tpe-modelo-sustituto-adquisicion-y-trayectoria">3.1.6 Optimización Bayesiana (Optuna-TPE): modelo sustituto, adquisición y trayectoria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritmo-genetico-deap-operadores-y-diversidad">3.1.7 Algoritmo genético (DEAP): operadores y diversidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estabilidad-frente-a-semillas-aleatorias">3.1.8 Estabilidad frente a semillas aleatorias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escenario-b-efecto-de-incluir-brentdifferential">3.1.9 Escenario B: efecto de incluir <code class="docutils literal notranslate"><span class="pre">BrentDifferential</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -391,9 +400,9 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modelos-y-optimizacion-de-hiperparametros">
-<h1>2. Modelos y optimización de hiperparámetros<a class="headerlink" href="#modelos-y-optimizacion-de-hiperparametros" title="Link to this heading">#</a></h1>
+<h1>3.1. Modelos y optimización de hiperparámetros<a class="headerlink" href="#modelos-y-optimizacion-de-hiperparametros" title="Link to this heading">#</a></h1>
 <section id="diseno-experimental">
-<h2>2.1 Diseño experimental<a class="headerlink" href="#diseno-experimental" title="Link to this heading">#</a></h2>
+<h2>3.1.1 Diseño experimental<a class="headerlink" href="#diseno-experimental" title="Link to this heading">#</a></h2>
 <p>La tarea es de <strong>regresión</strong>, por lo que la etapa de balanceo de clases no aplica (Sección 2 de la guía):</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -426,6 +435,13 @@
 </tbody>
 </table>
 </div>
+<p><strong>¿Y Naive Bayes y Regresión Logística L1/L2?</strong> La sección 7.2 de la guía los lista porque cubre ambos tipos de
+problema, pero son <strong>clasificadores</strong>: estiman P(clase | x) y no pueden predecir un costo continuo en USD/Bbl. La
+propia guía (Figura 1, Etapa 1 de regresión) define el conjunto para regresión como KNN, Ridge, Lasso, Decision
+Tree, Random Forest, XGBoost y SVR, que es exactamente el implementado. Sus equivalentes de regresión están
+cubiertos: la regresión logística con L2/L1 corresponde a <strong>Ridge/Lasso</strong> (misma penalización sobre los
+coeficientes) y SVM corresponde a <strong>SVR</strong>. Por la misma razón no aplican el balanceo de clases (5.1.2), la
+calibración de probabilidades (5.1.3) ni DeLong (6.2).</p>
 <p><strong>Validación anidada (Sección 3.2).</strong></p>
 <ul class="simple">
 <li><p><em>Hold-out</em> por activo: 20 % de los activos (139) se reserva y no se usa hasta la evaluación final.</p></li>
@@ -485,7 +501,7 @@ Evaluaciones totales (escenario A): 9,020 configuraciones x 3 pliegues internos
 </div>
 </section>
 <section id="espacios-de-busqueda">
-<h2>2.2 Espacios de búsqueda<a class="headerlink" href="#espacios-de-busqueda" title="Link to this heading">#</a></h2>
+<h2>3.1.2 Espacios de búsqueda<a class="headerlink" href="#espacios-de-busqueda" title="Link to this heading">#</a></h2>
 <p>Los espacios se definen una sola vez (<code class="docutils literal notranslate"><span class="pre">src/models.py</span></code>) y los cuatro optimizadores los traducen a su
 formato. Los hiperparámetros de escala (C, γ, ε, λ, <em>learning rate</em>, <code class="docutils literal notranslate"><span class="pre">min_child_weight</span></code>) se exploran en
 escala logarítmica.</p>
@@ -524,7 +540,7 @@ punto medio. SVR recibe 3 niveles de C, γ y ε (27 puntos) en rangos de 4 a 5 �
 la limitación estructural de Grid frente a métodos que muestrean el espacio de forma continua.</p>
 </section>
 <section id="tabla-maestra-de-resultados-escenario-a">
-<h2>2.3 Tabla maestra de resultados (escenario A)<a class="headerlink" href="#tabla-maestra-de-resultados-escenario-a" title="Link to this heading">#</a></h2>
+<h2>3.1.3 Tabla maestra de resultados (escenario A)<a class="headerlink" href="#tabla-maestra-de-resultados-escenario-a" title="Link to this heading">#</a></h2>
 <p>Una fila por combinación. Métricas del <strong>bucle externo</strong> como media ± desviación estándar entre los 10
 pliegues; tiempos en segundos de reloj (<em>wall-clock</em>) incluyendo las 11 búsquedas de la combinación.</p>
 <div class="cell docutils container">
@@ -595,7 +611,7 @@ desempeño sin usar un componente del target.</p></li>
 </ul>
 </section>
 <section id="por-que-validacion-anidada-sesgo-optimista-del-bucle-interno">
-<h2>2.4 ¿Por qué validación anidada? Sesgo optimista del bucle interno<a class="headerlink" href="#por-que-validacion-anidada-sesgo-optimista-del-bucle-interno" title="Link to this heading">#</a></h2>
+<h2>3.1.4 ¿Por qué validación anidada? Sesgo optimista del bucle interno<a class="headerlink" href="#por-que-validacion-anidada-sesgo-optimista-del-bucle-interno" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">opt</span> <span class="o">=</span> <span class="n">mtA</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">gap</span><span class="o">=</span><span class="n">mtA</span><span class="o">.</span><span class="n">outer_rmse_mean</span> <span class="o">-</span> <span class="n">mtA</span><span class="o">.</span><span class="n">inner_rmse_mean</span><span class="p">)</span>
@@ -625,7 +641,7 @@ entrenamiento externo (~1.850 filas) y se evalúa en 1/3, mientras que en el ext
 es pesimista; en KNN, optimista). Por eso las métricas que se reportan y comparan salen del bucle externo.</p>
 </section>
 <section id="convergencia-curvas-de-desempeno-anytime">
-<h2>2.5 Convergencia: curvas de desempeño <em>anytime</em><a class="headerlink" href="#convergencia-curvas-de-desempeno-anytime" title="Link to this heading">#</a></h2>
+<h2>3.1.5 Convergencia: curvas de desempeño <em>anytime</em><a class="headerlink" href="#convergencia-curvas-de-desempeno-anytime" title="Link to this heading">#</a></h2>
 <p>Para cada búsqueda se registra el mejor RMSE interno encontrado hasta la evaluación <em>t</em>. Las curvas
 muestran la mediana entre los 10 pliegues externos. Para Grid Search el orden de evaluación es el de la
 rejilla (no adaptativo), que es justamente su limitación.</p>
@@ -770,7 +786,7 @@ el RMSE <strong>interno</strong> (décimas de punto porcentual) no se traducen e
 </section>
 </section>
 <section id="optimizacion-bayesiana-optuna-tpe-modelo-sustituto-adquisicion-y-trayectoria">
-<h2>2.6 Optimización Bayesiana (Optuna-TPE): modelo sustituto, adquisición y trayectoria<a class="headerlink" href="#optimizacion-bayesiana-optuna-tpe-modelo-sustituto-adquisicion-y-trayectoria" title="Link to this heading">#</a></h2>
+<h2>3.1.6 Optimización Bayesiana (Optuna-TPE): modelo sustituto, adquisición y trayectoria<a class="headerlink" href="#optimizacion-bayesiana-optuna-tpe-modelo-sustituto-adquisicion-y-trayectoria" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Modelo sustituto:</strong> <em>Tree-structured Parzen Estimator</em>. En lugar de modelar p(y | x) como un proceso
 gaussiano, TPE divide las observaciones por el cuantil γ del RMSE y estima dos densidades:
@@ -819,7 +835,7 @@ exploración–explotación de EI. En SVR el TPE converge a una franja diagonal 
 y evita las combinaciones de γ muy pequeño con C bajo (subajuste, RMSE &gt; 4).</p>
 </section>
 <section id="algoritmo-genetico-deap-operadores-y-diversidad">
-<h2>2.7 Algoritmo genético (DEAP): operadores y diversidad<a class="headerlink" href="#algoritmo-genetico-deap-operadores-y-diversidad" title="Link to this heading">#</a></h2>
+<h2>3.1.7 Algoritmo genético (DEAP): operadores y diversidad<a class="headerlink" href="#algoritmo-genetico-deap-operadores-y-diversidad" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Componente</p></th>
@@ -901,7 +917,7 @@ diversidad cae) o reinicios parciales. Con este presupuesto el GA es competitivo
 </ul>
 </section>
 <section id="estabilidad-frente-a-semillas-aleatorias">
-<h2>2.8 Estabilidad frente a semillas aleatorias<a class="headerlink" href="#estabilidad-frente-a-semillas-aleatorias" title="Link to this heading">#</a></h2>
+<h2>3.1.8 Estabilidad frente a semillas aleatorias<a class="headerlink" href="#estabilidad-frente-a-semillas-aleatorias" title="Link to this heading">#</a></h2>
 <p>Se repiten las búsquedas Random, Bayesiana y Genética con 5 semillas distintas en el primer pliegue
 externo para XGBoost y Decision Tree (los modelos con aleatoriedad propia y bajo costo por evaluación).
 Grid Search es determinística. El resultado se guarda en <code class="docutils literal notranslate"><span class="pre">results/seed_stability.csv</span></code>.</p>
@@ -954,7 +970,7 @@ externos (≈ 0.6): la incertidumbre dominante viene de <strong>qué activos</st
 </ul>
 </section>
 <section id="escenario-b-efecto-de-incluir-brentdifferential">
-<h2>2.9 Escenario B: efecto de incluir <code class="docutils literal notranslate"><span class="pre">BrentDifferential</span></code><a class="headerlink" href="#escenario-b-efecto-de-incluir-brentdifferential" title="Link to this heading">#</a></h2>
+<h2>3.1.9 Escenario B: efecto de incluir <code class="docutils literal notranslate"><span class="pre">BrentDifferential</span></code><a class="headerlink" href="#escenario-b-efecto-de-incluir-brentdifferential" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mtB</span> <span class="o">=</span> <span class="n">mt</span><span class="p">[</span><span class="n">mt</span><span class="p">[</span><span class="s2">"scenario"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"B_con_BD"</span><span class="p">]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"model"</span><span class="p">)</span>
@@ -1013,12 +1029,12 @@ diferencia con el test de Clark-West (B anida a A).</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01_datos_eda.html"
+       href="03_benchmarks.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">1. Datos y EDA mejorado</p>
+        <p class="prev-next-title">3. Modelos benchmark</p>
       </div>
     </a>
     <a class="right-next"
@@ -1026,7 +1042,7 @@ diferencia con el test de Clark-West (B anida a A).</p>
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">3. Optimización computacional</p>
+        <p class="prev-next-title">3.2. Optimización computacional</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1048,18 +1064,18 @@ diferencia con el test de Clark-West (B anida a A).</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-experimental">2.1 Diseño experimental</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacios-de-busqueda">2.2 Espacios de búsqueda</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabla-maestra-de-resultados-escenario-a">2.3 Tabla maestra de resultados (escenario A)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-validacion-anidada-sesgo-optimista-del-bucle-interno">2.4 ¿Por qué validación anidada? Sesgo optimista del bucle interno</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergencia-curvas-de-desempeno-anytime">2.5 Convergencia: curvas de desempeño <em>anytime</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-experimental">3.1.1 Diseño experimental</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacios-de-busqueda">3.1.2 Espacios de búsqueda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabla-maestra-de-resultados-escenario-a">3.1.3 Tabla maestra de resultados (escenario A)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-validacion-anidada-sesgo-optimista-del-bucle-interno">3.1.4 ¿Por qué validación anidada? Sesgo optimista del bucle interno</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergencia-curvas-de-desempeno-anytime">3.1.5 Convergencia: curvas de desempeño <em>anytime</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evidencia-cuantitativa-de-eficiencia">Evidencia cuantitativa de eficiencia</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizacion-bayesiana-optuna-tpe-modelo-sustituto-adquisicion-y-trayectoria">2.6 Optimización Bayesiana (Optuna-TPE): modelo sustituto, adquisición y trayectoria</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritmo-genetico-deap-operadores-y-diversidad">2.7 Algoritmo genético (DEAP): operadores y diversidad</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estabilidad-frente-a-semillas-aleatorias">2.8 Estabilidad frente a semillas aleatorias</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escenario-b-efecto-de-incluir-brentdifferential">2.9 Escenario B: efecto de incluir <code class="docutils literal notranslate"><span class="pre">BrentDifferential</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizacion-bayesiana-optuna-tpe-modelo-sustituto-adquisicion-y-trayectoria">3.1.6 Optimización Bayesiana (Optuna-TPE): modelo sustituto, adquisición y trayectoria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritmo-genetico-deap-operadores-y-diversidad">3.1.7 Algoritmo genético (DEAP): operadores y diversidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estabilidad-frente-a-semillas-aleatorias">3.1.8 Estabilidad frente a semillas aleatorias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escenario-b-efecto-de-incluir-brentdifferential">3.1.9 Escenario B: efecto de incluir <code class="docutils literal notranslate"><span class="pre">BrentDifferential</span></code></a></li>
 </ul>
   </nav></div>
 

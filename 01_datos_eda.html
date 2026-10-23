@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Datos y EDA mejorado &#8212; Costo de producción equivalente Brent en activos upstream</title>
+    <title>2. Datos y EDA mejorado &#8212; Costo unitario de producción en activos upstream de Oil &amp; Gas</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="2. Modelos y optimización de hiperparámetros" href="02_modelos_optimizacion.html" />
-    <link rel="prev" title="Predicción del costo de producción equivalente Brent en activos upstream de Oil &amp; Gas" href="intro.html" />
+    <link rel="next" title="3. Modelos benchmark" href="03_benchmarks.html" />
+    <link rel="prev" title="1. Trazabilidad de correcciones" href="01_correcciones.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -194,7 +194,7 @@
   
   
   
-    <p class="title logo__title">Costo de producción equivalente Brent en activos upstream</p>
+    <p class="title logo__title">Costo unitario de producción en activos upstream de Oil & Gas</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -210,18 +210,27 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Predicción del costo de producción equivalente Brent en activos upstream de Oil & Gas
+                    Predicción del costo unitario de producción en activos upstream de Oil & Gas
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Datos y EDA mejorado</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_modelos_optimizacion.html">2. Modelos y optimización de hiperparámetros</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_optimizacion_computacional.html">3. Optimización computacional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_evaluacion.html">4. Evaluación de modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_comparacion_estadistica.html">5. Comparación estadística</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05b_modelos_hibridos.html">5b. Propuesta: modelos híbridos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_conclusiones.html">6. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Datos y EDA mejorado</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_modelos_optimizacion.html">3.1. Modelos y optimización de hiperparámetros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_optimizacion_computacional.html">3.2. Optimización computacional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_evaluacion.html">3.3. Evaluación de modelos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_comparacion_estadistica.html">3.4. Comparación estadística</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05b_modelos_hibridos.html">3.5. Propuesta: modelos híbridos</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="04_literatura.html">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: HGSB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística del modelo original</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
 </ul>
 
     </div>
@@ -357,7 +366,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1. Datos y EDA mejorado</h1>
+    <h1>2. Datos y EDA mejorado</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,14 +376,14 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgo-clave-identidad-contable-en-el-target">1.1 Hallazgo clave: identidad contable en el target</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multicolinealidad-corregida-vif">1.2 Multicolinealidad corregida (VIF)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mecanismo-de-los-valores-faltantes">1.3 Mecanismo de los valores faltantes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asociacion-entre-categoricas-v-de-cramer">1.4 Asociación entre categóricas (V de Cramér)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categoricas-frente-al-target-kruskal-wallis-2-con-holm">1.5 Variables categóricas frente al target: Kruskal-Wallis + ε² con Holm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auditoria-de-fuga-cuantitativa-informacion-mutua-y-r2-univariado">1.6 Auditoría de fuga cuantitativa: información mutua y R² univariado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#componente-temporal-y-deriva">1.7 Componente temporal y deriva</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-del-eda-a-las-decisiones-del-pipeline">1.8 Resumen: del EDA a las decisiones del pipeline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgo-clave-identidad-contable-en-el-target">2.1 Hallazgo clave: identidad contable en el target</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multicolinealidad-corregida-vif">2.2 Multicolinealidad corregida (VIF)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mecanismo-de-los-valores-faltantes">2.3 Mecanismo de los valores faltantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asociacion-entre-categoricas-v-de-cramer">2.4 Asociación entre categóricas (V de Cramér)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categoricas-frente-al-target-kruskal-wallis-2-con-holm">2.5 Variables categóricas frente al target: Kruskal-Wallis + ε² con Holm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auditoria-de-fuga-cuantitativa-informacion-mutua-y-r2-univariado">2.6 Auditoría de fuga cuantitativa: información mutua y R² univariado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#componente-temporal-y-deriva">2.7 Componente temporal y deriva</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-del-eda-a-las-decisiones-del-pipeline">2.8 Resumen: del EDA a las decisiones del pipeline</a></li>
 </ul>
             </nav>
         </div>
@@ -387,7 +396,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="datos-y-eda-mejorado">
-<h1>1. Datos y EDA mejorado<a class="headerlink" href="#datos-y-eda-mejorado" title="Link to this heading">#</a></h1>
+<h1>2. Datos y EDA mejorado<a class="headerlink" href="#datos-y-eda-mejorado" title="Link to this heading">#</a></h1>
 <p>Este capítulo retoma el EDA del primer entregable y lo <strong>corrige y amplía</strong> con los
 hallazgos encontrados durante el modelado (Sección 7.1 de la guía). Los cambios principales son:</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -472,7 +481,7 @@ Activos: 695 (desarrollo 556, prueba 139; sin solapamiento: True)
 </div>
 </div>
 <section id="hallazgo-clave-identidad-contable-en-el-target">
-<h2>1.1 Hallazgo clave: identidad contable en el target<a class="headerlink" href="#hallazgo-clave-identidad-contable-en-el-target" title="Link to this heading">#</a></h2>
+<h2>2.1 Hallazgo clave: identidad contable en el target<a class="headerlink" href="#hallazgo-clave-identidad-contable-en-el-target" title="Link to this heading">#</a></h2>
 <p>El VIF de 1.5 × 10⁹ y la quinta componente principal con varianza ≈ 0 del entregable 1 indican
 una <strong>combinación lineal exacta</strong> entre variables. Se verifica directamente:</p>
 <div class="cell docutils container">
@@ -527,7 +536,7 @@ antes que el costo de cabeza de pozo, por lo que <strong>no es ilegítimo</stron
 (B anida a A) en el capítulo 5.</p>
 </section>
 <section id="multicolinealidad-corregida-vif">
-<h2>1.2 Multicolinealidad corregida (VIF)<a class="headerlink" href="#multicolinealidad-corregida-vif" title="Link to this heading">#</a></h2>
+<h2>2.2 Multicolinealidad corregida (VIF)<a class="headerlink" href="#multicolinealidad-corregida-vif" title="Link to this heading">#</a></h2>
 <p>El VIF se recalcula de dos formas: con el conjunto original (que contiene la combinación lineal
 exacta) y sin <code class="docutils literal notranslate"><span class="pre">BrentEquivalentDevelopmentCost</span></code> (= WDC + BD).</p>
 <div class="cell docutils container">
@@ -558,7 +567,7 @@ de la identidad contable (los VIF restantes están entre 1.07 y 2.03). Las varia
 escenario B, <code class="docutils literal notranslate"><span class="pre">BrentDifferential</span></code>) no presentan colinealidad problemática.</p>
 </section>
 <section id="mecanismo-de-los-valores-faltantes">
-<h2>1.3 Mecanismo de los valores faltantes<a class="headerlink" href="#mecanismo-de-los-valores-faltantes" title="Link to this heading">#</a></h2>
+<h2>2.3 Mecanismo de los valores faltantes<a class="headerlink" href="#mecanismo-de-los-valores-faltantes" title="Link to this heading">#</a></h2>
 <p>El entregable 1 clasificó los faltantes como «MAR o MNAR» de forma preliminar. Aquí se aporta evidencia.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -628,7 +637,7 @@ descartan (no se imputa la variable objetivo).</p></li>
 </ul>
 </section>
 <section id="asociacion-entre-categoricas-v-de-cramer">
-<h2>1.4 Asociación entre categóricas (V de Cramér)<a class="headerlink" href="#asociacion-entre-categoricas-v-de-cramer" title="Link to this heading">#</a></h2>
+<h2>2.4 Asociación entre categóricas (V de Cramér)<a class="headerlink" href="#asociacion-entre-categoricas-v-de-cramer" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cats</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">CATEGORICAL</span>
@@ -669,7 +678,7 @@ un problema. Se mantienen todas porque aportan distinta granularidad: <code clas
 pocos activos (45 de 99 países tienen un solo activo).</p>
 </section>
 <section id="variables-categoricas-frente-al-target-kruskal-wallis-2-con-holm">
-<h2>1.5 Variables categóricas frente al target: Kruskal-Wallis + ε² con Holm<a class="headerlink" href="#variables-categoricas-frente-al-target-kruskal-wallis-2-con-holm" title="Link to this heading">#</a></h2>
+<h2>2.5 Variables categóricas frente al target: Kruskal-Wallis + ε² con Holm<a class="headerlink" href="#variables-categoricas-frente-al-target-kruskal-wallis-2-con-holm" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
@@ -697,7 +706,7 @@ suministro, el tipo de reserva y la OPEP tienen efectos medianos (0.07–0.12) y
 interacciones (árboles, boosting, KNN) superen a los lineales.</p>
 </section>
 <section id="auditoria-de-fuga-cuantitativa-informacion-mutua-y-r2-univariado">
-<h2>1.6 Auditoría de fuga cuantitativa: información mutua y R² univariado<a class="headerlink" href="#auditoria-de-fuga-cuantitativa-informacion-mutua-y-r2-univariado" title="Link to this heading">#</a></h2>
+<h2>2.6 Auditoría de fuga cuantitativa: información mutua y R² univariado<a class="headerlink" href="#auditoria-de-fuga-cuantitativa-informacion-mutua-y-r2-univariado" title="Link to this heading">#</a></h2>
 <p>Para cada variable se mide (i) la información mutua con el target y (ii) el R² de validación cruzada
 por grupos de un modelo que usa <strong>solo esa variable</strong>. Un R² univariado cercano a 1 es señal de fuga.</p>
 <div class="cell docutils container">
@@ -750,7 +759,7 @@ activo</strong>, el modelo no puede memorizar activos individuales.</p></li>
 </ul>
 </section>
 <section id="componente-temporal-y-deriva">
-<h2>1.7 Componente temporal y deriva<a class="headerlink" href="#componente-temporal-y-deriva" title="Link to this heading">#</a></h2>
+<h2>2.7 Componente temporal y deriva<a class="headerlink" href="#componente-temporal-y-deriva" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">yr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">)[</span><span class="n">C</span><span class="o">.</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s2">"mean"</span><span class="p">,</span> <span class="s2">"median"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">,</span> <span class="s2">"std"</span><span class="p">])</span>
@@ -793,7 +802,7 @@ activo): una partición aleatoria pondría años del mismo activo en entrenamien
 </ul>
 </section>
 <section id="resumen-del-eda-a-las-decisiones-del-pipeline">
-<h2>1.8 Resumen: del EDA a las decisiones del pipeline<a class="headerlink" href="#resumen-del-eda-a-las-decisiones-del-pipeline" title="Link to this heading">#</a></h2>
+<h2>2.8 Resumen: del EDA a las decisiones del pipeline<a class="headerlink" href="#resumen-del-eda-a-las-decisiones-del-pipeline" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Hallazgo del EDA</p></th>
@@ -862,20 +871,20 @@ activo): una partición aleatoria pondría años del mismo activo en entrenamien
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="01_correcciones.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Predicción del costo de producción equivalente Brent en activos upstream de Oil &amp; Gas</p>
+        <p class="prev-next-title">1. Trazabilidad de correcciones</p>
       </div>
     </a>
     <a class="right-next"
-       href="02_modelos_optimizacion.html"
+       href="03_benchmarks.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">2. Modelos y optimización de hiperparámetros</p>
+        <p class="prev-next-title">3. Modelos benchmark</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -897,14 +906,14 @@ activo): una partición aleatoria pondría años del mismo activo en entrenamien
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgo-clave-identidad-contable-en-el-target">1.1 Hallazgo clave: identidad contable en el target</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multicolinealidad-corregida-vif">1.2 Multicolinealidad corregida (VIF)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mecanismo-de-los-valores-faltantes">1.3 Mecanismo de los valores faltantes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asociacion-entre-categoricas-v-de-cramer">1.4 Asociación entre categóricas (V de Cramér)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categoricas-frente-al-target-kruskal-wallis-2-con-holm">1.5 Variables categóricas frente al target: Kruskal-Wallis + ε² con Holm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auditoria-de-fuga-cuantitativa-informacion-mutua-y-r2-univariado">1.6 Auditoría de fuga cuantitativa: información mutua y R² univariado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#componente-temporal-y-deriva">1.7 Componente temporal y deriva</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-del-eda-a-las-decisiones-del-pipeline">1.8 Resumen: del EDA a las decisiones del pipeline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgo-clave-identidad-contable-en-el-target">2.1 Hallazgo clave: identidad contable en el target</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multicolinealidad-corregida-vif">2.2 Multicolinealidad corregida (VIF)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mecanismo-de-los-valores-faltantes">2.3 Mecanismo de los valores faltantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asociacion-entre-categoricas-v-de-cramer">2.4 Asociación entre categóricas (V de Cramér)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categoricas-frente-al-target-kruskal-wallis-2-con-holm">2.5 Variables categóricas frente al target: Kruskal-Wallis + ε² con Holm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auditoria-de-fuga-cuantitativa-informacion-mutua-y-r2-univariado">2.6 Auditoría de fuga cuantitativa: información mutua y R² univariado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#componente-temporal-y-deriva">2.7 Componente temporal y deriva</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-del-eda-a-las-decisiones-del-pipeline">2.8 Resumen: del EDA a las decisiones del pipeline</a></li>
 </ul>
   </nav></div>
 

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5b. Propuesta: modelos híbridos &#8212; Costo de producción equivalente Brent en activos upstream</title>
+    <title>3.5. Propuesta: modelos híbridos &#8212; Costo unitario de producción en activos upstream de Oil &amp; Gas</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -67,8 +67,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="6. Conclusiones" href="06_conclusiones.html" />
-    <link rel="prev" title="5. Comparación estadística" href="05_comparacion_estadistica.html" />
+    <link rel="next" title="4. Revisión de literatura y novedad" href="04_literatura.html" />
+    <link rel="prev" title="3.4. Comparación estadística" href="05_comparacion_estadistica.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -196,7 +196,7 @@
   
   
   
-    <p class="title logo__title">Costo de producción equivalente Brent en activos upstream</p>
+    <p class="title logo__title">Costo unitario de producción en activos upstream de Oil & Gas</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -212,18 +212,27 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Predicción del costo de producción equivalente Brent en activos upstream de Oil & Gas
+                    Predicción del costo unitario de producción en activos upstream de Oil & Gas
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">1. Datos y EDA mejorado</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_modelos_optimizacion.html">2. Modelos y optimización de hiperparámetros</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_optimizacion_computacional.html">3. Optimización computacional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_evaluacion.html">4. Evaluación de modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_comparacion_estadistica.html">5. Comparación estadística</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5b. Propuesta: modelos híbridos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_conclusiones.html">6. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_datos_eda.html">2. Datos y EDA mejorado</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="02_modelos_optimizacion.html">3.1. Modelos y optimización de hiperparámetros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_optimizacion_computacional.html">3.2. Optimización computacional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_evaluacion.html">3.3. Evaluación de modelos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_comparacion_estadistica.html">3.4. Comparación estadística</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. Propuesta: modelos híbridos</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="04_literatura.html">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: HGSB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística del modelo original</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
 </ul>
 
     </div>
@@ -359,7 +368,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>5b. Propuesta: modelos híbridos</h1>
+    <h1>3.5. Propuesta: modelos híbridos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -371,10 +380,10 @@
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion">Formulación</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo-sin-fuga">Protocolo sin fuga</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#se-equivocan-los-modelos-en-los-mismos-activos">1. ¿Se equivocan los modelos en los mismos activos?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hibrido-rf-xgboost">2. Híbrido RF + XGBoost</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rf-svr-y-super-learner">3. RF + SVR y Super Learner</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen">4. Resumen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#se-equivocan-los-modelos-en-los-mismos-activos">3.5.1 ¿Se equivocan los modelos en los mismos activos?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hibrido-rf-xgboost">3.5.2 Híbrido RF + XGBoost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rf-svr-y-super-learner">3.5.3 RF + SVR y Super Learner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen">3.5.4 Resumen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusión</a></li>
 </ul>
             </nav>
@@ -387,8 +396,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="b-propuesta-modelos-hibridos">
-<h1>5b. Propuesta: modelos híbridos<a class="headerlink" href="#b-propuesta-modelos-hibridos" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="propuesta-modelos-hibridos">
+<h1>3.5. Propuesta: modelos híbridos<a class="headerlink" href="#propuesta-modelos-hibridos" title="Link to this heading">#</a></h1>
 <p>Random Forest y XGBoost quedaron empatados estadísticamente. La pregunta natural es si <strong>combinarlos</strong>
 produce un modelo mejor que cada uno. Se prueban tres mezclas, definidas antes de mirar la prueba:</p>
 <ol class="arabic simple">
@@ -447,7 +456,7 @@ predicciones de los modelos finales. La prueba nunca interviene en la estimació
 </div>
 </section>
 <section id="se-equivocan-los-modelos-en-los-mismos-activos">
-<h2>1. ¿Se equivocan los modelos en los mismos activos?<a class="headerlink" href="#se-equivocan-los-modelos-en-los-mismos-activos" title="Link to this heading">#</a></h2>
+<h2>3.5.1 ¿Se equivocan los modelos en los mismos activos?<a class="headerlink" href="#se-equivocan-los-modelos-en-los-mismos-activos" title="Link to this heading">#</a></h2>
 <p>Correlación de los errores <em>out-of-fold</em> externos (cada fila del desarrollo predicha una vez, sin haber sido
 vista) del mejor optimizador de cada modelo.</p>
 <div class="cell docutils container">
@@ -485,7 +494,7 @@ vista) del mejor optimizador de cada modelo.</p>
 pareja más redundante; SVR es el compañero fuerte más distinto (0.86).</p>
 </section>
 <section id="hibrido-rf-xgboost">
-<h2>2. Híbrido RF + XGBoost<a class="headerlink" href="#hibrido-rf-xgboost" title="Link to this heading">#</a></h2>
+<h2>3.5.2 Híbrido RF + XGBoost<a class="headerlink" href="#hibrido-rf-xgboost" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">run_blend</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
@@ -611,7 +620,7 @@ Es el <em>forecast combination puzzle</em> (Smith y Wallis, 2009): cuando la gan
 de estimar <span class="math notranslate nohighlight">\(w\)</span> se la come.</p>
 </section>
 <section id="rf-svr-y-super-learner">
-<h2>3. RF + SVR y Super Learner<a class="headerlink" href="#rf-svr-y-super-learner" title="Link to this heading">#</a></h2>
+<h2>3.5.3 RF + SVR y Super Learner<a class="headerlink" href="#rf-svr-y-super-learner" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">run_blend2</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
@@ -720,7 +729,7 @@ dm_p_holm              1.0000  ...            1.0000
 </div>
 </section>
 <section id="resumen">
-<h2>4. Resumen<a class="headerlink" href="#resumen" title="Link to this heading">#</a></h2>
+<h2>3.5.4 Resumen<a class="headerlink" href="#resumen" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">OUT</span> <span class="o">/</span> <span class="s2">"folds.csv"</span><span class="p">);</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">OUT</span> <span class="o">/</span> <span class="s2">"folds_mix2.csv"</span><span class="p">)</span>
@@ -810,15 +819,15 @@ límite está en la información disponible, no en el algoritmo.</p></li>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">5. Comparación estadística</p>
+        <p class="prev-next-title">3.4. Comparación estadística</p>
       </div>
     </a>
     <a class="right-next"
-       href="06_conclusiones.html"
+       href="04_literatura.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">6. Conclusiones</p>
+        <p class="prev-next-title">4. Revisión de literatura y novedad</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -842,10 +851,10 @@ límite está en la información disponible, no en el algoritmo.</p></li>
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion">Formulación</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo-sin-fuga">Protocolo sin fuga</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#se-equivocan-los-modelos-en-los-mismos-activos">1. ¿Se equivocan los modelos en los mismos activos?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hibrido-rf-xgboost">2. Híbrido RF + XGBoost</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rf-svr-y-super-learner">3. RF + SVR y Super Learner</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen">4. Resumen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#se-equivocan-los-modelos-en-los-mismos-activos">3.5.1 ¿Se equivocan los modelos en los mismos activos?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hibrido-rf-xgboost">3.5.2 Híbrido RF + XGBoost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rf-svr-y-super-learner">3.5.3 RF + SVR y Super Learner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen">3.5.4 Resumen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusión</a></li>
 </ul>
   </nav></div>
