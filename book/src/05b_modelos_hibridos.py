@@ -1,5 +1,5 @@
 # %% [markdown]
-# # 5b. Propuesta: modelos híbridos
+# # 3.5. Propuesta: modelos híbridos
 #
 # Random Forest y XGBoost quedaron empatados estadísticamente. La pregunta natural es si **combinarlos**
 # produce un modelo mejor que cada uno. Se prueban tres mezclas, definidas antes de mirar la prueba:
@@ -56,7 +56,7 @@ pd.set_option("display.float_format", lambda v: f"{v:,.4f}")
 OUT = C.RESULTS_DIR / "blend"
 
 # %% [markdown]
-# ## 1. ¿Se equivocan los modelos en los mismos activos?
+# ## 3.5.1 ¿Se equivocan los modelos en los mismos activos?
 #
 # Correlación de los errores *out-of-fold* externos (cada fila del desarrollo predicha una vez, sin haber sido
 # vista) del mejor optimizador de cada modelo.
@@ -89,7 +89,7 @@ plt.show()
 # Ningún par baja de 0.57: **todos los modelos fallan en los mismos activos**. RF y XGBoost tienen 0.96, la
 # pareja más redundante; SVR es el compañero fuerte más distinto (0.86).
 #
-# ## 2. Híbrido RF + XGBoost
+# ## 3.5.2 Híbrido RF + XGBoost
 
 # %%
 run_blend.main()
@@ -109,13 +109,13 @@ print(f"w estimado en desarrollo = {th['w_final']:.2f}; w 'oráculo' en prueba (
 # Es el *forecast combination puzzle* (Smith y Wallis, 2009): cuando la ganancia potencial es pequeña, el error
 # de estimar $w$ se la come.
 #
-# ## 3. RF + SVR y Super Learner
+# ## 3.5.3 RF + SVR y Super Learner
 
 # %%
 run_blend2.main()
 
 # %% [markdown]
-# ## 4. Resumen
+# ## 3.5.4 Resumen
 
 # %%
 f1 = pd.read_csv(OUT / "folds.csv"); f2 = pd.read_csv(OUT / "folds_mix2.csv")

@@ -1,5 +1,5 @@
 # %% [markdown]
-# # 4. Evaluación de modelos
+# # 3.3. Evaluación de modelos
 #
 # Para cada uno de los 7 modelos se elige el optimizador con menor RMSE externo medio (selección hecha
 # con la CV anidada, no con el conjunto de prueba). El modelo final de esa combinación (búsqueda sobre todo
@@ -42,7 +42,7 @@ print("Mejor modelo por RMSE externo:", best_model, "con", best.loc[best_model, 
 best[["method", "outer_rmse_mean", "outer_rmse_std", "outer_mae_mean", "outer_r2_mean"]]
 
 # %% [markdown]
-# ## 4.1 Líneas base de referencia
+# ## 3.3.1 Líneas base de referencia
 #
 # Se reentrenan con la misma partición las líneas base del entregable 1: `DummyRegressor` (media) y SVR
 # lineal, en ambos escenarios de variables.
@@ -63,7 +63,7 @@ for sc in ["A_estructural", "B_con_BD"]:
 pd.DataFrame([{"modelo": n, "escenario": sc, **regression_metrics(yt, pr)} for (n, sc), pr in baselines.items()])
 
 # %% [markdown]
-# ## 4.2 Métricas en el conjunto de prueba y pruebas de supuestos
+# ## 3.3.2 Métricas en el conjunto de prueba y pruebas de supuestos
 #
 # Residuos ordenados por activo y año (el orden natural del panel) para las pruebas de independencia:
 #
@@ -108,7 +108,7 @@ test_tbl
 #   sistemáticamente los activos caros. Los ensambles reducen la asimetría (0.6–1.0).
 
 # %% [markdown]
-# ## 4.3 Ajuste en entrenamiento, validación y prueba
+# ## 3.3.3 Ajuste en entrenamiento, validación y prueba
 #
 # - **Entrenamiento:** predicción del modelo final sobre el conjunto de desarrollo con el que fue ajustado.
 # - **Validación:** predicciones *fuera de pliegue* del bucle externo (cada fila predicha por el modelo
@@ -158,7 +158,7 @@ plt.tight_layout()
 #   ~0.5 USD/Bbl. El componente temporal común está bien capturado; el error está en el nivel de cada activo.
 
 # %% [markdown]
-# ## 4.4 Análisis de residuos del mejor modelo (prueba)
+# ## 3.3.4 Análisis de residuos del mejor modelo (prueba)
 
 # %%
 e = yt - finals[bm]["pred"]
@@ -231,7 +231,7 @@ print(f"Desv. est. de la media del residuo entre activos: {by_asset['mean'].std(
 #   bootstrap estacionario por bloques.
 
 # %% [markdown]
-# ## 4.5 Robustez y estabilidad de las métricas
+# ## 3.3.5 Robustez y estabilidad de las métricas
 #
 # ### Media ± desviación estándar a través de los pliegues externos
 
@@ -287,7 +287,7 @@ seed_m.groupby("model")["rmse"].agg(["mean", "std", "min", "max"])
 #   capítulo 5.
 
 # %% [markdown]
-# ## 4.6 Interpretabilidad con SHAP
+# ## 3.3.6 Interpretabilidad con SHAP
 #
 # Los valores de Shapley reparten la predicción de cada observación entre las variables cumpliendo
 # **eficiencia** (las contribuciones suman la predicción menos el valor base), **simetría** (variables
@@ -373,7 +373,7 @@ for i, lbl in [(i_good, "Predicción precisa"), (i_bad, "Predicción con error a
 #   extrapolar por encima de lo visto. Es el mismo patrón de error persistente por activo de la sección 4.4.
 
 # %% [markdown]
-# ## 4.7 XGBoost: SHAP vs LIME
+# ## 3.3.7 XGBoost: SHAP vs LIME
 #
 # La guía pide analizar XGBoost con ambas técnicas. Se explican las mismas dos observaciones.
 
@@ -416,7 +416,7 @@ gl.head(8).to_frame("XGBoost: media |SHAP|")
 #    (V de Cramér ≈ 1), el modelo lineal local se ajusta sobre puntos fuera de la distribución.
 # 3. **Discretización y aleatoriedad.** LIME discretiza las numéricas en cuartiles y su resultado cambia con la
 #    semilla y el número de muestras; TreeSHAP es exacto y determinista para árboles.
-# 4. **Garantías.** SHAP cumple eficiencia, simetría y aditividad; LIME solo garantiza fidelidad local
+# 3.3. **Garantías.** SHAP cumple eficiencia, simetría y aditividad; LIME solo garantiza fidelidad local
 #    aproximada (aquí R² ≈ 0.5–0.6).
 #
 # **Cuándo divergen:** con variables fuertemente dependientes, con efectos no lineales e interacciones (como la

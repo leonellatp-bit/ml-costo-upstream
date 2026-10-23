@@ -1,10 +1,18 @@
 format: jb-book
 root: intro
 chapters:
+  - file: 01_correcciones
   - file: 01_datos_eda
-  - file: 02_modelos_optimizacion
-  - file: 03_optimizacion_computacional
-  - file: 04_evaluacion
-  - file: 05_comparacion_estadistica
-  - file: 05b_modelos_hibridos
-  - file: 06_conclusiones
+  - file: 03_benchmarks
+    sections:
+      - file: 02_modelos_optimizacion
+      - file: 03_optimizacion_computacional
+      - file: 04_evaluacion
+      - file: 05_comparacion_estadistica
+      - file: 05b_modelos_hibridos
+  - file: 04_literatura
+  - file: 05_modelo_original
+  - file: 06_validacion
+  - file: 07_dashboard
+  - file: 08_conclusiones
+  - file: 09_reproducibilidad

@@ -1,6 +1,6 @@
 # Dependencias mínimas para desplegar el dashboard en Render.
 # Las versiones de numpy, scikit-learn y xgboost DEBEN coincidir con las del entrenamiento
-# para que carguen los modelos guardados (.pkl).
+# para que carguen los artefactos (artifacts/*/model.joblib).
 numpy==2.5.3
 pandas==3.0.5
 scipy==1.18.1
@@ -10,4 +10,5 @@ xgboost==2.1.4
 matplotlib==3.11.2
 plotly==5.24.1
 dash==2.18.2
+dash-bootstrap-components==1.6.0
 gunicorn==23.0.0

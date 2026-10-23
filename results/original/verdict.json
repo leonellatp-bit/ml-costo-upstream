@@ -1,0 +1,15 @@
+{
+ "status": "no superior",
+ "label": "R3 no cumplido",
+ "text": "HGSB: RMSE externo 1.927 ± 0.579 frente a 2.008 ± 0.549 del mejor benchmark (RandomForest|Random); en prueba 1.884 vs 1.717. 0 de 5 pruebas rechazan H0 (Holm / MCS); δ de Cliff = -0.140. No cumple R3: la diferencia no es estadísticamente significativa con las correcciones exigidas.",
+ "summary": "Modelo original HGSB · veredicto: no superior a los benchmarks.",
+ "orig_outer_mean": 1.927476229190594,
+ "bench_outer_mean": 2.0081843017102514,
+ "orig_test_rmse": 1.883703925538087,
+ "bench_test_rmse": 1.7170569900412842,
+ "n_significant": 0,
+ "cliff": -0.14,
+ "better_than_all_means": true,
+ "seeds_test_rmse_mean": 1.855740987969162,
+ "seeds_test_rmse_sd": 0.01966197883115418
+}

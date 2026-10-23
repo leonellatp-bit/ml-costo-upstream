@@ -1,0 +1,47 @@
+/* Estilo del dashboard (complementa el tema FLATLY de Bootstrap). Paleta: 5 colores. */
+:root { --navy:#0D2B4F; --blue:#2A78D6; --amber:#D9892B; --gray:#8A8A84; --light:#B7D3F6;
+        --ink:#16202C; --ink2:#4A5563; --line:#E3E5E8; --page:#F5F6F8; }
+body { background: var(--page); color: var(--ink); font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+.navbar-main { background: var(--navy) !important; }
+.navbar-main .navbar-brand { font-weight: 650; letter-spacing: -0.01em; }
+.page { padding-top: 76px; padding-bottom: 24px; max-width: 1400px; }
+.page-title { font-weight: 700; color: var(--navy); margin: 8px 0 4px; font-size: 1.7rem; }
+.lead-sm { color: var(--ink2); max-width: 900px; }
+.card { border: 1px solid var(--line); border-radius: 10px; box-shadow: none; }
+.card-header { background: #fff; font-weight: 650; color: var(--navy); border-bottom: 1px solid var(--line); }
+.kpi-label { color: var(--gray); font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; }
+.kpi-value { font-size: 1.7rem; font-weight: 700; color: var(--navy); }
+.kpi-note { color: var(--ink2); font-size: .85rem; }
+.insight { margin: 6px 0 0; padding: 8px 12px; border-left: 3px solid var(--blue); background: #EEF4FC;
+           border-radius: 4px; color: #10233D; font-size: .92rem; }
+.small { font-size: .82rem; color: var(--ink2); }
+.filters { position: sticky; top: 64px; z-index: 10; }
+.sticky-select { position: sticky; top: 64px; z-index: 10; }
+.hero { position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 18px; background: var(--navy); }
+.hero-img { display: block; width: 100%; height: 340px; object-fit: cover; }
+.hero-text { position: absolute; inset: auto 0 0 0; padding: 22px 28px; color: #F3F1EC;
+             background: linear-gradient(to top, rgba(8,20,38,.94), rgba(8,20,38,.6) 65%, rgba(8,20,38,0)); }
+.hero-text h1 { font-size: 1.75rem; font-weight: 700; margin: 2px 0 6px; max-width: 860px; }
+.hero-text p { margin: 0; max-width: 780px; color: #D9E2EE; }
+.hero-kicker { text-transform: uppercase; letter-spacing: .08em; font-size: .75rem; color: #F6C27A; font-weight: 600; }
+.hero-figure { margin-top: 10px; display: inline-block; background: rgba(217,137,43,.95); color: #1B1205;
+               padding: 4px 12px; border-radius: 999px; font-weight: 650; font-size: .9rem; }
+.pipeline { display: flex; flex-wrap: wrap; gap: 10px; }
+.step { flex: 1 1 150px; border-top: 4px solid var(--blue); background: #F8FAFC; border-radius: 6px; padding: 10px 12px;
+        position: relative; }
+.step:nth-child(6) { border-top-color: var(--amber); }
+.step-title { font-weight: 700; color: var(--navy); }
+.step-text { font-size: .85rem; color: var(--ink2); }
+.pred-out { font-size: 2.4rem; font-weight: 750; color: var(--navy); line-height: 1.1; }
+.pred-int { color: var(--ink2); margin-bottom: 6px; }
+.pseudo { background: #0F1B2B; color: #E6EDF6; padding: 14px 16px; border-radius: 8px; font-size: .8rem;
+          white-space: pre-wrap; line-height: 1.45; }
+.verdict-badge { font-size: .8rem; vertical-align: middle; }
+.footer { text-align: center; color: var(--gray); font-size: .8rem; padding: 18px 12px 28px; }
+@media (max-width: 992px) {
+  .hero-img { height: 220px; }
+  .hero-text { position: static; background: var(--navy); padding: 16px; }
+  .hero-text h1 { font-size: 1.3rem; }
+  .filters, .sticky-select { position: static; }
+  .page { padding-top: 70px; }
+}

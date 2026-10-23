@@ -1,0 +1,6 @@
+Variante,RMSE externo,Δ vs completo,Pliegues peores,p Wilcoxon
+HGSB completo,1.927 ± 0.579,—,—,—
+Sin jerarquía (contracción hacia la media global),2.002 ± 0.678,+0.075,5/10,0.375
+Sin contracción (κ = 0),2.018 ± 0.595,+0.091,8/10,0.064
+Codificación fuera de pliegue (K = 5),2.346 ± 0.538,+0.418,10/10,0.002
+Sin codificación (One-Hot),2.110 ± 0.613,+0.182,7/10,0.049

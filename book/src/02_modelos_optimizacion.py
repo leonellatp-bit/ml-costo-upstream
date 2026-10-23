@@ -1,7 +1,7 @@
 # %% [markdown]
-# # 2. Modelos y optimización de hiperparámetros
+# # 3.1. Modelos y optimización de hiperparámetros
 #
-# ## 2.1 Diseño experimental
+# ## 3.1.1 Diseño experimental
 #
 # La tarea es de **regresión**, por lo que la etapa de balanceo de clases no aplica (Sección 2 de la guía):
 #
@@ -71,7 +71,7 @@ print(f"Tareas registradas: {len(res)} | combinaciones escenario A: {len(mtA)} |
 print(f"Evaluaciones totales (escenario A): {int(mtA['total_evals'].sum()):,} configuraciones x 3 pliegues internos")
 
 # %% [markdown]
-# ## 2.2 Espacios de búsqueda
+# ## 3.1.2 Espacios de búsqueda
 #
 # Los espacios se definen una sola vez (`src/models.py`) y los cuatro optimizadores los traducen a su
 # formato. Los hiperparámetros de escala (C, γ, ε, λ, *learning rate*, `min_child_weight`) se exploran en
@@ -101,7 +101,7 @@ pd.DataFrame([{"modelo": n, "puntos de la rejilla": int(np.prod([len(v) for v in
 # la limitación estructural de Grid frente a métodos que muestrean el espacio de forma continua.
 
 # %% [markdown]
-# ## 2.3 Tabla maestra de resultados (escenario A)
+# ## 3.1.3 Tabla maestra de resultados (escenario A)
 #
 # Una fila por combinación. Métricas del **bucle externo** como media ± desviación estándar entre los 10
 # pliegues; tiempos en segundos de reloj (*wall-clock*) incluyendo las 11 búsquedas de la combinación.
@@ -161,7 +161,7 @@ plt.tight_layout()
 #   desempeño sin usar un componente del target.
 
 # %% [markdown]
-# ## 2.4 ¿Por qué validación anidada? Sesgo optimista del bucle interno
+# ## 3.1.4 ¿Por qué validación anidada? Sesgo optimista del bucle interno
 
 # %%
 opt = mtA.assign(gap=mtA.outer_rmse_mean - mtA.inner_rmse_mean)
@@ -187,7 +187,7 @@ opt.groupby("model")["gap"].mean().rename("RMSE externo − interno (media)").to
 # es pesimista; en KNN, optimista). Por eso las métricas que se reportan y comparan salen del bucle externo.
 
 # %% [markdown]
-# ## 2.5 Convergencia: curvas de desempeño *anytime*
+# ## 3.1.5 Convergencia: curvas de desempeño *anytime*
 #
 # Para cada búsqueda se registra el mejor RMSE interno encontrado hasta la evaluación *t*. Las curvas
 # muestran la mediana entre los 10 pliegues externos. Para Grid Search el orden de evaluación es el de la
@@ -309,7 +309,7 @@ plt.tight_layout()
 # **externo** entre optimizadores: el cuello de botella es la familia de modelo, no el optimizador.
 
 # %% [markdown]
-# ## 2.6 Optimización Bayesiana (Optuna-TPE): modelo sustituto, adquisición y trayectoria
+# ## 3.1.6 Optimización Bayesiana (Optuna-TPE): modelo sustituto, adquisición y trayectoria
 #
 # - **Modelo sustituto:** *Tree-structured Parzen Estimator*. En lugar de modelar p(y | x) como un proceso
 #   gaussiano, TPE divide las observaciones por el cuantil γ del RMSE y estima dos densidades:
@@ -352,7 +352,7 @@ plt.tight_layout()
 # y evita las combinaciones de γ muy pequeño con C bajo (subajuste, RMSE > 4).
 
 # %% [markdown]
-# ## 2.7 Algoritmo genético (DEAP): operadores y diversidad
+# ## 3.1.7 Algoritmo genético (DEAP): operadores y diversidad
 #
 # | Componente | Elección | Justificación |
 # |---|---|---|
@@ -403,7 +403,7 @@ gens.groupby("gen")[["diversity", "n_evals"]].mean().rename(columns={"diversity"
 #   (regret final mediano 0.02 %), pero más lento que la Bayesiana.
 
 # %% [markdown]
-# ## 2.8 Estabilidad frente a semillas aleatorias
+# ## 3.1.8 Estabilidad frente a semillas aleatorias
 #
 # Se repiten las búsquedas Random, Bayesiana y Genética con 5 semillas distintas en el primer pliegue
 # externo para XGBoost y Decision Tree (los modelos con aleatoriedad propia y bajo costo por evaluación).
@@ -452,7 +452,7 @@ seeds_df.groupby(["model", "method"]).agg(
 #   externos (≈ 0.6): la incertidumbre dominante viene de **qué activos** caen en prueba, no de la semilla.
 
 # %% [markdown]
-# ## 2.9 Escenario B: efecto de incluir `BrentDifferential`
+# ## 3.1.9 Escenario B: efecto de incluir `BrentDifferential`
 
 # %%
 mtB = mt[mt["scenario"] == "B_con_BD"].set_index("model")

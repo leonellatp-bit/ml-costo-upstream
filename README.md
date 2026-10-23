@@ -1,59 +1,65 @@
-# Predicción del costo unitario de producción en activos upstream de Oil & Gas — Entrega final
+# Predicción del costo unitario de producción en activos upstream de Oil & Gas
 
 **Leonella Torreglosa Portillo** · Machine Learning · Maestría en Ingeniería Industrial · Octubre 2026
 
-Regresión del `BrentEquivalentProductionCost` (USD/Bbl) de 695 activos upstream de petróleo (99 países, 2014–2023,
-S&P Global Commodity Insights) con 7 modelos × 4 optimizadores de hiperparámetros, validación cruzada anidada por
-activo y comparación estadística jerárquica.
+Regresión del costo unitario de producción (`BrentEquivalentProductionCost`, USD/Bbl) de 695 activos upstream de
+petróleo (99 países, 2014–2023, S&P Global Commodity Insights). Incluye 7 modelos × 4 optimizadores con
+validación cruzada anidada por activo, un **modelo original (HGSB)** con validación estadística y un dashboard
+desplegado.
+
+- **Dashboard:** <https://ml-costo-upstream-dash.onrender.com>
+- **Informe (Jupyter Book):** <https://leonellatp-bit.github.io/ml-costo-upstream>
 
 ## Estructura
 
 ```
-proyecto/
-├── data/                         Dataset (licencia corporativa S&P Global; uso académico)
-├── src/                          Código modular (docstrings estilo NumPy)
-│   ├── config.py                 Semilla global, rutas, variables, escenarios y esquema de validación
-│   ├── data.py                   Carga, partición por grupos, preprocesamiento en Pipeline
-│   ├── models.py                 7 modelos, espacios de búsqueda y complejidad O(·)
-│   ├── optimizers.py             Grid, Random, Bayesiana (Optuna-TPE), Genética (DEAP)
-│   ├── nested_cv.py              CV anidada combinatoria + tabla maestra de experimentos
-│   ├── computational.py          Escalamiento, estándar vs optimizado, Successive Halving, paralelismo, profiling
-│   ├── evaluation.py             White, Ljung-Box, BDS, normalidad, bootstrap BCa
-│   ├── stats_tests.py            Friedman, Nemenyi/CD, MCS, Giacomini-White, Clark-West, DM-HLN, SPA, Holm/BH, Cliff, Cohen
-│   ├── interpret.py              SHAP y LIME
-│   └── viz.py                    Paleta y estilo comunes
-├── run_nested.py                 Etapa pesada: 28 + 7 combinaciones (≈ 2 h en 2 núcleos)
-├── book/                         Jupyter Book (notebooks ejecutados + _config.yml + _toc.yml)
-│   └── src/                      Fuente de cada notebook en formato "percent" (.py)
-├── dashboard/                    App Dash final (app.py, build_data.py, assets/)
-├── results/                      Tabla maestra, caché de cada corrida, modelos finales, CSV de análisis
-├── tools/nbtools.py              Conversión .py → .ipynb y ejecutor mínimo
-└── requirements.txt              Versiones exactas
+├── app.py                    Punto de entrada del dashboard (Dash multipágina, expone `server`)
+├── pages/                    contexto.py · eda.py · modelos.py
+├── src/
+│   ├── original_model.py     Modelo original HGSB (numpy; compatible con scikit-learn)
+│   ├── config.py             Semilla global, rutas, variables, escenarios, esquema de validación
+│   ├── data.py               Carga, partición por grupos, preprocesamiento en Pipeline
+│   ├── models.py             7 modelos, espacios de búsqueda y complejidad
+│   ├── optimizers.py         Grid, Random, Bayesiana (Optuna-TPE), Genética (DEAP)
+│   ├── nested_cv.py          CV anidada + tabla maestra
+│   ├── stats_tests.py        Friedman, Nemenyi, MCS, GW, CW, DM-HLN, SPA, Holm/BH, Cliff, Cohen
+│   ├── evaluation.py · computational.py · interpret.py · viz.py
+│   ├── dash_data.py          Carga y caché para el dashboard
+│   ├── plots.py              Gráficos Plotly reutilizables
+│   └── explain.py            Shapley por grupos e intervalos conformales
+├── artifacts/<Modelo>/       model.joblib + metadata.json (8 modelos), leaderboard.csv, conformal.json
+├── tests/                    Pruebas unitarias del modelo original (pytest)
+├── run_nested.py             Benchmarks (≈ 80 min, 2 núcleos)
+├── run_original.py           HGSB con el mismo protocolo (≈ 16 min)
+├── run_original_stats.py     Pruebas de hipótesis, MCS, ablación, robustez
+├── run_blend.py, run_blend2.py  Modelos híbridos (capítulo 3.5)
+├── tools/                    build_artifacts.py, nbtools.py
+├── book/                     Jupyter Book (capítulos 0–9, references.bib)
+├── results/                  Tablas y resultados precalculados (caché y modelos pesados en .gitignore)
+├── assets/                   CSS e ilustración del dashboard
+├── requirements.txt          Versiones exactas (experimentos)
+├── requirements-render.txt   Versiones exactas (despliegue)
+└── render.yaml               Web Service de Render: gunicorn app:server
 ```
 
 ## Reproducir
 
 ```bash
-conda create -n ml_proyecto python=3.13 -y
-conda activate ml_proyecto
+conda create -n ml_venv2 python=3.13 -y && conda activate ml_venv2
 pip install -r requirements.txt
-
-python run_nested.py                         # 1) CV anidada (usa caché si se interrumpe)
-jupyter nbconvert --execute --inplace book/0*.ipynb   # 2) notebooks (o: jupyter-book build book/)
-python dashboard/build_data.py               # 3) datos del dashboard
-python dashboard/app.py                      # 4) http://127.0.0.1:8050
+# copiar DatasetOilCostProjectWorldwide.csv en data/  (licencia: no se publica)
+python run_nested.py
+python run_original.py
+python run_original_stats.py
+python tools/build_artifacts.py
+pytest -q tests/
+jupyter-book build book/
+python app.py        # http://127.0.0.1:8050
 ```
 
-Semilla global única: `SEED = 42` en `src/config.py`, propagada a numpy, random, scikit-learn, XGBoost, Optuna y DEAP.
-Cada corrida queda registrada en `results/cache/` y resumida en `results/master_table.csv`
-(modelo, optimizador, métricas del bucle externo media ± d.e., métricas de prueba, tiempos, evaluaciones,
-hiperparámetros finales y semilla).
+Semilla global `SEED = 42` (`src/config.py`). Los notebooks se entregan ejecutados.
 
-## Nota sobre el entorno en que se generaron los resultados
+## Despliegue
 
-Los resultados incluidos se generaron en un entorno Linux con 2 núcleos, sin acceso a PyPI. Por eso:
-
-- Las pruebas estadísticas (White, BDS, Ljung-Box, MCS, GW, CW, DM, SPA) están implementadas en `src/` con
-  numpy/scipy, sin depender de statsmodels ni arch.
-- Los notebooks se ejecutaron con `tools/nbtools.py` (ejecutor mínimo); en una máquina con Jupyter se
-  pueden re-ejecutar con `nbconvert` o `jupyter-book build`.
+Render lee `render.yaml`: `pip install -r requirements-render.txt` y `gunicorn app:server`. El CSV con licencia se
+sube como *Secret File* (`/etc/secrets/DatasetOilCostProjectWorldwide.csv`).

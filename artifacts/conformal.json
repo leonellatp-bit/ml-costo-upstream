@@ -1,0 +1,50 @@
+{
+ "KNN": {
+  "q": 0.23951170914363182,
+  "alpha": 0.1,
+  "coverage_test": 0.9292389853137517,
+  "method": "split conformal relativo |y\u2212\u0177|/\u0177"
+ },
+ "Ridge": {
+  "q": 0.26382485664662597,
+  "alpha": 0.1,
+  "coverage_test": 0.9225634178905207,
+  "method": "split conformal relativo |y\u2212\u0177|/\u0177"
+ },
+ "Lasso": {
+  "q": 0.26846432519717833,
+  "alpha": 0.1,
+  "coverage_test": 0.9265687583444593,
+  "method": "split conformal relativo |y\u2212\u0177|/\u0177"
+ },
+ "DecisionTree": {
+  "q": 0.23847083518860135,
+  "alpha": 0.1,
+  "coverage_test": 0.9425901201602136,
+  "method": "split conformal relativo |y\u2212\u0177|/\u0177"
+ },
+ "RandomForest": {
+  "q": 0.2099377660075807,
+  "alpha": 0.1,
+  "coverage_test": 0.931909212283044,
+  "method": "split conformal relativo |y\u2212\u0177|/\u0177"
+ },
+ "XGBoost": {
+  "q": 0.22017764288757863,
+  "alpha": 0.1,
+  "coverage_test": 0.9359145527369827,
+  "method": "split conformal relativo |y\u2212\u0177|/\u0177"
+ },
+ "SVR": {
+  "q": 0.2293173169934697,
+  "alpha": 0.1,
+  "coverage_test": 0.9265687583444593,
+  "method": "split conformal relativo |y\u2212\u0177|/\u0177"
+ },
+ "HGSB": {
+  "q": 0.20050272301232033,
+  "alpha": 0.1,
+  "coverage_test": 0.910547396528705,
+  "method": "split conformal relativo |y\u2212\u0177|/\u0177"
+ }
+}

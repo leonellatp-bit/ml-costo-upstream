@@ -1,0 +1,6 @@
+Prueba,H0,Supuestos,Estadístico,p crudo,p ajustado (Holm),Tamaño del efecto,Conclusión
+Wilcoxon (pliegues),Mediana de ΔRMSE por pliegue = 0,Pares por pliegue; diferencias simétricas,W = 16.0,0.1377,0.5508,δ de Cliff = -0.140 (despreciable),No rechaza H0
+t corregida de Nadeau-Bengio,E[ΔRMSE] = 0,Normalidad aprox. de ΔRMSE; corrección por solapamiento,t = -0.855,0.2074,0.6221,d de Cohen = -0.393 (pequeño),No rechaza H0
+Permutación pareada por activo (prueba),E[L_HGSB − L_bench] = 0 por activo,Activos independientes; intercambiabilidad del signo,Δ pérdida = 0.603,0.5745,1.0000,d de Cohen (activos) = 0.055 (despreciable),No rechaza H0
+Bootstrap BCa por activo (prueba),RMSE_HGSB − RMSE_bench = 0,Remuestreo de activos (conglomerados),"ΔRMSE = 0.167 [-0.088, 0.809]",0.7818,1.0000,ΔRMSE = +0.167 USD/Bbl,No rechaza H0
+"MCS (global, α = 0.10)",El benchmark pertenece al conjunto de los mejores,Bootstrap estacionario (orden activo-año),p_MCS bench = 0.672; p_MCS HGSB = 0.609,0.6725,—,—,No rechaza H0

@@ -1,5 +1,5 @@
 # %% [markdown]
-# # 3. Optimización computacional
+# # 3.2. Optimización computacional
 #
 # Objetivo (Sección 4 de la guía): reducir el costo manteniendo el desempeño, contrastando la complejidad
 # teórica O(·) con tiempos medidos. Todas las mediciones usan el escenario A, el conjunto de desarrollo
@@ -40,14 +40,14 @@ best_params = {m: json.loads(best_row.loc[m, "final_params"]) for m in MODEL_ORD
 best_row[["method", "outer_rmse_mean"]]
 
 # %% [markdown]
-# ## 3.1 Complejidad teórica de los modelos optimizados
+# ## 3.2.1 Complejidad teórica de los modelos optimizados
 
 # %%
 pd.DataFrame([{"modelo": m, "entrenamiento": MODELS[m].complexity_train, "inferencia": MODELS[m].complexity_predict}
               for m in MODEL_ORDER])
 
 # %% [markdown]
-# ## 3.2 Escalamiento empírico con n
+# ## 3.2.2 Escalamiento empírico con n
 #
 # Se mide el tiempo de ajuste y de predicción (500 consultas fijas) variando n con p fijo. La pendiente de
 # log(tiempo) frente a log(n) estima el exponente empírico *b* en t ∝ n^b, que se contrasta con la teoría.
@@ -100,7 +100,7 @@ ex
 # queden por debajo de los asintóticos.
 
 # %% [markdown]
-# ## 3.3 Modelo estándar vs optimizado
+# ## 3.2.3 Modelo estándar vs optimizado
 #
 # Cada variante se entrena con los mismos datos (desarrollo) y se evalúa en el hold-out. `speedup` > 1
 # indica que la variante es más rápida que la versión estándar (primera fila de cada modelo);
@@ -167,7 +167,7 @@ except ImportError:
 # PCA + KD-Tree: inferencia 4×, ΔRMSE +0.29; Ridge/Lasso: la versión estándar ya es la óptima para este tamaño.
 
 # %% [markdown]
-# ## 3.4 Optimización multi-fidelidad: Successive Halving
+# ## 3.2.4 Optimización multi-fidelidad: Successive Halving
 #
 # - **Fidelidad:** número de árboles (`n_estimators`). Es la elección natural en ensambles: el costo es
 #   lineal en el número de árboles y el ranking de configuraciones con pocos árboles está muy
@@ -203,7 +203,7 @@ sh
 #   el tamaño de la submuestra de filas, o escalar el *learning rate* con el número de árboles (lr·T constante).
 
 # %% [markdown]
-# ## 3.5 Paralelización y cómputo distribuido
+# ## 3.2.5 Paralelización y cómputo distribuido
 #
 # - Entre modelos y pliegues: la CV anidada completa (`src/nested_cv.py`) reparte las 308 + 77 tareas
 #   (escenario × modelo × método × pliegue) con `joblib` (backend `loky`, procesos); dentro de cada tarea
@@ -245,7 +245,7 @@ par
 # aceleración se mediría con el mismo `measure()` de `src/computational.py`.
 
 # %% [markdown]
-# ## 3.6 Perfilamiento (cProfile + tracemalloc)
+# ## 3.2.6 Perfilamiento (cProfile + tracemalloc)
 #
 # Se perfila una búsqueda Bayesiana de Random Forest (5 evaluaciones) para identificar dónde se gasta el
 # tiempo antes de optimizar.

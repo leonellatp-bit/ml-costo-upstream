@@ -1,5 +1,5 @@
 # %% [markdown]
-# # 1. Datos y EDA mejorado
+# # 2. Datos y EDA mejorado
 #
 # Este capítulo retoma el EDA del primer entregable y lo **corrige y amplía** con los
 # hallazgos encontrados durante el modelado (Sección 7.1 de la guía). Los cambios principales son:
@@ -45,7 +45,7 @@ print(f"Activos: {df[C.GROUP].nunique()} (desarrollo {dev[C.GROUP].nunique()}, p
       f"{len(set(dev[C.GROUP]) & set(test[C.GROUP])) == 0})")
 
 # %% [markdown]
-# ## 1.1 Hallazgo clave: identidad contable en el target
+# ## 2.1 Hallazgo clave: identidad contable en el target
 #
 # El VIF de 1.5 × 10⁹ y la quinta componente principal con varianza ≈ 0 del entregable 1 indican
 # una **combinación lineal exacta** entre variables. Se verifica directamente:
@@ -90,7 +90,7 @@ plt.tight_layout()
 # (B anida a A) en el capítulo 5.
 
 # %% [markdown]
-# ## 1.2 Multicolinealidad corregida (VIF)
+# ## 2.2 Multicolinealidad corregida (VIF)
 #
 # El VIF se recalcula de dos formas: con el conjunto original (que contiene la combinación lineal
 # exacta) y sin `BrentEquivalentDevelopmentCost` (= WDC + BD).
@@ -118,7 +118,7 @@ pd.DataFrame({"VIF original (E1)": vif(raw[cols_orig]), "VIF sin BEDC": vif(raw[
 # escenario B, `BrentDifferential`) no presentan colinealidad problemática.
 
 # %% [markdown]
-# ## 1.3 Mecanismo de los valores faltantes
+# ## 2.3 Mecanismo de los valores faltantes
 #
 # El entregable 1 clasificó los faltantes como "MAR o MNAR" de forma preliminar. Aquí se aporta evidencia.
 
@@ -171,7 +171,7 @@ plt.tight_layout()
 #   descartan (no se imputa la variable objetivo).
 
 # %% [markdown]
-# ## 1.4 Asociación entre categóricas (V de Cramér)
+# ## 2.4 Asociación entre categóricas (V de Cramér)
 
 # %%
 cats = C.CATEGORICAL
@@ -207,7 +207,7 @@ plt.tight_layout()
 # pocos activos (45 de 99 países tienen un solo activo).
 
 # %% [markdown]
-# ## 1.5 Variables categóricas frente al target: Kruskal-Wallis + ε² con Holm
+# ## 2.5 Variables categóricas frente al target: Kruskal-Wallis + ε² con Holm
 
 # %%
 rows = []
@@ -231,7 +231,7 @@ kw.sort_values("ε²", ascending=False).reset_index(drop=True)
 # interacciones (árboles, boosting, KNN) superen a los lineales.
 
 # %% [markdown]
-# ## 1.6 Auditoría de fuga cuantitativa: información mutua y R² univariado
+# ## 2.6 Auditoría de fuga cuantitativa: información mutua y R² univariado
 #
 # Para cada variable se mide (i) la información mutua con el target y (ii) el R² de validación cruzada
 # por grupos de un modelo que usa **solo esa variable**. Un R² univariado cercano a 1 es señal de fuga.
@@ -277,7 +277,7 @@ leak
 # - El identificador del activo (`CostProductionElementName`) nunca entra al modelo; solo define grupos.
 
 # %% [markdown]
-# ## 1.7 Componente temporal y deriva
+# ## 2.7 Componente temporal y deriva
 
 # %%
 yr = df.groupby("Year")[C.TARGET].agg(["mean", "median", "count", "std"])
@@ -310,7 +310,7 @@ print(f"Desv. estándar total del target: {df[C.TARGET].std():.2f} | desv. está
 # - `Year` se mantiene como predictora numérica para capturar el ciclo común.
 
 # %% [markdown]
-# ## 1.8 Resumen: del EDA a las decisiones del pipeline
+# ## 2.8 Resumen: del EDA a las decisiones del pipeline
 #
 # | Hallazgo del EDA | Decisión en el pipeline |
 # |---|---|

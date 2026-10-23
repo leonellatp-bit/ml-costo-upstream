@@ -8,11 +8,16 @@ execute:
   # Para re-ejecutar todo: cambiar a "force" o correr run_nested.py y luego los notebooks.
   execute_notebooks: "off"
 only_build_toc_files: true
+bibtex_bibfiles:
+  - references.bib
 parse:
-  myst_enable_extensions: [dollarmath, colon_fence]
+  myst_enable_extensions: [dollarmath, amsmath, colon_fence]
 sphinx:
   config:
     language: es
     html_show_copyright: false
+    bibtex_reference_style: author_year
+    math_numfig: true
+    numfig: true
 html:
   use_repository_button: false

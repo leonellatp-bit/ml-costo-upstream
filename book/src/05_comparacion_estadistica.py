@@ -1,5 +1,5 @@
 # %% [markdown]
-# # 5. Comparación estadística
+# # 3.4. Comparación estadística
 #
 # Con 28 combinaciones hay 378 pares posibles; probarlos uno a uno con α = 0.05 produciría ~19 falsos
 # positivos esperados. Por eso se sigue la **secuencia jerárquica** de la guía:
@@ -9,7 +9,7 @@
 # 3. Para regresión, sobre las predicciones del hold-out: **MCS** → **Giacomini-White / Clark-West**
 #    entre finalistas → **Diebold-Mariano (HLN)** mejor vs segundo + **bootstrap estacionario**.
 # 4. **SPA de Hansen** para controlar *data snooping* frente al modelo base del entregable 1.
-# 5. Corrección **Holm / Benjamini-Hochberg** y **tamaños de efecto** (δ de Cliff, d de Cohen).
+# 3.4. Corrección **Holm / Benjamini-Hochberg** y **tamaños de efecto** (δ de Cliff, d de Cohen).
 # 6. **IC bootstrap BCa** para las métricas principales.
 
 # %%
@@ -45,7 +45,7 @@ mtA = mt[mt.scenario == "A_estructural"]
 print(f"Matriz de pérdidas por pliegue: {fm.shape[0]} pliegues × {fm.shape[1]} combinaciones")
 
 # %% [markdown]
-# ## 5.1 Etapa 1: test de Friedman (28 combinaciones)
+# ## 3.4.1 Etapa 1: test de Friedman (28 combinaciones)
 
 # %%
 fr = friedman(fm)
@@ -59,7 +59,7 @@ pd.DataFrame([{"χ²_F": fr["chi2"], "g.l.": fr["df"], "p-valor": fr["p_value"],
 # pliegue a otro. Se justifica pasar al análisis post-hoc.
 
 # %% [markdown]
-# ## 5.2 Etapa 2: Nemenyi y diagrama de Diferencia Crítica
+# ## 3.4.2 Etapa 2: Nemenyi y diagrama de Diferencia Crítica
 
 # %%
 cd, P = nemenyi(fr["avg_ranks"], fr["N"])
@@ -118,7 +118,7 @@ P7.round(4)
 # debajo del ruido de la partición. La decisión que más importa es la **familia de modelo**.
 
 # %% [markdown]
-# ## 5.3 Regresión: Model Confidence Set sobre el hold-out
+# ## 3.4.3 Regresión: Model Confidence Set sobre el hold-out
 #
 # Pérdida = error cuadrático de cada uno de los 28 modelos finales sobre los 749 registros de prueba
 # (ordenados por activo y año). MCS con estadístico T_max, bootstrap estacionario (bloque medio ≈ n^{1/3})
@@ -153,7 +153,7 @@ mcs[["model", "RMSE prueba", "p_mcs", "in_mcs", "elim_order"]].head(15)
 # significativamente peores** y los ensambles encabezan el conjunto de confianza (XGBoost-Random con p = 1).
 
 # %% [markdown]
-# ## 5.4 Comparaciones dirigidas: Giacomini-White y Clark-West
+# ## 3.4.4 Comparaciones dirigidas: Giacomini-White y Clark-West
 #
 # - **Giacomini-White (condicional, instrumentos 1 y d_{t−1})** entre los finalistas del MCS de familias
 #   distintas (modelos no anidados).
@@ -215,7 +215,7 @@ directed
 #   modelo grande.
 
 # %% [markdown]
-# ## 5.5 Diebold-Mariano (HLN) mejor vs segundo + bootstrap estacionario
+# ## 3.4.5 Diebold-Mariano (HLN) mejor vs segundo + bootstrap estacionario
 
 # %%
 order = mcs.sort_values("mean_loss")["model"].tolist()
@@ -256,7 +256,7 @@ dm_tbl
 #   en que se mide.
 
 # %% [markdown]
-# ## 5.6 SPA de Hansen: ¿alguno de los 28 supera genuinamente al modelo base?
+# ## 3.4.6 SPA de Hansen: ¿alguno de los 28 supera genuinamente al modelo base?
 #
 # Benchmark = SVR lineal del entregable 1 (mismas variables del escenario A). H0: ningún modelo del universo
 # de 28 tiene menor pérdida esperada que el benchmark. El SPA corrige el *data snooping* de elegir el
@@ -274,7 +274,7 @@ pd.DataFrame([spa])
 # *data snooping*.
 
 # %% [markdown]
-# ## 5.7 Tamaños de efecto entre modelos (pliegues externos)
+# ## 3.4.7 Tamaños de efecto entre modelos (pliegues externos)
 #
 # δ de Cliff entre los 10 RMSE externos del mejor modelo y los de cada uno de los demás (mejor optimizador
 # de cada modelo). δ < 0 significa que el mejor modelo tiene RMSE menores.
@@ -296,7 +296,7 @@ pd.DataFrame(rows).sort_values("δ de Cliff")
 # con Nemenyi: las diferencias significativas son además grandes, y las no significativas son pequeñas.
 
 # %% [markdown]
-# ## 5.8 Intervalos de confianza BCa (hold-out)
+# ## 3.4.8 Intervalos de confianza BCa (hold-out)
 
 # %%
 rows = []
@@ -328,7 +328,7 @@ plt.tight_layout()
 # correlacionados dentro de cada activo, deben leerse como una cota inferior de la incertidumbre real.
 
 # %% [markdown]
-# ## 5.9 Síntesis de la evidencia estadística
+# ## 3.4.9 Síntesis de la evidencia estadística
 #
 # | Pregunta | Prueba | Resultado |
 # |---|---|---|

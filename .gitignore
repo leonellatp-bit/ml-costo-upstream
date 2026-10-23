@@ -4,7 +4,8 @@ data/
 # --- Artefactos pesados o regenerables con run_nested.py ---
 results/models/
 results/cache/
-# (results/dashboard/model_*.pkl SÍ se suben: el dashboard en Render los necesita, ~28 MB)
+# (artifacts/ SÍ se sube: el dashboard en Render carga de ahí los modelos, ~15 MB)
+.pytest_cache/
 
 # --- Salida intermedia del Jupyter Book ---
 book/_build/
