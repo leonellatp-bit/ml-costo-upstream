@@ -396,7 +396,7 @@
   <section class="tex2jax_ignore mathjax_ignore" id="optimizacion-computacional">
 <h1>3.2. Optimización computacional<a class="headerlink" href="#optimizacion-computacional" title="Link to this heading">#</a></h1>
 <p>Objetivo (Sección 4 de la guía): reducir el costo manteniendo el desempeño, contrastando la complejidad
-teórica O(·) con tiempos medidos. Todas las mediciones usan el escenario A, el conjunto de desarrollo
+teórica O(·) con tiempos medidos. Todas las mediciones usan el escenario A, el conjunto de entrenamiento (train)
 preprocesado (p = 173 columnas tras One-Hot) y la mediana de 3 repeticiones para reducir la varianza.</p>
 <p>Entorno de ejecución de este informe: 2 núcleos de CPU, sin GPU (el código de GPU se documenta en 3.5).</p>
 <div class="cell docutils container">
@@ -512,7 +512,7 @@ queden por debajo de los asintóticos.</p>
 </section>
 <section id="modelo-estandar-vs-optimizado">
 <h2>3.2.3 Modelo estándar vs optimizado<a class="headerlink" href="#modelo-estandar-vs-optimizado" title="Link to this heading">#</a></h2>
-<p>Cada variante se entrena con los mismos datos (desarrollo) y se evalúa en el hold-out. <code class="docutils literal notranslate"><span class="pre">speedup</span></code> &gt; 1
+<p>Cada variante se entrena con los mismos datos (entrenamiento) y se evalúa en el hold-out. <code class="docutils literal notranslate"><span class="pre">speedup</span></code> &gt; 1
 indica que la variante es más rápida que la versión estándar (primera fila de cada modelo);
 <code class="docutils literal notranslate"><span class="pre">delta_rmse</span></code> &gt; 0 indica pérdida de precisión. La memoria es el pico de asignaciones de Python
 (<code class="docutils literal notranslate"><span class="pre">tracemalloc</span></code>) durante ajuste + predicción.</p>

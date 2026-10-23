@@ -464,11 +464,11 @@ dinámico sin publicar los datos.</p></li>
 </table>
 </div>
 <p><strong>Intervalo de predicción.</strong> Conformal partido relativo <span class="bibtex-citation" id="id2">[<a class="reference internal" href="09_reproducibilidad.html#id32" title="Jing Lei, Max G'Sell, Alessandro Rinaldo, Ryan J. Tibshirani, and Larry Wasserman. Distribution-free predictive inference for regression. Journal of the American Statistical Association, 113(523):1094–1111, 2018.">Lei <em>et al.</em>, 2018</a>]</span>: con las predicciones fuera de
-pliegue del desarrollo se calcula el cuantil <span class="math notranslate nohighlight">\(q\)</span> de <span class="math notranslate nohighlight">\(|y-\hat y|/\hat y\)</span> al nivel <span class="math notranslate nohighlight">\(\lceil (n+1)(1-\alpha)\rceil/n\)</span> y
+pliegue del entrenamiento (train) se calcula el cuantil <span class="math notranslate nohighlight">\(q\)</span> de <span class="math notranslate nohighlight">\(|y-\hat y|/\hat y\)</span> al nivel <span class="math notranslate nohighlight">\(\lceil (n+1)(1-\alpha)\rceil/n\)</span> y
 el intervalo es <span class="math notranslate nohighlight">\(\hat y(1\pm q)\)</span>. Es relativo porque el error crece con el nivel del costo. La cobertura observada
 en el hold-out se reporta en la tabla de líderes.</p>
 <p><strong>Explicación local.</strong> Valores de Shapley exactos sobre cinco grupos de variables (geografía, tipo de reserva,
-ubicación, año y producción) con función de valor intervencional sobre un fondo de 15 filas del desarrollo
+ubicación, año y producción) con función de valor intervencional sobre un fondo de 15 filas del entrenamiento (train)
 <span class="bibtex-citation" id="id3">[<a class="reference internal" href="09_reproducibilidad.html#id31" title="Mukund Sundararajan and Amir Najmi. The many Shapley values for model explanation. In Proceedings of the 37th International Conference on Machine Learning, volume 119 of PMLR, 9269–9278. 2020.">Sundararajan and Najmi, 2020</a>]</span>. Con <span class="math notranslate nohighlight">\(2^5 = 32\)</span> coaliciones el cálculo es exacto, funciona igual para los ocho modelos y
 cumple la eficiencia: base <span class="math notranslate nohighlight">\(+\sum_j \phi_j = \hat y\)</span>. Agrupar la geografía evita combinaciones imposibles como un
 país en una región que no es la suya.</p>

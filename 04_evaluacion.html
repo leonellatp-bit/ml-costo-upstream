@@ -405,7 +405,7 @@
 <h1>3.3. Evaluación de modelos<a class="headerlink" href="#evaluacion-de-modelos" title="Link to this heading">#</a></h1>
 <p>Para cada uno de los 7 modelos se elige el optimizador con menor RMSE externo medio (selección hecha
 con la CV anidada, no con el conjunto de prueba). El modelo final de esa combinación (búsqueda sobre todo
-el desarrollo) se evalúa <strong>una sola vez</strong> en el hold-out de 139 activos no vistos.</p>
+el entrenamiento) se evalúa <strong>una sola vez</strong> en el hold-out de 139 activos no vistos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">warnings</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">pickle</span>
@@ -530,7 +530,7 @@ sistemáticamente los activos caros. Los ensambles reducen la asimetría (0.6–
 <section id="ajuste-en-entrenamiento-validacion-y-prueba">
 <h2>3.3.3 Ajuste en entrenamiento, validación y prueba<a class="headerlink" href="#ajuste-en-entrenamiento-validacion-y-prueba" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong>Entrenamiento:</strong> predicción del modelo final sobre el conjunto de desarrollo con el que fue ajustado.</p></li>
+<li><p><strong>Entrenamiento:</strong> predicción del modelo final sobre el conjunto de entrenamiento (train) con el que fue ajustado.</p></li>
 <li><p><strong>Validación:</strong> predicciones <em>fuera de pliegue</em> del bucle externo (cada fila predicha por el modelo
 del pliegue que no la vio).</p></li>
 <li><p><strong>Prueba:</strong> hold-out de activos nunca vistos.</p></li>
@@ -576,7 +576,7 @@ profundos interpolan los datos de entrenamiento). La medida honesta de generaliz
 y prueba, no la de entrenamiento.</p></li>
 <li><p><strong>Prueba (1.72, R² 0.913)</strong> queda dentro del rango de los pliegues externos (1.5–3.5) y por debajo del
 RMSE de validación agrupado, que incluye un pliegue particularmente difícil (RMSE ≈ 3.5). Además, el
-modelo final se entrena con todo el desarrollo (~10 % más datos que cada modelo externo). La prueba no es
+modelo final se entrena con todo el entrenamiento (train) (~10 % más datos que cada modelo externo). La prueba no es
 «más fácil»: tiene más varianza (σ 5.8 vs 5.5) y más activos no convencionales (6 % vs 3.4 %), lo que eleva
 el R² a igual RMSE.</p></li>
 <li><p><strong>Serie anual (panel derecho; se omite 2014, que solo tiene 3 filas):</strong> el modelo reproduce la forma en U

@@ -54,12 +54,12 @@ ml-costo-upstream/
 | Modelos | Tabla de líderes; predicción en vivo con intervalo y SHAP local; diagnóstico; SHAP global; comparación estadística; subsección del modelo original | `DataTable` ordenable y filtrable; formulario validado con intervalo conformal 90 % y explicación de Shapley por grupos; real vs predicho, residuos, histograma y ACF; MCS con el HGSB; pseudocódigo, diferencias con la literatura, convergencia, ablación, pruebas y veredicto |
 
 **Intervalo de predicción.** Conformal partido relativo {cite}`lei2018distribution`: con las predicciones fuera de
-pliegue del desarrollo se calcula el cuantil $q$ de $|y-\hat y|/\hat y$ al nivel $\lceil (n+1)(1-\alpha)\rceil/n$ y
+pliegue del entrenamiento (train) se calcula el cuantil $q$ de $|y-\hat y|/\hat y$ al nivel $\lceil (n+1)(1-\alpha)\rceil/n$ y
 el intervalo es $\hat y(1\pm q)$. Es relativo porque el error crece con el nivel del costo. La cobertura observada
 en el hold-out se reporta en la tabla de líderes.
 
 **Explicación local.** Valores de Shapley exactos sobre cinco grupos de variables (geografía, tipo de reserva,
-ubicación, año y producción) con función de valor intervencional sobre un fondo de 15 filas del desarrollo
+ubicación, año y producción) con función de valor intervencional sobre un fondo de 15 filas del entrenamiento (train)
 {cite}`sundararajan2020many`. Con $2^5 = 32$ coaliciones el cálculo es exacto, funciona igual para los ocho modelos y
 cumple la eficiencia: base $+\sum_j \phi_j = \hat y$. Agrupar la geografía evita combinaciones imposibles como un
 país en una región que no es la suya.

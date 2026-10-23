@@ -454,8 +454,8 @@ empate.</p>
 </section>
 <section id="reentrenamiento-final-y-serializacion">
 <h2>Reentrenamiento final y serialización<a class="headerlink" href="#reentrenamiento-final-y-serializacion" title="Link to this heading">#</a></h2>
-<p>Con los hiperparámetros fijados por la búsqueda sobre todo el conjunto de desarrollo, cada pipeline completo
-(preprocesamiento + modelo) se reentrenó sobre los 556 activos de desarrollo y se serializó con
+<p>Con los hiperparámetros fijados por la búsqueda sobre todo el conjunto de entrenamiento (train), cada pipeline completo
+(preprocesamiento + modelo) se reentrenó sobre los 556 activos de entrenamiento (train) y se serializó con
 <code class="docutils literal notranslate"><span class="pre">joblib.dump(...,</span> <span class="pre">compress=3)</span></code> en <code class="docutils literal notranslate"><span class="pre">artifacts/&lt;Modelo&gt;/model.joblib</span></code>. Junto a cada modelo hay un <code class="docutils literal notranslate"><span class="pre">metadata.json</span></code> con
 las versiones de las librerías, la semilla, los hiperparámetros, el esquema de entrada (nombres, tipos y rangos
 válidos) y las métricas del bucle externo y de prueba (<code class="docutils literal notranslate"><span class="pre">tools/build_artifacts.py</span></code>).</p>

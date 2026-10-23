@@ -430,7 +430,7 @@ asintóticamente, rinde tanto como la mejor combinación convexa.</p>
 <li><p><strong>CV externa:</strong> en cada pliegue externo <span class="math notranslate nohighlight">\(k\)</span> los pesos se estiman con predicciones OOF de un
 GroupKFold(3) interno sobre el entrenamiento externo <span class="math notranslate nohighlight">\(k\)</span> (hiperparámetros del pliegue <span class="math notranslate nohighlight">\(k\)</span>) y se aplican al
 pliegue externo <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
-<li><p><strong>Prueba:</strong> los pesos se estiman con las predicciones OOF externas de todo el desarrollo y se aplican a las
+<li><p><strong>Prueba:</strong> los pesos se estiman con las predicciones OOF externas de todo el entrenamiento (train) y se aplican a las
 predicciones de los modelos finales. La prueba nunca interviene en la estimación de pesos.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -457,7 +457,7 @@ predicciones de los modelos finales. La prueba nunca interviene en la estimació
 </section>
 <section id="se-equivocan-los-modelos-en-los-mismos-activos">
 <h2>3.5.1 ¿Se equivocan los modelos en los mismos activos?<a class="headerlink" href="#se-equivocan-los-modelos-en-los-mismos-activos" title="Link to this heading">#</a></h2>
-<p>Correlación de los errores <em>out-of-fold</em> externos (cada fila del desarrollo predicha una vez, sin haber sido
+<p>Correlación de los errores <em>out-of-fold</em> externos (cada fila del entrenamiento (train) predicha una vez, sin haber sido
 vista) del mejor optimizador de cada modelo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -480,14 +480,14 @@ vista) del mejor optimizador de cada modelo.</p>
         <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
                 <span class="n">color</span><span class="o">=</span><span class="s2">"white"</span> <span class="k">if</span> <span class="n">corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.85</span> <span class="k">else</span> <span class="s2">"black"</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"correlación de errores OOF"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Correlación de errores entre modelos (desarrollo, OOF externo)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Correlación de errores entre modelos (entrenamiento, OOF externo)"</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">FIG_DIR</span> <span class="o">/</span> <span class="s2">"hibridos_corr_errores.png"</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/458beeb4a93b6d7ed1aeca017574c70e67bcfc7df87c5ced4d8df290ddf8b5a2.png" src="_images/458beeb4a93b6d7ed1aeca017574c70e67bcfc7df87c5ced4d8df290ddf8b5a2.png" />
+<img alt="_images/593523e6c25a8e85e42ed4b5772ce5785c9bd82675a1c68fbafccdc717198865.png" src="_images/593523e6c25a8e85e42ed4b5772ce5785c9bd82675a1c68fbafccdc717198865.png" />
 </div>
 </div>
 <p>Ningún par baja de 0.57: <strong>todos los modelos fallan en los mismos activos</strong>. RF y XGBoost tienen 0.96, la
@@ -589,7 +589,7 @@ dm_p_holm             0.6218        0.0142
 9      DecisionTree|Random 1.9208 0.5300    True
 10   DecisionTree|Genetica 1.9326 0.4100    True
 11       DecisionTree|Grid 1.9611 0.3215    True
-tiempo 22.3
+tiempo 26.9
 </pre></div>
 </div>
 </div>
@@ -602,20 +602,20 @@ tiempo 22.3
 <span class="n">mse_min</span> <span class="o">=</span> <span class="p">(</span><span class="n">sR</span> <span class="o">*</span> <span class="n">sX</span> <span class="o">-</span> <span class="n">sRX</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sR</span> <span class="o">+</span> <span class="n">sX</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">sRX</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ρ errores = </span><span class="si">{</span><span class="n">th</span><span class="p">[</span><span class="s1">'rho_err_dev'</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> · w* = </span><span class="si">{</span><span class="n">th</span><span class="p">[</span><span class="s1">'w_final'</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"MSE mínimo teórico = </span><span class="si">{</span><span class="n">mse_min</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> vs MSE RF = </span><span class="si">{</span><span class="n">sR</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> → ganancia máxima </span><span class="si">{</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mse_min</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">sR</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> %"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"w estimado en desarrollo = </span><span class="si">{</span><span class="n">th</span><span class="p">[</span><span class="s1">'w_final'</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">; w 'oráculo' en prueba (solo diagnóstico) = </span><span class="si">{</span><span class="n">s1</span><span class="p">[</span><span class="s1">'w_oracle_test_diagnostic'</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"w estimado en entrenamiento (train) = </span><span class="si">{</span><span class="n">th</span><span class="p">[</span><span class="s1">'w_final'</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">; w 'oráculo' en prueba (solo diagnóstico) = </span><span class="si">{</span><span class="n">s1</span><span class="p">[</span><span class="s1">'w_oracle_test_diagnostic'</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ρ errores = 0.958 · w* = 0.834
 MSE mínimo teórico = 4.294 vs MSE RF = 4.304 → ganancia máxima 0.23 %
-w estimado en desarrollo = 0.83; w 'oráculo' en prueba (solo diagnóstico) = 0.33
+w estimado en entrenamiento (train) = 0.83; w 'oráculo' en prueba (solo diagnóstico) = 0.33
 </pre></div>
 </div>
 </div>
 </div>
 <p>Con <span class="math notranslate nohighlight">\(\rho = 0.96\)</span> la ganancia máxima posible de la combinación es de apenas ~0.2 % del MSE. Además, el peso
-es inestable: el estimado en desarrollo (0.83) y el que habría sido óptimo en prueba (0.33) son muy distintos.
+es inestable: el estimado en entrenamiento (train) (0.83) y el que habría sido óptimo en prueba (0.33) son muy distintos.
 Es el <em>forecast combination puzzle</em> (Smith y Wallis, 2009): cuando la ganancia potencial es pequeña, el error
 de estimar <span class="math notranslate nohighlight">\(w\)</span> se la come.</p>
 </section>
