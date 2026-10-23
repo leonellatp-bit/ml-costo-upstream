@@ -2,7 +2,7 @@
 
 ## Respuesta a la pregunta de investigación
 
-**Sí es posible estimar el costo de producción equivalente Brent de un activo upstream que el modelo nunca ha
+**Sí es posible estimar el costo unitario de producción (equivalente Brent, USD/Bbl) de un activo upstream que el modelo nunca ha
 visto**, con un error típico de 1.6–1.7 USD/Bbl (RMSE en el hold-out de 139 activos; MAE ≈ 0.95 USD/Bbl;
 MAPE ≈ 6.7 %; R² ≈ 0.91–0.92), usando solo características estructurales del activo (región, país, cuenca,
 tipo y subtipo de reserva, ubicación, OPEP, año y producción). Lo logran los ensambles de árboles, Random

@@ -1,12 +1,12 @@
-# Predicción del costo de producción equivalente Brent en activos upstream de Oil & Gas
+# Predicción del costo unitario de producción en activos upstream de Oil & Gas
 
 **Proyecto final — Segundo entregable** · Machine Learning · Maestría en Ingeniería Industrial
 **Estudiante:** Leonella Torreglosa Portillo · Octubre 2026
 
 ## Problema
 
-Estimar el `BrentEquivalentProductionCost` (USD/Bbl) de un activo upstream de petróleo **que el modelo no ha
-visto** a partir de sus características geográficas, operativas y temporales. Los datos provienen de S&P Global
+Estimar el costo unitario de producción, medido como costo de producción equivalente Brent
+(`BrentEquivalentProductionCost`, USD/Bbl), de un activo upstream de petróleo **que el modelo no ha visto** a partir de sus características geográficas, operativas y temporales. Los datos provienen de S&P Global
 Commodity Insights (Supply Cost and Ownership): 4.595 registros activo-año, 695 activos con costo observado,
 99 países y 14 regiones entre 2014 y 2023.
 

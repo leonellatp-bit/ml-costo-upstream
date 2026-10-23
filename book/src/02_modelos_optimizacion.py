@@ -13,6 +13,14 @@
 # | **Total escenario A (principal)** | 7 × 4 | **28 combinaciones** |
 # | Escenario B (sensibilidad, con `BrentDifferential`) | 7 × Bayesiana | 7 |
 #
+# **¿Y Naive Bayes y Regresión Logística L1/L2?** La sección 7.2 de la guía los lista porque cubre ambos tipos de
+# problema, pero son **clasificadores**: estiman P(clase | x) y no pueden predecir un costo continuo en USD/Bbl. La
+# propia guía (Figura 1, Etapa 1 de regresión) define el conjunto para regresión como KNN, Ridge, Lasso, Decision
+# Tree, Random Forest, XGBoost y SVR, que es exactamente el implementado. Sus equivalentes de regresión están
+# cubiertos: la regresión logística con L2/L1 corresponde a **Ridge/Lasso** (misma penalización sobre los
+# coeficientes) y SVM corresponde a **SVR**. Por la misma razón no aplican el balanceo de clases (5.1.2), la
+# calibración de probabilidades (5.1.3) ni DeLong (6.2).
+#
 # **Validación anidada (Sección 3.2).**
 #
 # - *Hold-out* por activo: 20 % de los activos (139) se reserva y no se usa hasta la evaluación final.

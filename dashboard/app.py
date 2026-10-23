@@ -506,7 +506,7 @@ TABS = [("Resumen", tab_resumen), ("Datos y EDA", tab_eda), ("Modelos y optimiza
         ("Comparación estadística", tab_estadistica), ("Predictor", tab_predictor)]
 app.layout = html.Div([
     html.Div([
-        html.H1("Predicción del costo de producción equivalente Brent en activos upstream"),
+        html.H1("Predicción del costo unitario de producción en activos upstream de Oil & Gas"),
         html.P("Proyecto de Machine Learning · Leonella Torreglosa Portillo · Maestría en Ingeniería Industrial"),
         html.Div([html.Span(t, className="chip") for t in
                   ["Regresión", "7 modelos × 4 optimizadores", "CV anidada 10×3 por activo", "S&P Global · 2014–2023"]], className="meta"),

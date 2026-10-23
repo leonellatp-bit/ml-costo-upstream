@@ -1,4 +1,4 @@
-# Predicción del costo de producción equivalente Brent en activos upstream — Entrega final
+# Predicción del costo unitario de producción en activos upstream de Oil & Gas — Entrega final
 
 **Leonella Torreglosa Portillo** · Machine Learning · Maestría en Ingeniería Industrial · Octubre 2026
 
