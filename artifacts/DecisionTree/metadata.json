@@ -278,6 +278,6 @@
  "max_abs_diff_vs_nested_cv": 0.0,
  "size_mb": 0.025803,
  "inference_ms_per_row": 0.010862242545630146,
- "trained_on": "conjunto de desarrollo completo (556 activos)",
+ "trained_on": "conjunto de entrenamiento (train) completo (556 activos)",
  "created": "2026-10-23 19:30"
 }

@@ -3,12 +3,12 @@
 Esquema
 -------
 - Hold-out por activo (20 %) reservado para la evaluación final.
-- Sobre el 80 % de desarrollo:
+- Sobre el 80 % de entrenamiento (train):
     * bucle externo: GroupKFold(10) por activo -> estimación de generalización;
     * bucle interno: GroupKFold(3) por activo dentro de cada entrenamiento
       externo -> búsqueda de hiperparámetros (Grid, Random, Bayes, GA).
 - Las métricas reportadas salen del bucle externo, nunca del óptimo interno.
-- Tras la CV anidada se repite la búsqueda sobre todo el conjunto de desarrollo
+- Tras la CV anidada se repite la búsqueda sobre todo el conjunto de entrenamiento (train)
   ("final") para obtener el modelo que se evalúa en el hold-out.
 
 Cada tarea (escenario, modelo, método, pliegue) se guarda en disco al terminar,
@@ -57,7 +57,7 @@ def run_task(dev: pd.DataFrame, test: pd.DataFrame, scenario: str, model: str, m
     ----------
     fold : int or "final"
         Índice del pliegue externo, o "final" para la búsqueda sobre todo el
-        conjunto de desarrollo (evaluada en el hold-out).
+        conjunto de entrenamiento (train) (evaluada en el hold-out).
 
     Returns
     -------

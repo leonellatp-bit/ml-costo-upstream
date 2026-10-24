@@ -35,7 +35,7 @@
 # * **CV externa:** en cada pliegue externo $k$ los pesos se estiman con predicciones OOF de un
 #   GroupKFold(3) interno sobre el entrenamiento externo $k$ (hiperparámetros del pliegue $k$) y se aplican al
 #   pliegue externo $k$.
-# * **Prueba:** los pesos se estiman con las predicciones OOF externas de todo el desarrollo y se aplican a las
+# * **Prueba:** los pesos se estiman con las predicciones OOF externas de todo el entrenamiento (train) y se aplican a las
 #   predicciones de los modelos finales. La prueba nunca interviene en la estimación de pesos.
 
 # %%
@@ -58,7 +58,7 @@ OUT = C.RESULTS_DIR / "blend"
 # %% [markdown]
 # ## 3.5.1 ¿Se equivocan los modelos en los mismos activos?
 #
-# Correlación de los errores *out-of-fold* externos (cada fila del desarrollo predicha una vez, sin haber sido
+# Correlación de los errores *out-of-fold* externos (cada fila del entrenamiento (train) predicha una vez, sin haber sido
 # vista) del mejor optimizador de cada modelo.
 
 # %%
@@ -81,7 +81,7 @@ for i in range(7):
         ax.text(j, i, f"{corr.iloc[i, j]:.2f}", ha="center", va="center", fontsize=9,
                 color="white" if corr.iloc[i, j] > 0.85 else "black")
 fig.colorbar(im, ax=ax, shrink=.8, label="correlación de errores OOF")
-ax.set_title("Correlación de errores entre modelos (desarrollo, OOF externo)")
+ax.set_title("Correlación de errores entre modelos (entrenamiento, OOF externo)")
 fig.tight_layout(); fig.savefig(C.FIG_DIR / "hibridos_corr_errores.png", dpi=150)
 plt.show()
 
@@ -101,11 +101,11 @@ sR, sX, sRX = th["var_eR"], th["var_eX"], th["cov_eRX"]
 mse_min = (sR * sX - sRX ** 2) / (sR + sX - 2 * sRX)
 print(f"ρ errores = {th['rho_err_dev']:.3f} · w* = {th['w_final']:.3f}")
 print(f"MSE mínimo teórico = {mse_min:.3f} vs MSE RF = {sR:.3f} → ganancia máxima {100 * (1 - mse_min / sR):.2f} %")
-print(f"w estimado en desarrollo = {th['w_final']:.2f}; w 'oráculo' en prueba (solo diagnóstico) = {s1['w_oracle_test_diagnostic']:.2f}")
+print(f"w estimado en entrenamiento (train) = {th['w_final']:.2f}; w 'oráculo' en prueba (solo diagnóstico) = {s1['w_oracle_test_diagnostic']:.2f}")
 
 # %% [markdown]
 # Con $\rho = 0.96$ la ganancia máxima posible de la combinación es de apenas ~0.2 % del MSE. Además, el peso
-# es inestable: el estimado en desarrollo (0.83) y el que habría sido óptimo en prueba (0.33) son muy distintos.
+# es inestable: el estimado en entrenamiento (train) (0.83) y el que habría sido óptimo en prueba (0.33) son muy distintos.
 # Es el *forecast combination puzzle* (Smith y Wallis, 2009): cuando la ganancia potencial es pequeña, el error
 # de estimar $w$ se la come.
 #

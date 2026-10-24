@@ -3,7 +3,7 @@
 #
 # Para cada uno de los 7 modelos se elige el optimizador con menor RMSE externo medio (selección hecha
 # con la CV anidada, no con el conjunto de prueba). El modelo final de esa combinación (búsqueda sobre todo
-# el desarrollo) se evalúa **una sola vez** en el hold-out de 139 activos no vistos.
+# el entrenamiento) se evalúa **una sola vez** en el hold-out de 139 activos no vistos.
 
 # %%
 import sys, warnings, json, pickle
@@ -110,7 +110,7 @@ test_tbl
 # %% [markdown]
 # ## 3.3.3 Ajuste en entrenamiento, validación y prueba
 #
-# - **Entrenamiento:** predicción del modelo final sobre el conjunto de desarrollo con el que fue ajustado.
+# - **Entrenamiento:** predicción del modelo final sobre el conjunto de entrenamiento (train) con el que fue ajustado.
 # - **Validación:** predicciones *fuera de pliegue* del bucle externo (cada fila predicha por el modelo
 #   del pliegue que no la vio).
 # - **Prueba:** hold-out de activos nunca vistos.
@@ -150,7 +150,7 @@ plt.tight_layout()
 #   y prueba, no la de entrenamiento.
 # - **Prueba (1.72, R² 0.913)** queda dentro del rango de los pliegues externos (1.5–3.5) y por debajo del
 #   RMSE de validación agrupado, que incluye un pliegue particularmente difícil (RMSE ≈ 3.5). Además, el
-#   modelo final se entrena con todo el desarrollo (~10 % más datos que cada modelo externo). La prueba no es
+#   modelo final se entrena con todo el entrenamiento (train) (~10 % más datos que cada modelo externo). La prueba no es
 #   "más fácil": tiene más varianza (σ 5.8 vs 5.5) y más activos no convencionales (6 % vs 3.4 %), lo que eleva
 #   el R² a igual RMSE.
 # - **Serie anual (panel derecho; se omite 2014, que solo tiene 3 filas):** el modelo reproduce la forma en U

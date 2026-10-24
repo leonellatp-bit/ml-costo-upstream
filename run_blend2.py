@@ -5,7 +5,7 @@
 
 Igual que run_blend.py: en cada pliegue externo k, los pesos salen de predicciones OOF de un
 GroupKFold(3) interno sobre el entrenamiento externo k (hiperparámetros del pliegue k);
-para la prueba, los pesos salen de las predicciones OOF externas del desarrollo.
+para la prueba, los pesos salen de las predicciones OOF externas del entrenamiento (train).
 """
 from __future__ import annotations
 

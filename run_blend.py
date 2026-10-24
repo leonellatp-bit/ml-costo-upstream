@@ -11,7 +11,7 @@ fuera de muestra que no incluyen los datos donde luego se evalúa:
   out-of-fold de un GroupKFold(3) interno sobre el entrenamiento externo k
   (hiperparámetros del pliegue k). Luego se aplica al pliegue externo k.
 * Prueba: w_final se estima con las predicciones out-of-fold externas de todo el
-  conjunto de desarrollo y se aplica a las predicciones de los modelos finales.
+  conjunto de entrenamiento (train) y se aplica a las predicciones de los modelos finales.
 """
 from __future__ import annotations
 
@@ -102,7 +102,7 @@ def main():
     fr = stats.friedmanchisquare(folds["rmse_RF"], folds["rmse_XGB"], folds["rmse_Hibrido"])
     fstats["friedman"] = {"chi2": float(fr.statistic), "p": float(fr.pvalue)}
 
-    # ---------- 2. Peso final con OOF externa del desarrollo ----------
+    # ---------- 2. Peso final con OOF externa del entrenamiento (train) ----------
     w_final = opt_weight(oof["y"], oof["rf"], oof["xgb"])
     er, ex = oof["y"] - oof["rf"], oof["y"] - oof["xgb"]
     s_r, s_x, s_rx = er.var(), ex.var(), np.cov(er, ex)[0, 1]

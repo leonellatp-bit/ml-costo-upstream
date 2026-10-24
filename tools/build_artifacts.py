@@ -2,7 +2,7 @@
 
 Para cada uno de los 7 modelos base se elige la mejor combinación según el RMSE medio del
 bucle externo; se añade el modelo original (HGSB). Cada pipeline final (reentrenado sobre
-todo el conjunto de entrenamiento/desarrollo durante la CV anidada) se serializa con
+todo el conjunto de entrenamiento (train) durante la CV anidada) se serializa con
 joblib (compress=3) junto a un metadata.json, y se verifica con una prueba de ida y vuelta
 que el artefacto produce exactamente las mismas predicciones que el modelo en memoria.
 
@@ -92,7 +92,7 @@ def main():
         for _ in range(3):
             pipe.predict(Xt)
         infer = (time.perf_counter() - t) / 3 / len(Xt) * 1000
-        # --- conformal (predicciones fuera de pliegue del desarrollo)
+        # --- conformal (predicciones fuera de pliegue del entrenamiento (train))
         oof = np.full(len(dev), np.nan)
         for r in res:
             oof[r["index"]] = r["pred"]
@@ -108,7 +108,7 @@ def main():
                              for k in ["rmse", "mae", "mape", "r2"]},
                 "test": fin["metrics"], "conformal_90": conf[m], "round_trip_identical": round_trip, "max_abs_diff_vs_nested_cv": max_diff_cv,
                 "size_mb": path.stat().st_size / 1e6, "inference_ms_per_row": infer,
-                "trained_on": "conjunto de desarrollo completo (556 activos)", "created": time.strftime("%Y-%m-%d %H:%M")}
+                "trained_on": "conjunto de entrenamiento (train) completo (556 activos)", "created": time.strftime("%Y-%m-%d %H:%M")}
         json.dump(meta, open(d / "metadata.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False, default=str)
         key = f"{m}|{me}"
         lb.append({"model": m, "label": LABELS[m], "method": me,

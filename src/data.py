@@ -38,13 +38,13 @@ def load_model_data(path=C.DATA_PATH) -> pd.DataFrame:
 def split_dev_test(df: pd.DataFrame, seed: int = C.SEED):
     """Partición hold-out por activo (GroupShuffleSplit, 80/20).
 
-    Ningún activo aparece a la vez en desarrollo y prueba. El conjunto de prueba
+    Ningún activo aparece a la vez en entrenamiento (train) y prueba (test). El conjunto de prueba
     no se toca durante la optimización: solo se usa para la evaluación final.
 
     Returns
     -------
     dev : DataFrame
-        Conjunto de desarrollo (sobre él corre la CV anidada).
+        Conjunto de entrenamiento (train) (sobre él corre la CV anidada).
     test : DataFrame
         Conjunto de prueba reservado.
     """

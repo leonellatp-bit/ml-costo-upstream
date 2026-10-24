@@ -16,7 +16,7 @@
 # | 8 | `SupplyTypeName` y `Commodity` son constantes | Se eliminan (en el entregable 1 `SupplyTypeName` entraba al modelo) |
 #
 # Las decisiones que alimentan el modelo (información mutua, R² univariado) se calculan **solo con el
-# conjunto de desarrollo** (80 %), nunca con el de prueba.
+# conjunto de entrenamiento (train)** (80 %), nunca con el de prueba.
 
 # %%
 import sys, warnings
@@ -40,8 +40,8 @@ pd.set_option("display.float_format", lambda v: f"{v:,.3f}")
 raw = load_raw()
 df = load_model_data()
 dev, test = split_dev_test(df)
-print(f"Filas crudas: {raw.shape[0]:,} | con target: {df.shape[0]:,} | desarrollo: {len(dev):,} | prueba: {len(test):,}")
-print(f"Activos: {df[C.GROUP].nunique()} (desarrollo {dev[C.GROUP].nunique()}, prueba {test[C.GROUP].nunique()}; sin solapamiento: "
+print(f"Filas crudas: {raw.shape[0]:,} | con target: {df.shape[0]:,} | entrenamiento (train): {len(dev):,} | prueba: {len(test):,}")
+print(f"Activos: {df[C.GROUP].nunique()} (entrenamiento {dev[C.GROUP].nunique()}, prueba {test[C.GROUP].nunique()}; sin solapamiento: "
       f"{len(set(dev[C.GROUP]) & set(test[C.GROUP])) == 0})")
 
 # %% [markdown]
@@ -196,7 +196,7 @@ for i in range(len(cats)):
         ax.text(j, i, f"{V.values[i, j]:.2f}", ha="center", va="center", fontsize=8,
                 color="white" if V.values[i, j] > 0.6 else "#0b0b0b")
 fig.colorbar(im, ax=ax, shrink=0.8, label="V de Cramér (corregida)")
-ax.set_title("Asociación entre variables categóricas (conjunto de desarrollo)")
+ax.set_title("Asociación entre variables categóricas (conjunto de entrenamiento (train))")
 plt.tight_layout()
 
 # %% [markdown]

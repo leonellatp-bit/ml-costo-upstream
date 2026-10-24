@@ -24,7 +24,7 @@
 # **Validación anidada (Sección 3.2).**
 #
 # - *Hold-out* por activo: 20 % de los activos (139) se reserva y no se usa hasta la evaluación final.
-# - **Bucle externo:** `GroupKFold(10)` por activo sobre los 556 activos de desarrollo (~56 activos y ~300
+# - **Bucle externo:** `GroupKFold(10)` por activo sobre los 556 activos de entrenamiento (train) (~56 activos y ~300
 #   filas por pliegue). Diez pliegues dan diez bloques para el test de Friedman y suficiente tamaño de prueba
 #   por pliegue; con n ≈ 3.000 el costo de 10 pliegues es asumible.
 # - **Bucle interno:** `GroupKFold(3)` por activo dentro de cada entrenamiento externo (~500 activos). Tres
@@ -32,7 +32,7 @@
 #   evaluaciones × 3 ajustes ≈ 28.000 entrenamientos.
 # - Las métricas reportadas salen del **bucle externo**; el RMSE del bucle interno solo se usa para elegir
 #   hiperparámetros.
-# - Después de la CV anidada se repite la búsqueda sobre todo el desarrollo (búsqueda *final*) y ese modelo
+# - Después de la CV anidada se repite la búsqueda sobre todo el entrenamiento (train) (búsqueda *final*) y ese modelo
 #   se evalúa en el hold-out.
 #
 # **Presupuesto igual para todos los métodos:** 30 evaluaciones por búsqueda (cada evaluación = CV interna

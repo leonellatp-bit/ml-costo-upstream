@@ -2,7 +2,7 @@
 # # 3.2. Optimización computacional
 #
 # Objetivo (Sección 4 de la guía): reducir el costo manteniendo el desempeño, contrastando la complejidad
-# teórica O(·) con tiempos medidos. Todas las mediciones usan el escenario A, el conjunto de desarrollo
+# teórica O(·) con tiempos medidos. Todas las mediciones usan el escenario A, el conjunto de entrenamiento (train)
 # preprocesado (p = 173 columnas tras One-Hot) y la mediana de 3 repeticiones para reducir la varianza.
 #
 # Entorno de ejecución de este informe: 2 núcleos de CPU, sin GPU (el código de GPU se documenta en 3.5).
@@ -102,7 +102,7 @@ ex
 # %% [markdown]
 # ## 3.2.3 Modelo estándar vs optimizado
 #
-# Cada variante se entrena con los mismos datos (desarrollo) y se evalúa en el hold-out. `speedup` > 1
+# Cada variante se entrena con los mismos datos (entrenamiento) y se evalúa en el hold-out. `speedup` > 1
 # indica que la variante es más rápida que la versión estándar (primera fila de cada modelo);
 # `delta_rmse` > 0 indica pérdida de precisión. La memoria es el pico de asignaciones de Python
 # (`tracemalloc`) durante ajuste + predicción.

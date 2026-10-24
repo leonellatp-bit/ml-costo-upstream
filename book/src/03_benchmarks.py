@@ -52,8 +52,8 @@ pd.DataFrame(alt).sort_values("RMSE elegido")
 # %% [markdown]
 # ## Reentrenamiento final y serialización
 #
-# Con los hiperparámetros fijados por la búsqueda sobre todo el conjunto de desarrollo, cada pipeline completo
-# (preprocesamiento + modelo) se reentrenó sobre los 556 activos de desarrollo y se serializó con
+# Con los hiperparámetros fijados por la búsqueda sobre todo el conjunto de entrenamiento (train), cada pipeline completo
+# (preprocesamiento + modelo) se reentrenó sobre los 556 activos de entrenamiento (train) y se serializó con
 # `joblib.dump(..., compress=3)` en `artifacts/<Modelo>/model.joblib`. Junto a cada modelo hay un `metadata.json` con
 # las versiones de las librerías, la semilla, los hiperparámetros, el esquema de entrada (nombres, tipos y rangos
 # válidos) y las métricas del bucle externo y de prueba (`tools/build_artifacts.py`).
