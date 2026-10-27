@@ -26,13 +26,15 @@ desplegado.
 │   ├── evaluation.py · computational.py · interpret.py · viz.py
 │   ├── dash_data.py          Carga y caché para el dashboard
 │   ├── plots.py              Gráficos Plotly reutilizables
-│   └── explain.py            Shapley por grupos e intervalos conformales
+│   ├── explain.py            Shapley por grupos e intervalos conformales
+│   └── theory_content.py     Teoría de los modelos y conclusiones del dashboard
 ├── artifacts/<Modelo>/       model.joblib + metadata.json (8 modelos), leaderboard.csv, conformal.json
 ├── tests/                    Pruebas unitarias del modelo original (pytest)
 ├── run_nested.py             Benchmarks (≈ 80 min, 2 núcleos)
 ├── run_original.py           HGSB con el mismo protocolo (≈ 16 min)
 ├── run_original_stats.py     Pruebas de hipótesis, MCS, ablación, robustez
 ├── run_blend.py, run_blend2.py  Modelos híbridos (capítulo 3.5)
+├── run_weighted_forest.py    Bosques con pesos por árbol (capítulo 5.9)
 ├── tools/                    build_artifacts.py, nbtools.py
 ├── book/                     Jupyter Book (capítulos 0–9, references.bib)
 ├── results/                  Tablas y resultados precalculados (caché y modelos pesados en .gitignore)

@@ -101,8 +101,8 @@ def layout():
                       for s, t in STEPS], className="pipeline"))], className="mb-3"),
 
         dbc.Card([dbc.CardHeader("Datos y diccionario de variables"), dbc.CardBody([
-            html.P(["Fuente: S&P Global Commodity Insights, módulo Supply Cost and Ownership (licencia corporativa, uso académico). "
-                    f"{len(r):,} registros activo-año, 2014–2023, 17 columnas.".replace(",", ".")]),
+            html.P("Fuente: S&P Global Commodity Insights, módulo Supply Cost and Ownership (licencia corporativa, uso "
+                   f"académico). {f'{len(r):,}'.replace(',', '.')} registros activo-año, 2014–2023, 17 columnas."),
             dbc.Table([html.Thead(html.Tr([html.Th("Variable"), html.Th("Tipo"), html.Th("Rol"), html.Th("Descripción")])),
                        html.Tbody([html.Tr([html.Td(html.Code(v)), html.Td(t), html.Td(rl), html.Td(ds)]) for v, t, rl, ds in DICT])],
                       bordered=False, hover=True, responsive=True, size="sm", className="mb-0"),

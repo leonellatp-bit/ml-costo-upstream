@@ -45,3 +45,11 @@ body { background: var(--page); color: var(--ink); font-family: Inter, system-ui
   .filters, .sticky-select { position: static; }
   .page { padding-top: 70px; }
 }
+.theory-md p { margin-bottom: .6rem; }
+.theory-md .MathJax { font-size: 105%; }
+.num { font-variant-numeric: tabular-nums; text-align: right; }
+.finding { height: 100%; border-top: 3px solid var(--blue); background: #F8FAFC; border-radius: 6px; padding: 12px 14px; }
+.finding-title { color: var(--navy); font-weight: 700; margin-bottom: 4px; }
+.accordion-button { font-weight: 600; color: var(--navy); }
+.hero-text h1, .hero-text p { color: #F3F1EC; }
+.hero-text p { color: #D9E2EE; }

@@ -51,7 +51,7 @@ ml-costo-upstream/
 |---|---|---|
 | Contexto | Problema y relevancia con cifra citada; pregunta y objetivos; datos y diccionario; tipo de tarea; metodología; limitaciones, ética, autores, versión | Portada con resultado clave, cifra de la IEA {cite}`iea2025wei`, diccionario de 12 variables, diagrama del pipeline, tarjeta de limitaciones y autoría |
 | EDA | Filtros globales; distribución del objetivo; univariadas y bivariadas con explorador; correlación; faltantes; atípicos; frase de interpretación | Región (Dropdown), años (RangeSlider), tipo y ubicación (Checklist). Histograma, tendencia anual, cajas por categoría con atípicos, faltantes por variable o por región, explorador x/y/color, Spearman e identidad contable. Cada gráfico tiene su frase calculada sobre la selección |
-| Modelos | Tabla de líderes; predicción en vivo con intervalo y SHAP local; diagnóstico; SHAP global; comparación estadística; subsección del modelo original | `DataTable` ordenable y filtrable; formulario validado con intervalo conformal 90 % y explicación de Shapley por grupos; real vs predicho, residuos, histograma y ACF; MCS con el HGSB; pseudocódigo, diferencias con la literatura, convergencia, ablación, pruebas y veredicto |
+| Modelos | Tabla de líderes; predicción en vivo con intervalo y SHAP local; diagnóstico; SHAP global; comparación estadística; subsección del modelo original | `DataTable` ordenable y filtrable; formulario validado con intervalo conformal 90 % y explicación de Shapley por grupos; real vs predicho, residuos, histograma y ACF; MCS con el HGSB; fundamentos teóricos de los 8 modelos (fórmula en LaTeX, cómo aprende, hiperparámetros elegidos); pseudocódigo, diferencias con la literatura, convergencia, ablación, pruebas y veredicto; conclusiones, uso para decisiones, limitaciones y trabajo futuro |
 
 **Intervalo de predicción.** Conformal partido relativo {cite}`lei2018distribution`: con las predicciones fuera de
 pliegue del entrenamiento (train) se calcula el cuantil $q$ de $|y-\hat y|/\hat y$ al nivel $\lceil (n+1)(1-\alpha)\rceil/n$ y
@@ -66,9 +66,45 @@ país en una región que no es la suya.
 
 ## 7.3 Capturas de pantalla
 
-```{note}
-Agregar aquí las capturas de las tres páginas desplegadas (`book/figures/dash_contexto.png`,
-`dash_eda.png`, `dash_modelos.png`).
+```{figure} figures/dash_contexto.png
+:name: fig-dash-contexto
+:width: 100%
+
+**Contexto.** Portada con el resultado clave, indicadores del conjunto de datos, relevancia con cifra citada de la
+IEA, pregunta de investigación y objetivos, diagrama de la metodología y diccionario de variables.
+```
+
+```{figure} figures/dash_eda.png
+:name: fig-dash-eda
+:width: 100%
+
+**EDA.** Filtros globales (región, años, tipo de reserva y ubicación) que actualizan todos los gráficos; cada gráfico
+lleva una frase de interpretación calculada sobre la selección.
+```
+
+```{figure} figures/dash_modelos.png
+:name: fig-dash-modelos
+:width: 100%
+
+**Modelos.** Tabla de líderes ordenable y filtrable (el HGSB resaltado) y predicción en vivo con intervalo conformal
+del 90 %, explicación local de Shapley por grupos y comparación de los ocho modelos para el mismo activo.
+```
+
+```{figure} figures/dash_teoria.png
+:name: fig-dash-teoria
+:width: 100%
+
+**Modelos: interpretabilidad, MCS y fundamentos teóricos.** Importancia SHAP global del modelo seleccionado, Model
+Confidence Set con el HGSB incluido y un panel por modelo con su formulación, cómo aprende y los hiperparámetros
+elegidos.
+```
+
+```{figure} figures/dash_conclusiones.png
+:name: fig-dash-conclusiones
+:width: 100%
+
+**Modelos: pruebas, veredicto y conclusiones.** Tabla de pruebas de hipótesis del HGSB con p ajustados y tamaños del
+efecto, veredicto sobre R3, hallazgos principales, uso del modelo para decidir, limitaciones y trabajo futuro.
 ```
 
 ## 7.4 Guía de despliegue en Render

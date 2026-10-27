@@ -99,13 +99,15 @@ def missing_bar(pct: pd.Series, title: str) -> go.Figure:
                          text=[f"{v:.0f} %" for v in pct.values], textposition="outside",
                          hovertemplate="%{y}: %{x:.1f} %<extra></extra>"))
     f.update_layout(title=title, xaxis_title="% de filas sin dato", xaxis=dict(range=[0, 115]),
-                    height=max(300, 26 * len(pct) + 100), margin=dict(l=190), showlegend=False)
+                    height=max(300, 26 * len(pct) + 100), margin=dict(l=240), showlegend=False)
     return f
 
 
-def year_trend(d: pd.DataFrame, y: str) -> go.Figure:
+def year_trend(d: pd.DataFrame, y: str, min_rows: int = 30) -> go.Figure:
+    """Mediana y rango intercuartil por año (omite años con menos de ``min_rows`` filas, p. ej. 2014)."""
     g = d.groupby("Year")[y].agg(["median", lambda s: s.quantile(.25), lambda s: s.quantile(.75), "size"])
     g.columns = ["med", "q1", "q3", "n"]
+    g = g[g.n >= min_rows] if (g.n >= min_rows).sum() >= 2 else g
     f = go.Figure()
     f.add_trace(go.Scatter(x=list(g.index) + list(g.index[::-1]), y=list(g.q3) + list(g.q1[::-1]), fill="toself",
                            fillcolor="rgba(42,120,214,0.15)", line=dict(width=0), name="rango intercuartil",
@@ -214,5 +216,6 @@ def mcs_bar(m: pd.DataFrame) -> go.Figure:
                          customdata=np.c_[m.p_mcs], text=[f"p={p:.2f}" for p in m.p_mcs], textposition="outside",
                          hovertemplate="%{y}<br>RMSE %{x:.3f} · p_MCS %{customdata[0]:.3f}<extra></extra>"))
     f.update_layout(title="Model Confidence Set (α = 0.10) en el hold-out", xaxis_title="RMSE de prueba (USD/Bbl)",
-                    height=460, margin=dict(l=210, r=60), yaxis=dict(autorange="reversed"), showlegend=False)
+                    height=460, margin=dict(l=210, r=90), yaxis=dict(autorange="reversed"), showlegend=False,
+                    xaxis_range=[0, float(m.RMSE.max()) * 1.15])
     return f

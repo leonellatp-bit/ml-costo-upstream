@@ -281,3 +281,35 @@ piv
 # Los tres modelos coinciden en el orden de importancia: geografía, luego año y tipo de reserva. El HGSB no cambia
 # **qué** explica el costo; cambia **cómo** usa la geografía, con información prestada entre niveles. La ventaja
 # frente a XGBoost viene de los países con pocos activos, donde el One-Hot no tiene suficiente información.
+
+# %% [markdown]
+# ## 5.9 Alternativa explorada: bosques con pesos aprendidos por árbol
+#
+# Antes de fijar el diseño del HGSB se probó otra familia de reglas de combinación: un Random Forest cuyos árboles
+# (entrenados con *bootstrap por activo*) reciben pesos distintos según su error fuera de bolsa, medido en activos
+# que no vieron (`run_weighted_forest.py`, mismos 10 pliegues externos e hiperparámetros de RF de cada pliegue):
+#
+# - **A.** pesos uniformes $1/B$ (referencia);
+# - **B.** pesos globales $w_b \propto \exp(-\beta z_b)$, con $z_b$ el error OOB estandarizado del árbol;
+# - **C.** pesos locales por región, con el error del árbol en la región contraído hacia su error global:
+#   $e_{b,r} = (n_r\,\mathrm{MSE}_{b,r} + \kappa\,\mathrm{MSE}_b)/(n_r+\kappa)$;
+# - **D.** apilamiento convexo de los árboles con penalización ridge hacia los pesos uniformes.
+#
+# $\beta$, $\kappa$ y la penalización se eligieron con el error OOB dentro del entrenamiento, nunca con el pliegue
+# externo.
+
+# %%
+wf = pd.read_csv(C.RESULTS_DIR / "weighted_forest" / "folds.csv")
+cols = {"A_uniforme": "A. Uniforme (bootstrap por activo)", "B_global": "B. Pesos globales OOB",
+        "C_local_region": "C. Pesos locales por región", "D_stacking": "D. Apilamiento convexo",
+        "RF_sklearn": "Random Forest (scikit-learn)", "HGSB": "HGSB"}
+pd.DataFrame({"RMSE externo medio": wf[list(cols)].mean().values,
+              "d.e. entre pliegues": wf[list(cols)].std(ddof=1).values}, index=list(cols.values())).sort_values("RMSE externo medio")
+
+# %% [markdown]
+# Reponderar los árboles da como mucho un 2 % frente a los pesos uniformes y, en el mejor caso, empata con el Random
+# Forest de scikit-learn; ninguna variante se acerca al HGSB. Con árboles profundos que cometen errores muy parecidos,
+# cambiar sus pesos casi no mueve el promedio, y estimar pesos por región con pocos activos agrega ruido (al ampliar
+# la rejilla de búsqueda la variante C empeoró). La conclusión refuerza el diseño del HGSB: la mejora no viene de
+# **cómo se combinan** los árboles, sino de **qué ven**, es decir, de una codificación de la geografía que comparte
+# información entre niveles.

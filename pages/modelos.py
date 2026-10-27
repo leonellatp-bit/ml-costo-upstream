@@ -9,6 +9,7 @@ from dash import Input, Output, State, callback, dash_table, dcc, html, no_updat
 from src import plots as P
 from src.dash_data import LABELS, available_models, jfile, metadata, model, table
 from src.explain import conformal_interval, grouped_shapley
+from src.theory_content import FINDINGS, FUTURE, LIMITATIONS, METHOD_MD, THEORY, USES
 
 dash.register_page(__name__, path="/modelos", name="Modelos", title="Modelos · Costo upstream", order=2)
 GCFG = {"displayModeBar": False, "responsive": True}
@@ -104,7 +105,7 @@ def original_section():
     tests = table("tests")
     abl = table("ablation")
     conv = table("convergence")
-    badge = dbc.Badge(v.get("label", "pendiente"), color={"superior": "success", "no superior": "warning"}.get(
+    badge = dbc.Badge(v.get("label", "—"), color={"superior": "success", "no superior": "warning"}.get(
         v.get("status"), "secondary"), className="verdict-badge")
     tcols = ["Prueba", "H0", "Supuestos", "Estadístico", "p crudo", "p ajustado (Holm)", "Tamaño del efecto", "Conclusión"]
     ttab = (dbc.Table.from_dataframe(tests[[c for c in tcols if c in tests.columns]], striped=False, hover=True,
@@ -139,8 +140,56 @@ def original_section():
         ], className="mt-2"),
         html.H5("Pruebas de hipótesis frente al mejor benchmark", className="mt-3"),
         ttab,
-        dbc.Alert([html.B("Veredicto: "), v.get("text", "pendiente")],
+        dbc.Alert([html.B("Veredicto: "), v.get("text", "—")],
                   color="success" if v.get("status") == "superior" else "warning", className="mt-3 mb-0"),
+    ])], className="mb-3")
+
+
+def _fmt(v):
+    return f"{v:.4g}" if isinstance(v, float) else str(v)
+
+
+def theory_section():
+    """Fundamentos teóricos: un panel por modelo con fórmula, aprendizaje e hiperparámetros elegidos."""
+    items = []
+    for m in [k for k in ["Ridge", "Lasso", "KNN", "SVR", "DecisionTree", "RandomForest", "XGBoost", "HGSB"]
+              if k in THEORY]:
+        t = THEORY[m]
+        md = metadata(m)
+        hp = md.get("hyperparameters", {})
+        rows = [html.Tr([html.Td(html.Code(k)), html.Td(t["hp"].get(k, "")), html.Td(_fmt(v), className="num")])
+                for k, v in hp.items()]
+        outer = md.get("outer_cv", {}).get("rmse", {})
+        items.append(dbc.AccordionItem([
+            dcc.Markdown(t["md"], mathjax=True, className="theory-md"),
+            html.H6(f"Hiperparámetros elegidos ({md.get('method', '—')})", className="mt-3"),
+            dbc.Table([html.Thead(html.Tr([html.Th("Hiperparámetro"), html.Th("Qué controla"), html.Th("Valor")])),
+                       html.Tbody(rows)], size="sm", hover=True, responsive=True, className="mb-1") if rows else None,
+            html.P(f"RMSE externo {outer.get('mean', float('nan')):.3f} ± {outer.get('sd', float('nan')):.3f} USD/Bbl · "
+                   f"prueba {md.get('test', {}).get('rmse', float('nan')):.3f} USD/Bbl", className="small mb-0")
+            if outer else None,
+        ], title=f"{LABELS[m]} · {t['family']}", item_id=m))
+    items.append(dbc.AccordionItem(dcc.Markdown(METHOD_MD, mathjax=True, className="theory-md"),
+                                   title="Validación anidada, optimizadores y sesgo–varianza", item_id="metodo"))
+    return dbc.Card([dbc.CardHeader("Fundamentos teóricos de los modelos"), dbc.CardBody([
+        html.P("Abre cada modelo para ver su formulación, cómo aprende, sus supuestos y los hiperparámetros que eligió "
+               "la optimización anidada (leídos de los artefactos desplegados).", className="small"),
+        dbc.Accordion(items, start_collapsed=True, always_open=True, flush=True)])], className="mb-3")
+
+
+def conclusions_section():
+    """Conclusiones del problema, uso para decisiones, limitaciones y trabajo futuro."""
+    find = [dbc.Col(html.Div([html.H6(t, className="finding-title"), html.P(d, className="mb-0")],
+                             className="finding"), md=6, lg=4, className="mb-3") for t, d in FINDINGS]
+    return dbc.Card([dbc.CardHeader("Conclusiones y limitaciones"), dbc.CardBody([
+        html.P(html.I("¿Es posible predecir el costo unitario de producción de un activo upstream que el modelo nunca ha "
+                      "visto? Sí, con un error típico de 1.6–1.7 USD/Bbl, y con límites claros."), className="mb-3"),
+        dbc.Row(find),
+        dbc.Row([
+            dbc.Col([html.H6("Cómo usar el modelo para decidir"), html.Ul([html.Li(u) for u in USES])], lg=4),
+            dbc.Col([html.H6("Limitaciones"), html.Ul([html.Li(u) for u in LIMITATIONS])], lg=4),
+            dbc.Col([html.H6("Trabajo futuro"), html.Ul([html.Li(u) for u in FUTURE])], lg=4),
+        ]),
     ])], className="mb-3")
 
 
@@ -182,7 +231,9 @@ def layout():
                                                    "mejores: no se distinguen estadísticamente del mejor.", className="insight")])],
                              className="h-100"), lg=7),
         ], className="g-3 mb-3"),
+        theory_section(),
         original_section(),
+        conclusions_section(),
     ])
 
 

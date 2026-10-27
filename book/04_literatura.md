@@ -7,57 +7,53 @@ costo unitario de producción de activos petroleros.
 
 ## 4.1 Protocolo de búsqueda
 
-- **Bases de datos:** Scopus, Google Scholar y arXiv, más un motor web general para literatura técnica de la
-  industria (SPE, *Energies*, repositorios institucionales).
+- **Bases de datos (4):** **OnePetro** (literatura técnica de la Society of Petroleum Engineers, la base de
+  referencia del sector), **Semantic Scholar** (base académica multidisciplinaria), **arXiv** (preprints de
+  aprendizaje automático) y un motor web general para revistas y repositorios institucionales (*Energies*, MDPI,
+  repositorios universitarios).
 - **Componentes de cada cadena:** (i) nombre o familia del modelo, (ii) problema de aplicación, (iii) sinónimos en
   inglés y español.
-- **Revisión:** título y resumen de todos los resultados revisados; texto completo de los más cercanos.
-- **Fecha de consulta:** 23 de octubre de 2026 (arXiv y web). Scopus y Google Scholar: ver la columna *Fecha*.
+- **Revisión:** título de todos los resultados devueltos; resumen y texto completo de los más cercanos cuando fueron
+  accesibles.
+- **Fecha de consulta:** 23 y 27 de octubre de 2026.
 
-**Cadenas para Scopus y Google Scholar** (sintaxis de Scopus; en Scholar se usan las mismas palabras sin
-`TITLE-ABS-KEY`):
+**Cadenas ejecutadas** (texto exacto de la consulta):
 
-| ID | Cadena de búsqueda | Componentes |
-|---|---|---|
-| S1 | `TITLE-ABS-KEY(("gradient boosting" OR "XGBoost" OR "boosted trees") AND ("production cost" OR "lifting cost" OR "operating cost" OR "breakeven") AND (oil OR petroleum OR upstream))` | familia + problema |
-| S2 | `TITLE-ABS-KEY(("hierarchical" AND ("target encoding" OR "shrinkage" OR "empirical Bayes")) AND ("gradient boosting" OR "decision tree"))` | mecanismo |
-| S3 | `TITLE-ABS-KEY(("hierarchical shrinkage" OR "hierarchical encoding" OR "categorical hierarchy") AND (oil OR petroleum OR "oil and gas") AND cost)` | mecanismo + problema |
-| S4 | `TITLE-ABS-KEY(("machine learning") AND ("cost per barrel" OR "unit production cost" OR "supply cost") AND (oil OR upstream))` | problema (cualquier modelo) |
-| S5 | `"costo de producción" petróleo ("aprendizaje automático" OR "machine learning") ("boosting" OR "bosques aleatorios")` | sinónimos en español |
-
-**Cadenas ejecutadas en arXiv y en el motor web** (texto exacto de la consulta):
-
-| ID | Cadena ejecutada | Componentes |
-|---|---|---|
-| W1 | `machine learning prediction oil production cost per barrel upstream assets gradient boosting` | familia + problema |
-| W2 | `site:arxiv.org hierarchical target encoding gradient boosting categorical empirical Bayes shrinkage` | mecanismo (arXiv) |
-| W3 | `"lifting cost" OR "breakeven" oil fields machine learning regression random forest XGBoost` | problema + sinónimos |
-| W4 | `hierarchical categorical variables gradient boosting tree shrinkage parent category regression` | mecanismo |
-| W5 | `"costo de producción" petróleo "aprendizaje automático" predicción por barril` | sinónimos en español |
-| W6 | `machine learning operating cost OPEX estimation oil and gas fields regression model study` | problema (OPEX) |
+| ID | Base | Cadena ejecutada | Componentes |
+|---|---|---|---|
+| O1 | OnePetro | `machine learning prediction production cost per barrel oil fields gradient boosting` | familia + problema |
+| O2 | OnePetro | `machine learning operating cost OPEX lifting cost estimation upstream assets` | problema + sinónimos |
+| S1 | Semantic Scholar | `hierarchical shrinkage categorical encoding gradient boosting empirical Bayes` | mecanismo |
+| S2 | Semantic Scholar | `oil production cost prediction machine learning upstream breakeven` | problema + sinónimos |
+| A1 | arXiv | `site:arxiv.org hierarchical target encoding gradient boosting categorical empirical Bayes shrinkage` | mecanismo |
+| W1 | Web | `machine learning prediction oil production cost per barrel upstream assets gradient boosting` | familia + problema |
+| W2 | Web | `"lifting cost" OR "breakeven" oil fields machine learning regression random forest XGBoost` | problema + sinónimos |
+| W3 | Web | `hierarchical categorical variables gradient boosting tree shrinkage parent category regression` | mecanismo |
+| W4 | Web | `"costo de producción" petróleo "aprendizaje automático" predicción por barril` | sinónimos en español |
+| W5 | Web | `machine learning operating cost OPEX estimation oil and gas fields regression model study` | problema (OPEX) |
 
 ## 4.2 Matriz de novedad
 
-```{note}
-Las filas de **Scopus** y **Google Scholar** se completan ejecutando las cadenas S1–S5 con acceso institucional y
-registrando resultados, revisados y relevantes. En arXiv y en el motor web se revisaron los primeros resultados
-que devuelve cada consulta (la columna *Result.* indica cuántos se revisaron, no el total de la base).
-```
+En cada consulta se revisaron los resultados que devuelve el buscador de la base (la columna *Revis.* indica
+cuántos se revisaron, no el total de la base).
 
-| Base de datos | Cadena | Fecha | Result. | Revis. | Relev. | Observación |
-|---|---|---|---|---|---|---|
-| Scopus | S1 | _completar_ | _ | _ | _ | _ |
-| Scopus | S2 | _completar_ | _ | _ | _ | _ |
-| Scopus | S3 | _completar_ | _ | _ | _ | _ |
-| Scopus | S4 | _completar_ | _ | _ | _ | _ |
-| Google Scholar | S1 | _completar_ | _ | _ | _ | _ |
-| Google Scholar | S5 | _completar_ | _ | _ | _ | _ |
-| arXiv | W2 | 2026-10-23 | 9 | 9 | 3 | CatBoost {cite}`prokhorenkova2018catboost`, codificación regularizada del objetivo {cite}`pargent2022regularized` y un estudio comparativo de codificadores: codifican el **objetivo** (preprocesamiento o estadísticos ordenados); ninguno usa una jerarquía del dominio dentro del boosting ni aborda costos petroleros. |
-| Web | W1 | 2026-10-23 | 10 | 10 | 1 | {cite}`alkhammash2022gagb`: boosting optimizado con algoritmo genético para **pronosticar producción** de crudo, no costo. |
-| Web | W3 | 2026-10-23 | 10 | 10 | 0 | Productividad de pozos, desempeño SAGD y recomendación de intervenciones; ninguno predice costo unitario. |
-| Web | W4 | 2026-10-23 | 9 | 9 | 2 | CatBoost y una regresión **lineal** con categóricas jerárquicas por programación entera mixta (*Expert Systems with Applications*, 2022). |
-| Web | W5 | 2026-10-23 | 9 | 9 | 0 | Pronóstico de precios y de producción, no de costo unitario. |
-| Web | W6 | 2026-10-23 | 9 | 9 | 1 | {cite}`kaborogo2024proxy`: modelos *proxy* de CAPEX/DRILLEX/OPEX con **regresión lineal múltiple**; sin ML ni categorías. |
+| Base de datos | Cadena | Fecha | Revis. | Relev. | Observación |
+|---|---|---|---|---|---|
+| OnePetro | O1 | 2026-10-27 | 10 | 0 | Todos pronostican **producción** (pozos, fracturamiento, EOR, *gas lift*), no costo unitario. |
+| OnePetro | O2 | 2026-10-27 | 10 | 2 | *Forecast Techniques for Lifting Cost in Gas and Oil Onshore Fields* (SPE-69559-MS, 2001) pronostica el costo de levantamiento, pero es anterior al uso de boosting en la industria y el resumen no fue accesible. *Automated Lease Operating Statements for Cost Optimization…* (SPE ATCE 2020) automatiza estados de costos operativos con IA; no predice el costo de activos nuevos. |
+| Semantic Scholar | S1 | 2026-10-27 | 10 | 3 | Hierarchical Shrinkage {cite}`agarwal2022hierarchical` (contrae hojas hacia nodos ancestros **del árbol**), CatBoost {cite}`prokhorenkova2018catboost` y contracción en una jerarquía de clases para texto (McCallum et al.). Ninguno usa una jerarquía del dominio dentro del boosting ni aborda costos petroleros. |
+| Semantic Scholar | S2 | 2026-10-27 | 10 | 0 | Pronóstico de producción y de precios del crudo, y revisiones generales de métodos predictivos; ninguno estima costo unitario por activo. |
+| arXiv | A1 | 2026-10-23 | 9 | 3 | CatBoost, codificación regularizada del objetivo {cite}`pargent2022regularized` y un estudio comparativo de codificadores: codifican el **objetivo** como preprocesamiento o con estadísticos ordenados; ninguno usa una jerarquía del dominio dentro del boosting. |
+| Web | W1 | 2026-10-23 | 10 | 1 | {cite}`alkhammash2022gagb`: boosting optimizado con algoritmo genético para **pronosticar producción** de crudo, no costo. |
+| Web | W2 | 2026-10-23 | 10 | 0 | Productividad de pozos, desempeño SAGD y recomendación de intervenciones; ninguno predice costo unitario. |
+| Web | W3 | 2026-10-23 | 9 | 2 | CatBoost y una regresión **lineal** con categóricas jerárquicas por programación entera mixta (*Expert Systems with Applications*, 2022). |
+| Web | W4 | 2026-10-23 | 9 | 0 | Pronóstico de precios y de producción, no de costo unitario. |
+| Web | W5 | 2026-10-23 | 9 | 1 | {cite}`kaborogo2024proxy`: modelos *proxy* de CAPEX/DRILLEX/OPEX con **regresión lineal múltiple**; sin ML ni categorías. |
+
+**Síntesis:** en 96 resultados revisados en cuatro bases, la literatura de la industria usa aprendizaje automático
+sobre todo para **pronosticar producción**; los pocos trabajos sobre costos usan regresión lineal o automatización
+de reportes. La literatura de métodos sí tiene codificaciones contraídas y contracción jerárquica, pero ninguna
+combina las tres piezas del HGSB.
 
 ## 4.3 Trabajos más cercanos y en qué se diferencia la propuesta
 
@@ -77,8 +73,8 @@ La tabla compara familias algorítmicas afines, no solo aplicaciones.
 ## 4.4 Declaración de novedad
 
 ```{important}
-Al mejor de nuestro conocimiento y según la búsqueda descrita (arXiv y motor web el 23-10-2026; Scopus y Google
-Scholar según la matriz), **no se encontraron estudios que apliquen un gradient boosting con recodificación
+Al mejor de nuestro conocimiento y según la búsqueda descrita (OnePetro, Semantic Scholar, arXiv y motor web, 23 y
+27 de octubre de 2026), **no se encontraron estudios que apliquen un gradient boosting con recodificación
 jerárquica contraída de las categóricas (HGSB) a la predicción del costo unitario de producción de activos
 upstream**. Los trabajos más cercanos en la aplicación pronostican producción {cite}`alkhammash2022gagb` o
 estiman CAPEX/OPEX con regresión lineal {cite}`kaborogo2024proxy`; los más cercanos en el mecanismo

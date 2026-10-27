@@ -108,7 +108,6 @@ ajusta peor los activos no convencionales extremos, que son más frecuentes en e
   modelado, la interpretación de resultados y la sustentación.
 - **Herramientas de IA:** se usó un asistente de IA (Claude, de Anthropic) para apoyar la escritura y depuración
   de código (pipeline de validación anidada, dashboard, implementación del HGSB y sus pruebas), la redacción de
-  borradores del informe y la búsqueda inicial de literatura en la web y en arXiv. Todo el código fue revisado,
+  borradores del informe y la búsqueda de literatura (OnePetro, Semantic Scholar, arXiv y web). Todo el código fue revisado,
   ejecutado y validado por la autora, que puede explicar y modificar cualquier parte del algoritmo y de las pruebas.
-  Las búsquedas en Scopus y Google Scholar las realizó la autora.
 - **Datos:** S&P Global Commodity Insights, bajo licencia corporativa con fines académicos.

@@ -193,7 +193,8 @@ def update_explorer(regs, years, rts, locs, x, y, color):
         return P.empty("Sin datos"), ""
     rho = d[[x, y]].corr(method="spearman").iloc[0, 1]
     strength = "fuerte" if abs(rho) >= 0.5 else ("moderada" if abs(rho) >= 0.3 else "débil")
-    txt = f"Correlación de Spearman ρ = {rho:.2f} ({strength}) entre {LABELS[x]} y {LABELS[y]} en {len(d):,} filas.".replace(",", ".")
+    n_txt = f"{len(d):,}".replace(",", ".")
+    txt = f"Correlación de Spearman ρ = {rho:.2f} ({strength}) entre {LABELS[x]} y {LABELS[y]} en {n_txt} filas."
     if color:
         med = d.groupby(color)[y].median().sort_values()
         txt += f" Por {LABELS[color]}, la mediana de {LABELS[y]} va de {med.iloc[0]:.1f} ({med.index[0]}) a {med.iloc[-1]:.1f} ({med.index[-1]})."
