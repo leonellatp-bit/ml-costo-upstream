@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -390,6 +390,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hiperparametros">5.6 Hiperparámetros</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estudio-de-ablacion">5.7 Estudio de ablación</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergencia-e-interpretabilidad">5.8 Convergencia e interpretabilidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternativa-explorada-bosques-con-pesos-aprendidos-por-arbol">5.9 Alternativa explorada: bosques con pesos aprendidos por árbol</a></li>
 </ul>
             </nav>
         </div>
@@ -589,8 +590,8 @@ con hiperparámetros fijos.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2257654c4e2295ee723a8a119ed2afb704a9d5febd4e26eee92e886eecb3f4d5.png" src="_images/2257654c4e2295ee723a8a119ed2afb704a9d5febd4e26eee92e886eecb3f4d5.png" />
-<div class="output text_html"><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>variable</th>      <th>valor</th>      <th>s</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>n</td>      <td>385</td>      <td>0.3403</td>    </tr>    <tr>      <th>1</th>      <td>n</td>      <td>771</td>      <td>0.3750</td>    </tr>    <tr>      <th>2</th>      <td>n</td>      <td>1542</td>      <td>0.7058</td>    </tr>    <tr>      <th>3</th>      <td>n</td>      <td>3085</td>      <td>0.9434</td>    </tr>    <tr>      <th>4</th>      <td>p</td>      <td>10</td>      <td>0.7214</td>    </tr>    <tr>      <th>5</th>      <td>p</td>      <td>14</td>      <td>0.8051</td>    </tr>    <tr>      <th>6</th>      <td>p</td>      <td>18</td>      <td>0.9843</td>    </tr>    <tr>      <th>7</th>      <td>p</td>      <td>26</td>      <td>1.1762</td>    </tr>  </tbody></table></div></div></div>
+<img alt="_images/ef87ff2f3aea0e4dcea7b4b4a1399b34ca5b432b6a003823e1ed001381780feb.png" src="_images/ef87ff2f3aea0e4dcea7b4b4a1399b34ca5b432b6a003823e1ed001381780feb.png" />
+<div class="output text_html"><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>variable</th>      <th>valor</th>      <th>s</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>n</td>      <td>385</td>      <td>0.5582</td>    </tr>    <tr>      <th>1</th>      <td>n</td>      <td>771</td>      <td>0.8545</td>    </tr>    <tr>      <th>2</th>      <td>n</td>      <td>1542</td>      <td>0.9751</td>    </tr>    <tr>      <th>3</th>      <td>n</td>      <td>3085</td>      <td>1.2693</td>    </tr>    <tr>      <th>4</th>      <td>p</td>      <td>10</td>      <td>1.4425</td>    </tr>    <tr>      <th>5</th>      <td>p</td>      <td>14</td>      <td>1.3568</td>    </tr>    <tr>      <th>6</th>      <td>p</td>      <td>18</td>      <td>1.2467</td>    </tr>    <tr>      <th>7</th>      <td>p</td>      <td>26</td>      <td>1.2514</td>    </tr>  </tbody></table></div></div></div>
 </div>
 <p>La pendiente en log-log mide el exponente empírico. Frente a <span class="math notranslate nohighlight">\(n\)</span> queda por debajo de 1: con pocos datos domina el
 costo fijo por nodo (<span class="math notranslate nohighlight">\(2^d p B\)</span>), que no depende de <span class="math notranslate nohighlight">\(n\)</span>. Frente a <span class="math notranslate nohighlight">\(p\)</span> es lineal o menor, como predice el término
@@ -686,7 +687,7 @@ activo no se usa para predecir; y (viii) la proposición 3 (pérdida monótona).
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>...................                                                      [100%]
-19 passed in 2.49s
+19 passed in 3.46s
 </pre></div>
 </div>
 </div>
@@ -823,6 +824,41 @@ dispersos alrededor de los de su región.</p>
 <strong>qué</strong> explica el costo; cambia <strong>cómo</strong> usa la geografía, con información prestada entre niveles. La ventaja
 frente a XGBoost viene de los países con pocos activos, donde el One-Hot no tiene suficiente información.</p>
 </section>
+<section id="alternativa-explorada-bosques-con-pesos-aprendidos-por-arbol">
+<h2>5.9 Alternativa explorada: bosques con pesos aprendidos por árbol<a class="headerlink" href="#alternativa-explorada-bosques-con-pesos-aprendidos-por-arbol" title="Link to this heading">#</a></h2>
+<p>Antes de fijar el diseño del HGSB se probó otra familia de reglas de combinación: un Random Forest cuyos árboles
+(entrenados con <em>bootstrap por activo</em>) reciben pesos distintos según su error fuera de bolsa, medido en activos
+que no vieron (<code class="docutils literal notranslate"><span class="pre">run_weighted_forest.py</span></code>, mismos 10 pliegues externos e hiperparámetros de RF de cada pliegue):</p>
+<ul class="simple">
+<li><p><strong>A.</strong> pesos uniformes <span class="math notranslate nohighlight">\(1/B\)</span> (referencia);</p></li>
+<li><p><strong>B.</strong> pesos globales <span class="math notranslate nohighlight">\(w_b \propto \exp(-\beta z_b)\)</span>, con <span class="math notranslate nohighlight">\(z_b\)</span> el error OOB estandarizado del árbol;</p></li>
+<li><p><strong>C.</strong> pesos locales por región, con el error del árbol en la región contraído hacia su error global:
+<span class="math notranslate nohighlight">\(e_{b,r} = (n_r\,\mathrm{MSE}_{b,r} + \kappa\,\mathrm{MSE}_b)/(n_r+\kappa)\)</span>;</p></li>
+<li><p><strong>D.</strong> apilamiento convexo de los árboles con penalización ridge hacia los pesos uniformes.</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\beta\)</span>, <span class="math notranslate nohighlight">\(\kappa\)</span> y la penalización se eligieron con el error OOB dentro del entrenamiento, nunca con el pliegue
+externo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">wf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">RESULTS_DIR</span> <span class="o">/</span> <span class="s2">"weighted_forest"</span> <span class="o">/</span> <span class="s2">"folds.csv"</span><span class="p">)</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A_uniforme"</span><span class="p">:</span> <span class="s2">"A. Uniforme (bootstrap por activo)"</span><span class="p">,</span> <span class="s2">"B_global"</span><span class="p">:</span> <span class="s2">"B. Pesos globales OOB"</span><span class="p">,</span>
+        <span class="s2">"C_local_region"</span><span class="p">:</span> <span class="s2">"C. Pesos locales por región"</span><span class="p">,</span> <span class="s2">"D_stacking"</span><span class="p">:</span> <span class="s2">"D. Apilamiento convexo"</span><span class="p">,</span>
+        <span class="s2">"RF_sklearn"</span><span class="p">:</span> <span class="s2">"Random Forest (scikit-learn)"</span><span class="p">,</span> <span class="s2">"HGSB"</span><span class="p">:</span> <span class="s2">"HGSB"</span><span class="p">}</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"RMSE externo medio"</span><span class="p">:</span> <span class="n">wf</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">cols</span><span class="p">)]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+              <span class="s2">"d.e. entre pliegues"</span><span class="p">:</span> <span class="n">wf</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">cols</span><span class="p">)]</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">cols</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"RMSE externo medio"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>RMSE externo medio</th>      <th>d.e. entre pliegues</th>    </tr>  </thead>  <tbody>    <tr>      <th>HGSB</th>      <td>1.9275</td>      <td>0.5789</td>    </tr>    <tr>      <th>Random Forest (scikit-learn)</th>      <td>2.0082</td>      <td>0.5486</td>    </tr>    <tr>      <th>B. Pesos globales OOB</th>      <td>2.0085</td>      <td>0.5083</td>    </tr>    <tr>      <th>C. Pesos locales por región</th>      <td>2.0175</td>      <td>0.5343</td>    </tr>    <tr>      <th>D. Apilamiento convexo</th>      <td>2.0411</td>      <td>0.5395</td>    </tr>    <tr>      <th>A. Uniforme (bootstrap por activo)</th>      <td>2.0440</td>      <td>0.5103</td>    </tr>  </tbody></table></div></div></div>
+</div>
+<p>Reponderar los árboles da como mucho un 2 % frente a los pesos uniformes y, en el mejor caso, empata con el Random
+Forest de scikit-learn; ninguna variante se acerca al HGSB. Con árboles profundos que cometen errores muy parecidos,
+cambiar sus pesos casi no mueve el promedio, y estimar pesos por región con pocos activos agrega ruido (al ampliar
+la rejilla de búsqueda la variante C empeoró). La conclusión refuerza el diseño del HGSB: la mejora no viene de
+<strong>cómo se combinan</strong> los árboles, sino de <strong>qué ven</strong>, es decir, de una codificación de la geografía que comparte
+información entre niveles.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -903,6 +939,7 @@ frente a XGBoost viene de los países con pocos activos, donde el One-Hot no tie
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hiperparametros">5.6 Hiperparámetros</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estudio-de-ablacion">5.7 Estudio de ablación</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergencia-e-interpretabilidad">5.8 Convergencia e interpretabilidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternativa-explorada-bosques-con-pesos-aprendidos-por-arbol">5.9 Alternativa explorada: bosques con pesos aprendidos por árbol</a></li>
 </ul>
   </nav></div>
 

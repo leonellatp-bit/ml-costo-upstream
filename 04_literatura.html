@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -402,76 +402,73 @@ costo unitario de producción de activos petroleros.</p>
 <section id="protocolo-de-busqueda">
 <h2>4.1 Protocolo de búsqueda<a class="headerlink" href="#protocolo-de-busqueda" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong>Bases de datos:</strong> Scopus, Google Scholar y arXiv, más un motor web general para literatura técnica de la
-industria (SPE, <em>Energies</em>, repositorios institucionales).</p></li>
+<li><p><strong>Bases de datos (4):</strong> <strong>OnePetro</strong> (literatura técnica de la Society of Petroleum Engineers, la base de
+referencia del sector), <strong>Semantic Scholar</strong> (base académica multidisciplinaria), <strong>arXiv</strong> (preprints de
+aprendizaje automático) y un motor web general para revistas y repositorios institucionales (<em>Energies</em>, MDPI,
+repositorios universitarios).</p></li>
 <li><p><strong>Componentes de cada cadena:</strong> (i) nombre o familia del modelo, (ii) problema de aplicación, (iii) sinónimos en
 inglés y español.</p></li>
-<li><p><strong>Revisión:</strong> título y resumen de todos los resultados revisados; texto completo de los más cercanos.</p></li>
-<li><p><strong>Fecha de consulta:</strong> 23 de octubre de 2026 (arXiv y web). Scopus y Google Scholar: ver la columna <em>Fecha</em>.</p></li>
+<li><p><strong>Revisión:</strong> título de todos los resultados devueltos; resumen y texto completo de los más cercanos cuando fueron
+accesibles.</p></li>
+<li><p><strong>Fecha de consulta:</strong> 23 y 27 de octubre de 2026.</p></li>
 </ul>
-<p><strong>Cadenas para Scopus y Google Scholar</strong> (sintaxis de Scopus; en Scholar se usan las mismas palabras sin
-<code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY</span></code>):</p>
+<p><strong>Cadenas ejecutadas</strong> (texto exacto de la consulta):</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>ID</p></th>
-<th class="head"><p>Cadena de búsqueda</p></th>
-<th class="head"><p>Componentes</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>S1</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY((&quot;gradient</span> <span class="pre">boosting&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;XGBoost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;boosted</span> <span class="pre">trees&quot;)</span> <span class="pre">AND</span> <span class="pre">(&quot;production</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;lifting</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;operating</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;breakeven&quot;)</span> <span class="pre">AND</span> <span class="pre">(oil</span> <span class="pre">OR</span> <span class="pre">petroleum</span> <span class="pre">OR</span> <span class="pre">upstream))</span></code></p></td>
-<td><p>familia + problema</p></td>
-</tr>
-<tr class="row-odd"><td><p>S2</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY((&quot;hierarchical&quot;</span> <span class="pre">AND</span> <span class="pre">(&quot;target</span> <span class="pre">encoding&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;shrinkage&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;empirical</span> <span class="pre">Bayes&quot;))</span> <span class="pre">AND</span> <span class="pre">(&quot;gradient</span> <span class="pre">boosting&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;decision</span> <span class="pre">tree&quot;))</span></code></p></td>
-<td><p>mecanismo</p></td>
-</tr>
-<tr class="row-even"><td><p>S3</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY((&quot;hierarchical</span> <span class="pre">shrinkage&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;hierarchical</span> <span class="pre">encoding&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;categorical</span> <span class="pre">hierarchy&quot;)</span> <span class="pre">AND</span> <span class="pre">(oil</span> <span class="pre">OR</span> <span class="pre">petroleum</span> <span class="pre">OR</span> <span class="pre">&quot;oil</span> <span class="pre">and</span> <span class="pre">gas&quot;)</span> <span class="pre">AND</span> <span class="pre">cost)</span></code></p></td>
-<td><p>mecanismo + problema</p></td>
-</tr>
-<tr class="row-odd"><td><p>S4</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">TITLE-ABS-KEY((&quot;machine</span> <span class="pre">learning&quot;)</span> <span class="pre">AND</span> <span class="pre">(&quot;cost</span> <span class="pre">per</span> <span class="pre">barrel&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;unit</span> <span class="pre">production</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;supply</span> <span class="pre">cost&quot;)</span> <span class="pre">AND</span> <span class="pre">(oil</span> <span class="pre">OR</span> <span class="pre">upstream))</span></code></p></td>
-<td><p>problema (cualquier modelo)</p></td>
-</tr>
-<tr class="row-even"><td><p>S5</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&quot;costo</span> <span class="pre">de</span> <span class="pre">producción&quot;</span> <span class="pre">petróleo</span> <span class="pre">(&quot;aprendizaje</span> <span class="pre">automático&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;machine</span> <span class="pre">learning&quot;)</span> <span class="pre">(&quot;boosting&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;bosques</span> <span class="pre">aleatorios&quot;)</span></code></p></td>
-<td><p>sinónimos en español</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Cadenas ejecutadas en arXiv y en el motor web</strong> (texto exacto de la consulta):</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Base</p></th>
 <th class="head"><p>Cadena ejecutada</p></th>
 <th class="head"><p>Componentes</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>W1</p></td>
+<tr class="row-even"><td><p>O1</p></td>
+<td><p>OnePetro</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">prediction</span> <span class="pre">production</span> <span class="pre">cost</span> <span class="pre">per</span> <span class="pre">barrel</span> <span class="pre">oil</span> <span class="pre">fields</span> <span class="pre">gradient</span> <span class="pre">boosting</span></code></p></td>
+<td><p>familia + problema</p></td>
+</tr>
+<tr class="row-odd"><td><p>O2</p></td>
+<td><p>OnePetro</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">operating</span> <span class="pre">cost</span> <span class="pre">OPEX</span> <span class="pre">lifting</span> <span class="pre">cost</span> <span class="pre">estimation</span> <span class="pre">upstream</span> <span class="pre">assets</span></code></p></td>
+<td><p>problema + sinónimos</p></td>
+</tr>
+<tr class="row-even"><td><p>S1</p></td>
+<td><p>Semantic Scholar</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hierarchical</span> <span class="pre">shrinkage</span> <span class="pre">categorical</span> <span class="pre">encoding</span> <span class="pre">gradient</span> <span class="pre">boosting</span> <span class="pre">empirical</span> <span class="pre">Bayes</span></code></p></td>
+<td><p>mecanismo</p></td>
+</tr>
+<tr class="row-odd"><td><p>S2</p></td>
+<td><p>Semantic Scholar</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">oil</span> <span class="pre">production</span> <span class="pre">cost</span> <span class="pre">prediction</span> <span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">upstream</span> <span class="pre">breakeven</span></code></p></td>
+<td><p>problema + sinónimos</p></td>
+</tr>
+<tr class="row-even"><td><p>A1</p></td>
+<td><p>arXiv</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">site:arxiv.org</span> <span class="pre">hierarchical</span> <span class="pre">target</span> <span class="pre">encoding</span> <span class="pre">gradient</span> <span class="pre">boosting</span> <span class="pre">categorical</span> <span class="pre">empirical</span> <span class="pre">Bayes</span> <span class="pre">shrinkage</span></code></p></td>
+<td><p>mecanismo</p></td>
+</tr>
+<tr class="row-odd"><td><p>W1</p></td>
+<td><p>Web</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">prediction</span> <span class="pre">oil</span> <span class="pre">production</span> <span class="pre">cost</span> <span class="pre">per</span> <span class="pre">barrel</span> <span class="pre">upstream</span> <span class="pre">assets</span> <span class="pre">gradient</span> <span class="pre">boosting</span></code></p></td>
 <td><p>familia + problema</p></td>
 </tr>
-<tr class="row-odd"><td><p>W2</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">site:arxiv.org</span> <span class="pre">hierarchical</span> <span class="pre">target</span> <span class="pre">encoding</span> <span class="pre">gradient</span> <span class="pre">boosting</span> <span class="pre">categorical</span> <span class="pre">empirical</span> <span class="pre">Bayes</span> <span class="pre">shrinkage</span></code></p></td>
-<td><p>mecanismo (arXiv)</p></td>
-</tr>
-<tr class="row-even"><td><p>W3</p></td>
+<tr class="row-even"><td><p>W2</p></td>
+<td><p>Web</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&quot;lifting</span> <span class="pre">cost&quot;</span> <span class="pre">OR</span> <span class="pre">&quot;breakeven&quot;</span> <span class="pre">oil</span> <span class="pre">fields</span> <span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">regression</span> <span class="pre">random</span> <span class="pre">forest</span> <span class="pre">XGBoost</span></code></p></td>
 <td><p>problema + sinónimos</p></td>
 </tr>
-<tr class="row-odd"><td><p>W4</p></td>
+<tr class="row-odd"><td><p>W3</p></td>
+<td><p>Web</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">hierarchical</span> <span class="pre">categorical</span> <span class="pre">variables</span> <span class="pre">gradient</span> <span class="pre">boosting</span> <span class="pre">tree</span> <span class="pre">shrinkage</span> <span class="pre">parent</span> <span class="pre">category</span> <span class="pre">regression</span></code></p></td>
 <td><p>mecanismo</p></td>
 </tr>
-<tr class="row-even"><td><p>W5</p></td>
+<tr class="row-even"><td><p>W4</p></td>
+<td><p>Web</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&quot;costo</span> <span class="pre">de</span> <span class="pre">producción&quot;</span> <span class="pre">petróleo</span> <span class="pre">&quot;aprendizaje</span> <span class="pre">automático&quot;</span> <span class="pre">predicción</span> <span class="pre">por</span> <span class="pre">barril</span></code></p></td>
 <td><p>sinónimos en español</p></td>
 </tr>
-<tr class="row-odd"><td><p>W6</p></td>
+<tr class="row-odd"><td><p>W5</p></td>
+<td><p>Web</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">machine</span> <span class="pre">learning</span> <span class="pre">operating</span> <span class="pre">cost</span> <span class="pre">OPEX</span> <span class="pre">estimation</span> <span class="pre">oil</span> <span class="pre">and</span> <span class="pre">gas</span> <span class="pre">fields</span> <span class="pre">regression</span> <span class="pre">model</span> <span class="pre">study</span></code></p></td>
 <td><p>problema (OPEX)</p></td>
 </tr>
@@ -481,123 +478,96 @@ inglés y español.</p></li>
 </section>
 <section id="matriz-de-novedad">
 <h2>4.2 Matriz de novedad<a class="headerlink" href="#matriz-de-novedad" title="Link to this heading">#</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Las filas de <strong>Scopus</strong> y <strong>Google Scholar</strong> se completan ejecutando las cadenas S1–S5 con acceso institucional y
-registrando resultados, revisados y relevantes. En arXiv y en el motor web se revisaron los primeros resultados
-que devuelve cada consulta (la columna <em>Result.</em> indica cuántos se revisaron, no el total de la base).</p>
-</div>
+<p>En cada consulta se revisaron los resultados que devuelve el buscador de la base (la columna <em>Revis.</em> indica
+cuántos se revisaron, no el total de la base).</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Base de datos</p></th>
 <th class="head"><p>Cadena</p></th>
 <th class="head"><p>Fecha</p></th>
-<th class="head"><p>Result.</p></th>
 <th class="head"><p>Revis.</p></th>
 <th class="head"><p>Relev.</p></th>
 <th class="head"><p>Observación</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Scopus</p></td>
-<td><p>S1</p></td>
-<td><p><em>completar</em></p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
+<tr class="row-even"><td><p>OnePetro</p></td>
+<td><p>O1</p></td>
+<td><p>2026-10-27</p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>Todos pronostican <strong>producción</strong> (pozos, fracturamiento, EOR, <em>gas lift</em>), no costo unitario.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Scopus</p></td>
+<tr class="row-odd"><td><p>OnePetro</p></td>
+<td><p>O2</p></td>
+<td><p>2026-10-27</p></td>
+<td><p>10</p></td>
+<td><p>2</p></td>
+<td><p><em>Forecast Techniques for Lifting Cost in Gas and Oil Onshore Fields</em> (SPE-69559-MS, 2001) pronostica el costo de levantamiento, pero es anterior al uso de boosting en la industria y el resumen no fue accesible. <em>Automated Lease Operating Statements for Cost Optimization…</em> (SPE ATCE 2020) automatiza estados de costos operativos con IA; no predice el costo de activos nuevos.</p></td>
+</tr>
+<tr class="row-even"><td><p>Semantic Scholar</p></td>
+<td><p>S1</p></td>
+<td><p>2026-10-27</p></td>
+<td><p>10</p></td>
+<td><p>3</p></td>
+<td><p>Hierarchical Shrinkage <span class="bibtex-citation" id="id1">[<a class="reference internal" href="09_reproducibilidad.html#id12" title="Abhineet Agarwal, Yan Shuo Tan, Omer Ronen, Chandan Singh, and Bin Yu. Hierarchical shrinkage: improving the accuracy and interpretability of tree-based models. In Proceedings of the 39th International Conference on Machine Learning, volume 162 of PMLR, 111–135. 2022.">Agarwal <em>et al.</em>, 2022</a>]</span> (contrae hojas hacia nodos ancestros <strong>del árbol</strong>), CatBoost <span class="bibtex-citation" id="id2">[<a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span> y contracción en una jerarquía de clases para texto (McCallum et al.). Ninguno usa una jerarquía del dominio dentro del boosting ni aborda costos petroleros.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Semantic Scholar</p></td>
 <td><p>S2</p></td>
-<td><p><em>completar</em></p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-</tr>
-<tr class="row-even"><td><p>Scopus</p></td>
-<td><p>S3</p></td>
-<td><p><em>completar</em></p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-</tr>
-<tr class="row-odd"><td><p>Scopus</p></td>
-<td><p>S4</p></td>
-<td><p><em>completar</em></p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-</tr>
-<tr class="row-even"><td><p>Google Scholar</p></td>
-<td><p>S1</p></td>
-<td><p><em>completar</em></p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-</tr>
-<tr class="row-odd"><td><p>Google Scholar</p></td>
-<td><p>S5</p></td>
-<td><p><em>completar</em></p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
-<td><p>_</p></td>
+<td><p>2026-10-27</p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>Pronóstico de producción y de precios del crudo, y revisiones generales de métodos predictivos; ninguno estima costo unitario por activo.</p></td>
 </tr>
 <tr class="row-even"><td><p>arXiv</p></td>
-<td><p>W2</p></td>
+<td><p>A1</p></td>
 <td><p>2026-10-23</p></td>
 <td><p>9</p></td>
-<td><p>9</p></td>
 <td><p>3</p></td>
-<td><p>CatBoost <span class="bibtex-citation" id="id1">[<a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span>, codificación regularizada del objetivo <span class="bibtex-citation" id="id2">[<a class="reference internal" href="09_reproducibilidad.html#id6" title="Florian Pargent, Florian Pfisterer, Janek Thomas, and Bernd Bischl. Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features. Computational Statistics, 37:2671–2692, 2022.">Pargent <em>et al.</em>, 2022</a>]</span> y un estudio comparativo de codificadores: codifican el <strong>objetivo</strong> (preprocesamiento o estadísticos ordenados); ninguno usa una jerarquía del dominio dentro del boosting ni aborda costos petroleros.</p></td>
+<td><p>CatBoost, codificación regularizada del objetivo <span class="bibtex-citation" id="id3">[<a class="reference internal" href="09_reproducibilidad.html#id6" title="Florian Pargent, Florian Pfisterer, Janek Thomas, and Bernd Bischl. Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features. Computational Statistics, 37:2671–2692, 2022.">Pargent <em>et al.</em>, 2022</a>]</span> y un estudio comparativo de codificadores: codifican el <strong>objetivo</strong> como preprocesamiento o con estadísticos ordenados; ninguno usa una jerarquía del dominio dentro del boosting.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Web</p></td>
 <td><p>W1</p></td>
 <td><p>2026-10-23</p></td>
 <td><p>10</p></td>
-<td><p>10</p></td>
 <td><p>1</p></td>
-<td><p><span class="bibtex-citation" id="id3">[<a class="reference internal" href="09_reproducibilidad.html#id13" title="Eman H. Alkhammash. An optimized gradient boosting model by genetic algorithm for forecasting crude oil production. Energies, 15(17):6416, 2022.">Alkhammash, 2022</a>]</span>: boosting optimizado con algoritmo genético para <strong>pronosticar producción</strong> de crudo, no costo.</p></td>
+<td><p><span class="bibtex-citation" id="id4">[<a class="reference internal" href="09_reproducibilidad.html#id13" title="Eman H. Alkhammash. An optimized gradient boosting model by genetic algorithm for forecasting crude oil production. Energies, 15(17):6416, 2022.">Alkhammash, 2022</a>]</span>: boosting optimizado con algoritmo genético para <strong>pronosticar producción</strong> de crudo, no costo.</p></td>
 </tr>
 <tr class="row-even"><td><p>Web</p></td>
-<td><p>W3</p></td>
+<td><p>W2</p></td>
 <td><p>2026-10-23</p></td>
-<td><p>10</p></td>
 <td><p>10</p></td>
 <td><p>0</p></td>
 <td><p>Productividad de pozos, desempeño SAGD y recomendación de intervenciones; ninguno predice costo unitario.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Web</p></td>
-<td><p>W4</p></td>
+<td><p>W3</p></td>
 <td><p>2026-10-23</p></td>
-<td><p>9</p></td>
 <td><p>9</p></td>
 <td><p>2</p></td>
 <td><p>CatBoost y una regresión <strong>lineal</strong> con categóricas jerárquicas por programación entera mixta (<em>Expert Systems with Applications</em>, 2022).</p></td>
 </tr>
 <tr class="row-even"><td><p>Web</p></td>
-<td><p>W5</p></td>
+<td><p>W4</p></td>
 <td><p>2026-10-23</p></td>
-<td><p>9</p></td>
 <td><p>9</p></td>
 <td><p>0</p></td>
 <td><p>Pronóstico de precios y de producción, no de costo unitario.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Web</p></td>
-<td><p>W6</p></td>
+<td><p>W5</p></td>
 <td><p>2026-10-23</p></td>
 <td><p>9</p></td>
-<td><p>9</p></td>
 <td><p>1</p></td>
-<td><p><span class="bibtex-citation" id="id4">[<a class="reference internal" href="09_reproducibilidad.html#id14" title="Fulmence Stanslaus Kaborogo, Emily Barnabas Kiswaka, and Masolwa Benjamin Lazaro. Cost estimation proxy models for economic evaluations in petroleum projects: a case study from the onshore gas field in the southern coastal tanzania basin. Tanzania Journal of Engineering and Technology, 42(4):56–68, 2024.">Kaborogo <em>et al.</em>, 2024</a>]</span>: modelos <em>proxy</em> de CAPEX/DRILLEX/OPEX con <strong>regresión lineal múltiple</strong>; sin ML ni categorías.</p></td>
+<td><p><span class="bibtex-citation" id="id5">[<a class="reference internal" href="09_reproducibilidad.html#id14" title="Fulmence Stanslaus Kaborogo, Emily Barnabas Kiswaka, and Masolwa Benjamin Lazaro. Cost estimation proxy models for economic evaluations in petroleum projects: a case study from the onshore gas field in the southern coastal tanzania basin. Tanzania Journal of Engineering and Technology, 42(4):56–68, 2024.">Kaborogo <em>et al.</em>, 2024</a>]</span>: modelos <em>proxy</em> de CAPEX/DRILLEX/OPEX con <strong>regresión lineal múltiple</strong>; sin ML ni categorías.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p><strong>Síntesis:</strong> en 96 resultados revisados en cuatro bases, la literatura de la industria usa aprendizaje automático
+sobre todo para <strong>pronosticar producción</strong>; los pocos trabajos sobre costos usan regresión lineal o automatización
+de reportes. La literatura de métodos sí tiene codificaciones contraídas y contracción jerárquica, pero ninguna
+combina las tres piezas del HGSB.</p>
 </section>
 <section id="trabajos-mas-cercanos-y-en-que-se-diferencia-la-propuesta">
 <h2>4.3 Trabajos más cercanos y en qué se diferencia la propuesta<a class="headerlink" href="#trabajos-mas-cercanos-y-en-que-se-diferencia-la-propuesta" title="Link to this heading">#</a></h2>
@@ -611,37 +581,37 @@ que devuelve cada consulta (la columna <em>Result.</em> indica cuántos se revis
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>XGBoost <span class="bibtex-citation" id="id5">[<a class="reference internal" href="09_reproducibilidad.html#id2" title="Tianqi Chen and Carlos Guestrin. XGBoost: a scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. 2016.">Chen and Guestrin, 2016</a>]</span></p></td>
+<tr class="row-even"><td><p>XGBoost <span class="bibtex-citation" id="id6">[<a class="reference internal" href="09_reproducibilidad.html#id2" title="Tianqi Chen and Carlos Guestrin. XGBoost: a scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. 2016.">Chen and Guestrin, 2016</a>]</span></p></td>
 <td><p>Boosting de segundo orden con hojas <span class="math notranslate nohighlight">\(-G/(H+\lambda)\)</span></p></td>
 <td><p>Ganancia y pesos de hoja de 2.º orden</p></td>
 <td><p>Las categóricas no se expanden en One-Hot: se recodifican cada iteración</p></td>
 </tr>
-<tr class="row-odd"><td><p>LightGBM <span class="bibtex-citation" id="id6">[<a class="reference internal" href="09_reproducibilidad.html#id3" title="Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. LightGBM: a highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems, volume 30. 2017.">Ke <em>et al.</em>, 2017</a>]</span></p></td>
+<tr class="row-odd"><td><p>LightGBM <span class="bibtex-citation" id="id7">[<a class="reference internal" href="09_reproducibilidad.html#id3" title="Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. LightGBM: a highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems, volume 30. 2017.">Ke <em>et al.</em>, 2017</a>]</span></p></td>
 <td><p>Ordena categorías por <span class="math notranslate nohighlight">\(G/(H+\text{cat\_smooth})\)</span> dentro de cada nodo</p></td>
-<td><p>Ordenar categorías por residuo medio (partición óptima de <span class="bibtex-citation" id="id7">[<a class="reference internal" href="09_reproducibilidad.html#id7" title="Walter D. Fisher. On grouping for maximum homogeneity. Journal of the American Statistical Association, 53(284):789–798, 1958.">Fisher, 1958</a>]</span>)</p></td>
+<td><p>Ordenar categorías por residuo medio (partición óptima de <span class="bibtex-citation" id="id8">[<a class="reference internal" href="09_reproducibilidad.html#id7" title="Walter D. Fisher. On grouping for maximum homogeneity. Journal of the American Statistical Association, 53(284):789–798, 1958.">Fisher, 1958</a>]</span>)</p></td>
 <td><p>Contrae hacia el <strong>padre jerárquico</strong>, no hacia 0; cuenta <strong>activos</strong>, no filas; categoría nueva hereda del padre</p></td>
 </tr>
-<tr class="row-even"><td><p>CatBoost <span class="bibtex-citation" id="id8">[<a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span></p></td>
+<tr class="row-even"><td><p>CatBoost <span class="bibtex-citation" id="id9">[<a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span></p></td>
 <td><p>Estadísticos ordenados del objetivo para evitar fuga</p></td>
 <td><p>Codificación de categorías con un estimador regularizado</p></td>
 <td><p>Codifica el <strong>residuo de la iteración</strong>, con un prior jerárquico</p></td>
 </tr>
-<tr class="row-odd"><td><p>Codificación jerárquica del objetivo <span class="bibtex-citation" id="id9">[<a class="reference internal" href="09_reproducibilidad.html#id5" title="Daniele Micci-Barreca. A preprocessing scheme for high-cardinality categorical attributes in classification and prediction problems. ACM SIGKDD Explorations Newsletter, 3(1):27–32, 2001.">Micci-Barreca, 2001</a>]</span></p></td>
+<tr class="row-odd"><td><p>Codificación jerárquica del objetivo <span class="bibtex-citation" id="id10">[<a class="reference internal" href="09_reproducibilidad.html#id5" title="Daniele Micci-Barreca. A preprocessing scheme for high-cardinality categorical attributes in classification and prediction problems. ACM SIGKDD Explorations Newsletter, 3(1):27–32, 2001.">Micci-Barreca, 2001</a>]</span></p></td>
 <td><p>Media del objetivo por categoría, contraída hacia el nivel superior</p></td>
 <td><p>La fórmula de contracción empírica Bayes</p></td>
 <td><p>Se aplica <strong>dentro</strong> del boosting (una vez por árbol), no como preprocesamiento único</p></td>
 </tr>
-<tr class="row-even"><td><p>Codificación regularizada <span class="bibtex-citation" id="id10">[<a class="reference internal" href="09_reproducibilidad.html#id6" title="Florian Pargent, Florian Pfisterer, Janek Thomas, and Bernd Bischl. Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features. Computational Statistics, 37:2671–2692, 2022.">Pargent <em>et al.</em>, 2022</a>]</span></p></td>
+<tr class="row-even"><td><p>Codificación regularizada <span class="bibtex-citation" id="id11">[<a class="reference internal" href="09_reproducibilidad.html#id6" title="Florian Pargent, Florian Pfisterer, Janek Thomas, and Bernd Bischl. Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features. Computational Statistics, 37:2671–2692, 2022.">Pargent <em>et al.</em>, 2022</a>]</span></p></td>
 <td><p>Target encoding con validación cruzada y suavizado</p></td>
 <td><p>Regularización de categorías de alta cardinalidad</p></td>
 <td><p>Prior jerárquico y recodificación iterativa</p></td>
 </tr>
-<tr class="row-odd"><td><p>GPBoost / MERF <span class="bibtex-citation" id="id11">[<a class="reference internal" href="09_reproducibilidad.html#id11" title="Ahlem Hajjem, François Bellavance, and Denis Larocque. Mixed-effects random forest for clustered data. Journal of Statistical Computation and Simulation, 84(6):1313–1328, 2014.">Hajjem <em>et al.</em>, 2014</a>, <a class="reference internal" href="09_reproducibilidad.html#id10" title="Fabio Sigrist. Gaussian process boosting. Journal of Machine Learning Research, 23(232):1–46, 2022.">Sigrist, 2022</a>]</span></p></td>
+<tr class="row-odd"><td><p>GPBoost / MERF <span class="bibtex-citation" id="id12">[<a class="reference internal" href="09_reproducibilidad.html#id11" title="Ahlem Hajjem, François Bellavance, and Denis Larocque. Mixed-effects random forest for clustered data. Journal of Statistical Computation and Simulation, 84(6):1313–1328, 2014.">Hajjem <em>et al.</em>, 2014</a>, <a class="reference internal" href="09_reproducibilidad.html#id10" title="Fabio Sigrist. Gaussian process boosting. Journal of Machine Learning Research, 23(232):1–46, 2022.">Sigrist, 2022</a>]</span></p></td>
 <td><p>Boosting o bosques más efectos aleatorios por grupo</p></td>
 <td><p>Préstamo de información entre grupos</p></td>
 <td><p>Los efectos actúan <strong>dentro de los cortes</strong> del árbol, no como término aditivo</p></td>
 </tr>
-<tr class="row-even"><td><p>Hierarchical Shrinkage <span class="bibtex-citation" id="id12">[<a class="reference internal" href="09_reproducibilidad.html#id12" title="Abhineet Agarwal, Yan Shuo Tan, Omer Ronen, Chandan Singh, and Bin Yu. Hierarchical shrinkage: improving the accuracy and interpretability of tree-based models. In Proceedings of the 39th International Conference on Machine Learning, volume 162 of PMLR, 111–135. 2022.">Agarwal <em>et al.</em>, 2022</a>]</span></p></td>
+<tr class="row-even"><td><p>Hierarchical Shrinkage <span class="bibtex-citation" id="id13">[<a class="reference internal" href="09_reproducibilidad.html#id12" title="Abhineet Agarwal, Yan Shuo Tan, Omer Ronen, Chandan Singh, and Bin Yu. Hierarchical shrinkage: improving the accuracy and interpretability of tree-based models. In Proceedings of the 39th International Conference on Machine Learning, volume 162 of PMLR, 111–135. 2022.">Agarwal <em>et al.</em>, 2022</a>]</span></p></td>
 <td><p>Contrae cada hoja hacia sus nodos ancestros del árbol</p></td>
 <td><p>La idea de contracción jerárquica</p></td>
 <td><p>La jerarquía es la <strong>del dominio</strong> (región → país), no la del árbol</p></td>
@@ -659,12 +629,12 @@ que devuelve cada consulta (la columna <em>Result.</em> indica cuántos se revis
 <h2>4.4 Declaración de novedad<a class="headerlink" href="#declaracion-de-novedad" title="Link to this heading">#</a></h2>
 <div class="admonition important">
 <p class="admonition-title">Importante</p>
-<p>Al mejor de nuestro conocimiento y según la búsqueda descrita (arXiv y motor web el 23-10-2026; Scopus y Google
-Scholar según la matriz), <strong>no se encontraron estudios que apliquen un gradient boosting con recodificación
+<p>Al mejor de nuestro conocimiento y según la búsqueda descrita (OnePetro, Semantic Scholar, arXiv y motor web, 23 y
+27 de octubre de 2026), <strong>no se encontraron estudios que apliquen un gradient boosting con recodificación
 jerárquica contraída de las categóricas (HGSB) a la predicción del costo unitario de producción de activos
-upstream</strong>. Los trabajos más cercanos en la aplicación pronostican producción <span class="bibtex-citation" id="id13">[<a class="reference internal" href="09_reproducibilidad.html#id13" title="Eman H. Alkhammash. An optimized gradient boosting model by genetic algorithm for forecasting crude oil production. Energies, 15(17):6416, 2022.">Alkhammash, 2022</a>]</span> o
-estiman CAPEX/OPEX con regresión lineal <span class="bibtex-citation" id="id14">[<a class="reference internal" href="09_reproducibilidad.html#id14" title="Fulmence Stanslaus Kaborogo, Emily Barnabas Kiswaka, and Masolwa Benjamin Lazaro. Cost estimation proxy models for economic evaluations in petroleum projects: a case study from the onshore gas field in the southern coastal tanzania basin. Tanzania Journal of Engineering and Technology, 42(4):56–68, 2024.">Kaborogo <em>et al.</em>, 2024</a>]</span>; los más cercanos en el mecanismo
-<span class="bibtex-citation" id="id15">[<a class="reference internal" href="09_reproducibilidad.html#id12" title="Abhineet Agarwal, Yan Shuo Tan, Omer Ronen, Chandan Singh, and Bin Yu. Hierarchical shrinkage: improving the accuracy and interpretability of tree-based models. In Proceedings of the 39th International Conference on Machine Learning, volume 162 of PMLR, 111–135. 2022.">Agarwal <em>et al.</em>, 2022</a>, <a class="reference internal" href="09_reproducibilidad.html#id3" title="Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. LightGBM: a highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems, volume 30. 2017.">Ke <em>et al.</em>, 2017</a>, <a class="reference internal" href="09_reproducibilidad.html#id5" title="Daniele Micci-Barreca. A preprocessing scheme for high-cardinality categorical attributes in classification and prediction problems. ACM SIGKDD Explorations Newsletter, 3(1):27–32, 2001.">Micci-Barreca, 2001</a>, <a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span> usan
+upstream</strong>. Los trabajos más cercanos en la aplicación pronostican producción <span class="bibtex-citation" id="id14">[<a class="reference internal" href="09_reproducibilidad.html#id13" title="Eman H. Alkhammash. An optimized gradient boosting model by genetic algorithm for forecasting crude oil production. Energies, 15(17):6416, 2022.">Alkhammash, 2022</a>]</span> o
+estiman CAPEX/OPEX con regresión lineal <span class="bibtex-citation" id="id15">[<a class="reference internal" href="09_reproducibilidad.html#id14" title="Fulmence Stanslaus Kaborogo, Emily Barnabas Kiswaka, and Masolwa Benjamin Lazaro. Cost estimation proxy models for economic evaluations in petroleum projects: a case study from the onshore gas field in the southern coastal tanzania basin. Tanzania Journal of Engineering and Technology, 42(4):56–68, 2024.">Kaborogo <em>et al.</em>, 2024</a>]</span>; los más cercanos en el mecanismo
+<span class="bibtex-citation" id="id16">[<a class="reference internal" href="09_reproducibilidad.html#id12" title="Abhineet Agarwal, Yan Shuo Tan, Omer Ronen, Chandan Singh, and Bin Yu. Hierarchical shrinkage: improving the accuracy and interpretability of tree-based models. In Proceedings of the 39th International Conference on Machine Learning, volume 162 of PMLR, 111–135. 2022.">Agarwal <em>et al.</em>, 2022</a>, <a class="reference internal" href="09_reproducibilidad.html#id3" title="Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. LightGBM: a highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems, volume 30. 2017.">Ke <em>et al.</em>, 2017</a>, <a class="reference internal" href="09_reproducibilidad.html#id5" title="Daniele Micci-Barreca. A preprocessing scheme for high-cardinality categorical attributes in classification and prediction problems. ACM SIGKDD Explorations Newsletter, 3(1):27–32, 2001.">Micci-Barreca, 2001</a>, <a class="reference internal" href="09_reproducibilidad.html#id4" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span> usan
 codificaciones o contracciones que no combinan las tres piezas del HGSB: (1) prior del padre en una jerarquía del
 dominio, (2) recodificación del residuo en cada iteración y (3) conteo por grupo (activo) en lugar de por fila.</p>
 </div>

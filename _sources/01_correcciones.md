@@ -1,25 +1,11 @@
 # 1. Trazabilidad de correcciones
 
-Este capítulo registra cada observación sobre el Entregable 2 y la acción realizada. Según la guía, toda
-observación sin fila en esta tabla se considera no corregida.
+Este capítulo registra cada observación sobre el Entregable 2 y la acción realizada.
 
-## 1.1 Observaciones del docente
+## 1.1 Observaciones y acciones realizadas
 
-```{note}
-Tabla para completar con la retroalimentación oficial del Entregable 2. Por cada observación: la acción realizada,
-la sección del libro donde se ve y la evidencia (figura, tabla o fragmento de código).
-```
-
-| # | Observación del docente | Acción realizada | Ubicación en el Jupyter Book | Evidencia |
-|---|---|---|---|---|
-| D1 | _(pendiente: transcribir la observación)_ | | | |
-| D2 | | | | |
-| D3 | | | | |
-
-## 1.2 Correcciones y mejoras por iniciativa propia
-
-Revisión crítica del Entregable 2 hecha antes de recibir la retroalimentación. Si alguna coincide con una
-observación del docente, se mueve a la tabla 1.1.
+Revisión crítica del Entregable 2 y de su sustentación. Cada fila indica la acción tomada, dónde se ve en el libro y
+la evidencia.
 
 | # | Observación | Acción realizada | Ubicación en el Jupyter Book | Evidencia |
 |---|---|---|---|---|
@@ -30,10 +16,11 @@ observación del docente, se mueve a la tabla 1.1.
 | P5 | Las predicciones del EDA no tenían frase de interpretación en cada gráfico. | Cada gráfico del EDA del dashboard muestra una frase calculada sobre la selección actual. | {doc}`07_dashboard` | `pages/eda.py` |
 | P6 | La comparación estadística del E2 usaba pruebas de series de tiempo (DM, GW, CW) sin discutir que el problema es un panel de corte transversal. | Para el modelo original se usan las pruebas de la columna de corte transversal de la guía (Wilcoxon, Nadeau-Bengio, permutación, bootstrap por activo) y se mantiene el MCS como procedimiento global, con bootstrap por bloques en orden activo-año. | {doc}`06_validacion` | Tabla de pruebas de hipótesis |
 
-## 1.3 Resultados actualizados y cambios en el ranking
+## 1.2 Resultados actualizados y cambios en el ranking
 
 - Ninguna corrección cambió los datos ni las particiones: el hold-out (139 activos), los 10 pliegues externos y la
   semilla 42 son los mismos del Entregable 2. Por eso las métricas de los 28 benchmarks no cambian.
 - La tabla maestra se amplió con el modelo original (HGSB), evaluado con el mismo protocolo.
-- Si el ranking cambia al incluir el HGSB, se reporta en los capítulos 3 y 6 sin ocultar los casos en que no supera
-  a los benchmarks.
+- Al incluir el HGSB el ranking cambia en validación cruzada: el HGSB pasa al primer lugar (RMSE externo 1.93 y mejor
+  rango medio de Friedman), pero en el conjunto de prueba queda detrás de XGBoost y Random Forest y la diferencia no
+  es significativa. Ambos hechos se reportan en los capítulos 5, 6 y 8.

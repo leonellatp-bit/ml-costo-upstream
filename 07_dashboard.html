@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -458,7 +458,7 @@ dinámico sin publicar los datos.</p></li>
 </tr>
 <tr class="row-even"><td><p>Modelos</p></td>
 <td><p>Tabla de líderes; predicción en vivo con intervalo y SHAP local; diagnóstico; SHAP global; comparación estadística; subsección del modelo original</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">DataTable</span></code> ordenable y filtrable; formulario validado con intervalo conformal 90 % y explicación de Shapley por grupos; real vs predicho, residuos, histograma y ACF; MCS con el HGSB; pseudocódigo, diferencias con la literatura, convergencia, ablación, pruebas y veredicto</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DataTable</span></code> ordenable y filtrable; formulario validado con intervalo conformal 90 % y explicación de Shapley por grupos; real vs predicho, residuos, histograma y ACF; MCS con el HGSB; fundamentos teóricos de los 8 modelos (fórmula en LaTeX, cómo aprende, hiperparámetros elegidos); pseudocódigo, diferencias con la literatura, convergencia, ablación, pruebas y veredicto; conclusiones, uso para decisiones, limitaciones y trabajo futuro</p></td>
 </tr>
 </tbody>
 </table>
@@ -475,11 +475,42 @@ país en una región que no es la suya.</p>
 </section>
 <section id="capturas-de-pantalla">
 <h2>7.3 Capturas de pantalla<a class="headerlink" href="#capturas-de-pantalla" title="Link to this heading">#</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Agregar aquí las capturas de las tres páginas desplegadas (<code class="docutils literal notranslate"><span class="pre">book/figures/dash_contexto.png</span></code>,
-<code class="docutils literal notranslate"><span class="pre">dash_eda.png</span></code>, <code class="docutils literal notranslate"><span class="pre">dash_modelos.png</span></code>).</p>
-</div>
+<figure class="align-default" id="fig-dash-contexto">
+<a class="reference internal image-reference" href="_images/dash_contexto.png"><img alt="_images/dash_contexto.png" src="_images/dash_contexto.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figura 1 </span><span class="caption-text"><strong>Contexto.</strong> Portada con el resultado clave, indicadores del conjunto de datos, relevancia con cifra citada de la
+IEA, pregunta de investigación y objetivos, diagrama de la metodología y diccionario de variables.</span><a class="headerlink" href="#fig-dash-contexto" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-dash-eda">
+<a class="reference internal image-reference" href="_images/dash_eda.png"><img alt="_images/dash_eda.png" src="_images/dash_eda.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figura 2 </span><span class="caption-text"><strong>EDA.</strong> Filtros globales (región, años, tipo de reserva y ubicación) que actualizan todos los gráficos; cada gráfico
+lleva una frase de interpretación calculada sobre la selección.</span><a class="headerlink" href="#fig-dash-eda" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-dash-modelos">
+<a class="reference internal image-reference" href="_images/dash_modelos.png"><img alt="_images/dash_modelos.png" src="_images/dash_modelos.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figura 3 </span><span class="caption-text"><strong>Modelos.</strong> Tabla de líderes ordenable y filtrable (el HGSB resaltado) y predicción en vivo con intervalo conformal
+del 90 %, explicación local de Shapley por grupos y comparación de los ocho modelos para el mismo activo.</span><a class="headerlink" href="#fig-dash-modelos" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-dash-teoria">
+<a class="reference internal image-reference" href="_images/dash_teoria.png"><img alt="_images/dash_teoria.png" src="_images/dash_teoria.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figura 4 </span><span class="caption-text"><strong>Modelos: interpretabilidad, MCS y fundamentos teóricos.</strong> Importancia SHAP global del modelo seleccionado, Model
+Confidence Set con el HGSB incluido y un panel por modelo con su formulación, cómo aprende y los hiperparámetros
+elegidos.</span><a class="headerlink" href="#fig-dash-teoria" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-dash-conclusiones">
+<a class="reference internal image-reference" href="_images/dash_conclusiones.png"><img alt="_images/dash_conclusiones.png" src="_images/dash_conclusiones.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figura 5 </span><span class="caption-text"><strong>Modelos: pruebas, veredicto y conclusiones.</strong> Tabla de pruebas de hipótesis del HGSB con p ajustados y tamaños del
+efecto, veredicto sobre R3, hallazgos principales, uso del modelo para decidir, limitaciones y trabajo futuro.</span><a class="headerlink" href="#fig-dash-conclusiones" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="guia-de-despliegue-en-render">
 <h2>7.4 Guía de despliegue en Render<a class="headerlink" href="#guia-de-despliegue-en-render" title="Link to this heading">#</a></h2>

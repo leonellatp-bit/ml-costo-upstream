@@ -16,7 +16,7 @@
 | 1 | `python run_nested.py` | 385 búsquedas de los benchmarks en `results/cache/`, `results/master_table.csv` | 80 min (2 núcleos) |
 | 2 | `python run_original.py` | 11 búsquedas del HGSB con el mismo protocolo | 16 min |
 | 3 | `python run_original_stats.py` | Pruebas, MCS, ablación, convergencia y robustez en `results/original/` | 15 min |
-| 4 | `python run_blend.py` y `python run_blend2.py` | Modelos híbridos (capítulo 3.5) | 3 min |
+| 4 | `python run_blend.py`, `python run_blend2.py` y `python run_weighted_forest.py` | Modelos híbridos (capítulo 3.5) y bosques con pesos por árbol (5.9) | 6 min |
 | 5 | `python tools/build_artifacts.py` | `artifacts/` (8 modelos + metadata), tablas del dashboard | 3 min |
 | 6 | `pytest -q tests/` | 19 pruebas unitarias del modelo original | 5 s |
 | 7 | `jupyter-book build book/` | Informe HTML | 2 min |
